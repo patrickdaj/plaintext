@@ -10,13 +10,18 @@ Plaintext is an open security-education curriculum (CC BY 4.0). It is a **conten
 
 ```
 plaintext/
-├── docs/index.html        # the entire public website (standalone, CSS inlined) — the ONLY thing published
-├── tracks/                # the Markdown curriculum — NOT built into or served by the site
+├── docs/                  # the published site — the ONLY directory GitHub Pages serves
+│   ├── index.html             # the landing page (standalone, CSS inlined)
+│   └── tracks/                # GENERATED curriculum-map pages — do not hand-edit
+│       ├── track.css             # shared styling for the map pages
+│       └── <NN-track-name>.html  # rendered from tracks/<NN>/README.md
+├── tracks/                # the Markdown curriculum — the SOURCE OF TRUTH for content
 │   └── <NN-track-name>/
-│       ├── README.md          # track overview (intro + module table)
+│       ├── README.md          # track overview (intro + module table) → rendered to docs/tracks/
 │       └── modules/<NN-module-name>/
 │           ├── README.md      # concept explanation
 │           └── lab.md          # hands-on OSS-only exercise
+├── tools/build_track_pages.py # regenerates docs/tracks/*.html from tracks/*/README.md
 ├── CONTRIBUTING.md        # canonical module/lab templates + content rules — read before authoring
 ├── README.md              # repo intro + track table
 ├── LICENSE                # CC BY 4.0
@@ -25,22 +30,27 @@ plaintext/
     └── ISSUE_TEMPLATE/new-module.md # how new modules are proposed
 ```
 
-## Two decoupled halves
+## The site, the curriculum, and how they connect
 
-The single most important thing to understand: **the published website and the curriculum content are separate and do not reference each other.**
+Two layers, with a one-way generator bridging them:
 
-1. **`docs/index.html`** — the entire public website. A standalone, hand-authored page with all CSS inlined in a `<style>` block (no framework, no build step, no external assets except a Google Fonts link). Its nav/CTA links are placeholder `#` anchors; it does **not** link to or render anything under `tracks/`.
-2. **`tracks/`** — the curriculum, authored in Markdown. This content is **not** built into the site or served by Pages.
+1. **`docs/index.html`** — the hand-authored landing page. Standalone, all CSS inlined in a `<style>` block (no framework, no external assets except a Google Fonts link). Its track cards link to the generated map pages under `docs/tracks/`.
+2. **`tracks/`** — the curriculum, authored in Markdown. **This is the source of truth for all curriculum content.**
+3. **`docs/tracks/<NN>.html`** — published map pages, **generated** from each `tracks/<NN>/README.md` by `tools/build_track_pages.py`. They share `docs/tracks/track.css`.
 
-Consequences:
-- Editing curriculum Markdown does **not** change the live site, and editing `docs/index.html` does **not** change the curriculum. If a task implies the two should stay in sync, that wiring does not exist yet — flag it rather than assuming it.
-- Only `docs/` is published (see Deployment). Nothing in `tracks/` reaches the live site.
+The critical rule:
+- **Never hand-edit `docs/tracks/*.html`.** Edit the track `README.md` under `tracks/`, then re-run `python3 tools/build_track_pages.py` to regenerate. Hand edits will be overwritten and the two will silently drift.
+- `index.html` is still hand-authored — it is *not* generated. Only the per-track map pages are.
+- Only `docs/` is published (see Deployment). The `tracks/` Markdown and `tools/` script are in the repo but **not** served; the live curriculum pages are the rendered copies under `docs/tracks/`.
+- The generator only renders track-level `README.md` files. Module `README.md`/`lab.md` content is **not** yet rendered to the site — if a task implies it should be, that wiring does not exist yet; flag it.
 
 ## Deployment
 
 `.github/workflows/deploy.yml` deploys to GitHub Pages via GitHub Actions, **on push to `main` only**. It uploads `./docs` as the Pages artifact — so only files inside `docs/` are published. The site is a project page served under the `/plaintext/` path (`https://patrickdaj.github.io/plaintext/`); keep that in mind for any absolute paths.
 
-There is nothing to build, lint, or test. To preview the site locally, open `docs/index.html` directly in a browser, or serve it with `python3 -m http.server` from the `docs/` directory. (The published Pages site may be unreachable from sandboxed environments that block `*.github.io`; verify a deploy succeeded via the GitHub Actions run status instead.)
+Deployment itself stays build-free: Pages serves the committed `docs/` as-is. The one generation step is **local and optional** — `tools/build_track_pages.py` (stdlib-only Python 3, no dependencies) renders the track maps into `docs/tracks/`. Run it after editing any track `README.md`, then commit the regenerated HTML alongside the Markdown so the published pages stay in sync. CI does not run it.
+
+To preview the site locally, open `docs/index.html` in a browser, or serve it with `python3 -m http.server` from the `docs/` directory. (The published Pages site may be unreachable from sandboxed environments that block `*.github.io`; verify a deploy succeeded via the GitHub Actions run status instead.)
 
 ## Content structure and authoring rules
 

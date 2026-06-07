@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track 05 — Cloud Security — Plaintext</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="track.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="../index.html">plain<span>text</span></a>
+  <a class="back" href="../index.html">← all tracks</a>
+</nav>
+<main>
+<h1>Track 05 — Cloud Security</h1>
+<p>Attack and defend cloud-native environments. Find and fix the misconfigurations that lead to real-world breaches across AWS, GCP, and Azure — and learn to express security as code, because in the cloud the infrastructure <em>is</em> code.</p>
+<h2>What you'll be able to do</h2>
+<ul>
+<li>Reason about the shared-responsibility model and cloud identity.</li>
+<li>Find and explain privilege-escalation paths through IAM.</li>
+<li>Audit posture and infrastructure-as-code for misconfigurations, gated in CI.</li>
+<li>Secure containers and Kubernetes, and detect and respond to cloud attacks.</li>
+</ul>
+<h2>The arc</h2>
+<table><thead><tr><th>Phase</th><th>Modules</th><th>Focus</th></tr></thead><tbody>
+<tr><td>Ground rules</td><td>01</td><td>Shared responsibility, identity, accounts</td></tr>
+<tr><td>Find the gaps</td><td>02–04</td><td>IAM paths, posture, IaC and container security</td></tr>
+<tr><td>Attack &amp; defend</td><td>05–07</td><td>Cloud attack techniques, detection, secrets/data</td></tr>
+</tbody></table>
+<h2>Modules</h2>
+<table><thead><tr><th>#</th><th>Module</th><th>What you'll learn</th><th>OSS tools</th></tr></thead><tbody>
+<tr><td>01</td><td>Cloud Fundamentals &amp; IAM</td><td>Shared responsibility, identity, policies, and trust</td><td>cloud CLIs</td></tr>
+<tr><td>02</td><td>IAM Attack Paths</td><td>Finding and explaining privilege-escalation chains</td><td><code>pmapper</code>, <code>cloudfox</code></td></tr>
+<tr><td>03</td><td>Posture &amp; Configuration Auditing</td><td>Benchmarking accounts against known misconfigurations</td><td><code>prowler</code>, <code>scoutsuite</code>, <code>cloudsploit</code></td></tr>
+<tr><td>04</td><td>Infrastructure-as-Code Security</td><td>Scanning Terraform/manifests before they deploy</td><td><code>checkov</code>, <code>trivy</code>, <code>tfsec</code></td></tr>
+<tr><td>05</td><td>Container &amp; Kubernetes Security</td><td>Image hygiene, RBAC, network policy, runtime detection</td><td><code>trivy</code>, <code>kube-bench</code>, <code>falco</code></td></tr>
+<tr><td>06</td><td>Cloud Attack Techniques</td><td>Exploiting misconfig and simulating attacks safely</td><td><code>pacu</code>, <code>stratus-red-team</code></td></tr>
+<tr><td>07</td><td>Cloud Detection &amp; Secrets</td><td>Logging-based detection and finding leaked credentials</td><td><code>falco</code>, <code>gitleaks</code>, <code>trufflehog</code></td></tr>
+</tbody></table>
+<h2>Prerequisites</h2>
+<p>Complete Track 00 — Foundations first.</p>
+<blockquote>All labs use your own free-tier cloud accounts or intentionally vulnerable environments (e.g. CloudGoat, flaws.cloud). Never test against accounts or tenants you don't own or aren't authorised to assess, and tear down billable resources when done.</blockquote>
+<h2>Standards &amp; further reading</h2>
+<ul>
+<li>CIS Benchmarks for AWS/GCP/Azure and Kubernetes</li>
+<li>MITRE ATT&amp;CK for Cloud and the Cloud Matrix</li>
+<li>Cloud provider Well-Architected / security best-practice guidance</li>
+<li>OWASP Kubernetes and Cloud-Native security guidance</li>
+</ul>
+</main>
+<footer>
+  <div class="logo-small">plain<span>text</span></div>
+  <div>Open security education for everyone · CC BY 4.0</div>
+</footer>
+</body>
+</html>

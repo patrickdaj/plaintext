@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track 01 — Offensive Security — Plaintext</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="track.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="../index.html">plain<span>text</span></a>
+  <a class="back" href="../index.html">← all tracks</a>
+</nav>
+<main>
+<h1>Track 01 — Offensive Security</h1>
+<p>Learn to think like an attacker. Work an engagement end to end — reconnaissance, exploitation, post-exploitation, and the professional reporting that makes the work useful to a defender. The goal is not to collect exploits; it is to understand <em>why</em> systems fall so you can explain and fix them.</p>
+<h2>What you'll be able to do</h2>
+<ul>
+<li>Map an attack surface from public information and active scanning.</li>
+<li>Identify, validate, and responsibly exploit common vulnerability classes.</li>
+<li>Attack web applications using the OWASP Top 10 as a guide.</li>
+<li>Escalate privileges, move laterally, and understand post-exploitation tradecraft.</li>
+<li>Write a clear, reproducible report that a defender can act on.</li>
+</ul>
+<h2>The arc</h2>
+<table><thead><tr><th>Phase</th><th>Modules</th><th>Focus</th></tr></thead><tbody>
+<tr><td>Recon &amp; mapping</td><td>01–02</td><td>Find and enumerate the attack surface</td></tr>
+<tr><td>Finding the way in</td><td>03–05</td><td>Identify and exploit vulnerabilities (network + web)</td></tr>
+<tr><td>After access</td><td>06–08</td><td>Credentials, privilege escalation, lateral movement</td></tr>
+<tr><td>Closing the loop</td><td>09</td><td>Reporting and remediation guidance</td></tr>
+</tbody></table>
+<h2>Modules</h2>
+<table><thead><tr><th>#</th><th>Module</th><th>What you'll learn</th><th>OSS tools</th></tr></thead><tbody>
+<tr><td>01</td><td>Reconnaissance &amp; OSINT</td><td>Passive and active intel gathering; building a target picture</td><td><code>amass</code>, <code>theHarvester</code>, <code>recon-ng</code></td></tr>
+<tr><td>02</td><td>Scanning &amp; Enumeration</td><td>Host discovery, service/version detection, and enumeration</td><td><code>nmap</code>, <code>gobuster</code>, <code>enum4linux-ng</code></td></tr>
+<tr><td>03</td><td>Vulnerability Identification</td><td>Mapping findings to known weaknesses (CVE/CWE) and verifying them</td><td><code>nuclei</code>, <code>searchsploit</code></td></tr>
+<tr><td>04</td><td>Exploitation Fundamentals</td><td>How exploits work; using and understanding a framework safely</td><td><code>metasploit</code>, <code>msfvenom</code></td></tr>
+<tr><td>05</td><td>Web Application Attacks</td><td>Injection, broken auth, access control — the OWASP Top 10 in practice</td><td><code>burpsuite CE</code>, <code>sqlmap</code>, <code>OWASP ZAP</code>, <code>ffuf</code></td></tr>
+<tr><td>06</td><td>Password &amp; Credential Attacks</td><td>Hashing, cracking, spraying, and credential reuse</td><td><code>hashcat</code>, <code>john</code>, <code>hydra</code></td></tr>
+<tr><td>07</td><td>Privilege Escalation</td><td>Local enumeration and escalation on Linux and Windows</td><td><code>linpeas</code>, <code>winpeas</code>, <code>pwncat</code></td></tr>
+<tr><td>08</td><td>Post-Exploitation &amp; Lateral Movement</td><td>Pivoting, tunneling, and AD attack paths</td><td><code>BloodHound</code>, <code>chisel</code>, <code>ligolo-ng</code></td></tr>
+<tr><td>09</td><td>Reporting &amp; Remediation</td><td>Turning findings into a clear, prioritised, reproducible report</td><td><code>ghostwriter</code></td></tr>
+</tbody></table>
+<h2>Prerequisites</h2>
+<p>Complete Track 00 — Foundations first.</p>
+<blockquote><strong>Authorization is mandatory.</strong> Only test systems you own or have explicit written permission to test. All labs use intentionally vulnerable targets (DVWA, locally spun VMs, free CTF rooms such as TryHackMe/HackTheBox free tiers). Never point these techniques at anything else.</blockquote>
+<h2>Standards &amp; further reading</h2>
+<ul>
+<li>OWASP Top 10 and the OWASP Testing Guide</li>
+<li>MITRE ATT&amp;CK (Enterprise) for technique mapping</li>
+<li>MITRE CWE / NIST NVD for vulnerability classes</li>
+<li>PTES (Penetration Testing Execution Standard) for engagement structure</li>
+</ul>
+</main>
+<footer>
+  <div class="logo-small">plain<span>text</span></div>
+  <div>Open security education for everyone · CC BY 4.0</div>
+</footer>
+</body>
+</html>

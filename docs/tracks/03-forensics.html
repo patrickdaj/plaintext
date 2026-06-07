@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track 03 — Digital Forensics — Plaintext</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="track.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="../index.html">plain<span>text</span></a>
+  <a class="back" href="../index.html">← all tracks</a>
+</nav>
+<main>
+<h1>Track 03 — Digital Forensics</h1>
+<p>Disk, memory, and network forensics. Reconstruct events from the artifacts left behind and tell the story of what happened on a system — defensibly, so the timeline holds up.</p>
+<h2>What you'll be able to do</h2>
+<ul>
+<li>Acquire and verify evidence without altering it.</li>
+<li>Recover and interpret artifacts from disks, memory, and the file system.</li>
+<li>Build a super-timeline that correlates activity across sources.</li>
+<li>Reconstruct an intrusion from network and host evidence and write a root-cause report.</li>
+</ul>
+<h2>The arc</h2>
+<table><thead><tr><th>Phase</th><th>Modules</th><th>Focus</th></tr></thead><tbody>
+<tr><td>Handle evidence</td><td>01</td><td>Acquisition, integrity, chain of custody</td></tr>
+<tr><td>Examine sources</td><td>02–05</td><td>Disk, OS artifacts, memory, network</td></tr>
+<tr><td>Tell the story</td><td>06–07</td><td>Timeline correlation and reporting</td></tr>
+</tbody></table>
+<h2>Modules</h2>
+<table><thead><tr><th>#</th><th>Module</th><th>What you'll learn</th><th>OSS tools</th></tr></thead><tbody>
+<tr><td>01</td><td>Forensic Fundamentals &amp; Evidence Handling</td><td>Acquisition, hashing, write-blocking, chain of custody</td><td><code>dc3dd</code>, <code>sleuthkit</code></td></tr>
+<tr><td>02</td><td>Disk &amp; File System Forensics</td><td>Partitions, file systems, deleted-file recovery, carving</td><td><code>autopsy</code>, <code>sleuthkit</code></td></tr>
+<tr><td>03</td><td>Operating System Artifacts</td><td>Registry, logs, browser, and execution artifacts (Windows + Linux)</td><td><code>RegRipper</code>, <code>plaso</code></td></tr>
+<tr><td>04</td><td>Memory Forensics</td><td>Processes, network connections, and injected code from a RAM image</td><td><code>volatility3</code>, <code>MemProcFS</code></td></tr>
+<tr><td>05</td><td>Network Forensics</td><td>Reconstructing sessions and extracting files from captures</td><td><code>wireshark</code>, <code>zeek</code></td></tr>
+<tr><td>06</td><td>Timeline Analysis</td><td>Building and pivoting through a super-timeline</td><td><code>plaso</code>, <code>timesketch</code></td></tr>
+<tr><td>07</td><td>Investigation &amp; Reporting</td><td>Driving an investigation to root cause and documenting it</td><td><code>Velociraptor</code></td></tr>
+</tbody></table>
+<h2>Prerequisites</h2>
+<p>Complete Track 00 — Foundations first.</p>
+<blockquote>All labs use publicly available forensic images and sample memory dumps intended for training (e.g. DFIR images, the Volatility sample set). Never examine evidence you are not authorised to handle.</blockquote>
+<h2>Standards &amp; further reading</h2>
+<ul>
+<li>NIST SP 800-86 (Guide to Integrating Forensic Techniques into Incident Response)</li>
+<li>SWGDE best practices for digital evidence</li>
+<li>The Volatility and Sleuth Kit documentation for artifact reference</li>
+</ul>
+</main>
+<footer>
+  <div class="logo-small">plain<span>text</span></div>
+  <div>Open security education for everyone · CC BY 4.0</div>
+</footer>
+</body>
+</html>
