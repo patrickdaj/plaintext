@@ -14,8 +14,8 @@ the triage script you'll write a hundred variations of.
 Write the script yourself — or have AI draft it and then review every line. Don't paste
 without reading.
 
-1. [ ] Get a sample auth log with several `Failed password ... from <ip>` lines (make one if
-   needed).
+1. [ ] Get a **real** SSH auth log — the same [loghub OpenSSH dataset](https://github.com/logpai/loghub)
+   you triaged by hand in module 04 (genuine [T1110 Brute Force](https://attack.mitre.org/techniques/T1110/) noise).
 2. [ ] Write `topips.py` that reads the log, extracts each source IP with a regex, and
    tallies them. (Building blocks: `re` for the pattern, `collections.Counter` for the
    count.)

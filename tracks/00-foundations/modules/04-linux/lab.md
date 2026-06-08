@@ -22,9 +22,10 @@ the keystrokes, is the point.
 2. [ ] Find every file that runs with its owner's privileges — the SUID set. (What
    permission bit is that, and how do you search the whole filesystem for it?)
 3. [ ] Show the running processes, sorted by CPU usage.
-4. [ ] Given a log of failed SSH logins, produce a ranked per-source-IP count. (No log
-   handy? Make a few `Failed password ... from <ip>` lines. Reach for `grep`, `awk`,
-   `sort`, `uniq` — the pipeline *is* the skill.)
+4. [ ] Grab a **real** SSH auth log — the [OpenSSH dataset from loghub](https://github.com/logpai/loghub)
+   is genuine brute-force noise (MITRE ATT&CK [T1110, Brute Force](https://attack.mitre.org/techniques/T1110/))
+   — and produce a ranked per-source-IP count of the failed logins. (Reach for `grep`,
+   `awk`, `sort`, `uniq` — the pipeline *is* the skill.)
 
 ## Success criteria — you're done when
 - [ ] You can list every UID-0 account and everyone who can `sudo`.

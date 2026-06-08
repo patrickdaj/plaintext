@@ -17,7 +17,7 @@ secrets and artifacts out of history.
 **Git, properly**
 - [Pro Git (free book)](https://git-scm.com/book/en/v2) — chapters 1–3 are the durable foundation; read, don't skim.
 - [GitHub Skills](https://skills.github.com/) — short, interactive courses (intro, branching, pull requests) you do *in* a repo.
-- [freeCodeCamp — Git & GitHub crash course (YouTube)](https://www.youtube.com/watch?v=RGOj5yH7evk) — a fast video pass if the book feels heavy.
+- [freeCodeCamp — Git and GitHub for Beginners Crash Course (~1 hr)](https://www.youtube.com/watch?v=RGOj5yH7evk) — a fast video pass if the book feels heavy; watch through the branching and pull-request sections.
 
 **Hygiene**
 - [git docs — gitignore](https://git-scm.com/docs/gitignore) — and study this repo's own `.gitignore` for what a security project must exclude.
