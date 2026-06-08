@@ -92,7 +92,7 @@ fits; don't claim a lab works unless you ran it.
 - [ ] 05-memory-corruption — *tiny vulnerable C binary + gdb; demonstrate EIP control (NX/ASLR off)*
 - [ ] 07-web-access-control — *vulnerable app with IDOR/role flaws (extend the 06 app or Juice Shop)*
 - [ ] 08-web-ssrf-xxe — *app with SSRF to a mock metadata endpoint (compose: app + fake-metadata)*
-- [ ] 09-password-attacks — *hashcat/john over a bundled hash set (fast vs slow KDF contrast)*
+- [x] 09-password-attacks — *hashcat/john over a bundled hash set (fast vs slow KDF contrast)*
 - [ ] 10-privesc-linux — *container/VM with a SUID/sudo/cron misconfig; linpeas → root*
 - [ ] 11-privesc-windows — *(needs Windows — likely a documented VM, not a container; validate the path)*
 - [ ] 12-pivoting — *compose: attacker + dual-homed pivot host + hidden internal target; ligolo/chisel*
