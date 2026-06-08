@@ -86,39 +86,81 @@
     <p class="px-desc">Structured, hands-on paths from zero to job-ready. Every track uses the real tools you'll use on the job — open source first — with AI woven through as the force multiplier.</p>
     <div class="px-tracks">
       <a class="px-track" href="{{ '00-foundations/' | url }}">
-        <div class="n">TRACK_00 · 6 modules</div><span class="ic">⚪</span>
-        <h3>Foundations</h3><p>Networking, Linux, scripting, and cryptography. The bedrock everything else is built on.</p>
+        <div class="n">TRACK_00</div><span class="ic">⚪</span>
+        <h3>Foundations</h3><p>Networking, Linux, scripting, crypto, web, and threat modeling — the bedrock.</p>
         <div class="px-tools"><b>tcpdump</b><b>openssl</b><b>python</b><b>bash</b></div>
         <div class="px-more">View curriculum →</div>
       </a>
       <a class="px-track" href="{{ '01-offensive/' | url }}">
-        <div class="n">TRACK_01 · 9 modules</div><span class="ic">🔴</span>
-        <h3>Offensive Security</h3><p>Recon, exploitation, post-exploitation, and reporting. Learn to think like an attacker.</p>
+        <div class="n">TRACK_01</div><span class="ic">🔴</span>
+        <h3>Offensive Security</h3><p>Recon, exploitation, web attacks, post-exploitation, and reporting.</p>
         <div class="px-tools"><b>nmap</b><b>metasploit</b><b>burpsuite</b><b>sqlmap</b></div>
         <div class="px-more">View curriculum →</div>
       </a>
       <a class="px-track" href="{{ '02-defensive/' | url }}">
-        <div class="n">TRACK_02 · 8 modules</div><span class="ic">🔵</span>
-        <h3>Defensive Operations</h3><p>Detection engineering, SIEM, log analysis, and incident triage at scale.</p>
+        <div class="n">TRACK_02</div><span class="ic">🔵</span>
+        <h3>Defensive Operations</h3><p>Telemetry, SIEM, detection-as-code, threat hunting, and incident response.</p>
         <div class="px-tools"><b>elastic</b><b>zeek</b><b>suricata</b><b>wazuh</b></div>
         <div class="px-more">View curriculum →</div>
       </a>
       <a class="px-track" href="{{ '03-forensics/' | url }}">
-        <div class="n">TRACK_03 · 7 modules</div><span class="ic">🟣</span>
-        <h3>Digital Forensics</h3><p>Disk, memory, and network forensics. Reconstruct events from the artifacts left behind.</p>
-        <div class="px-tools"><b>autopsy</b><b>volatility</b><b>wireshark</b><b>sleuthkit</b></div>
+        <div class="n">TRACK_03</div><span class="ic">🟣</span>
+        <h3>Digital Forensics &amp; IR</h3><p>Disk, memory, and network forensics to a root-cause incident report.</p>
+        <div class="px-tools"><b>autopsy</b><b>volatility</b><b>plaso</b><b>velociraptor</b></div>
         <div class="px-more">View curriculum →</div>
       </a>
       <a class="px-track" href="{{ '04-malware/' | url }}">
-        <div class="n">TRACK_04 · 7 modules</div><span class="ic">🟡</span>
-        <h3>Malware Analysis</h3><p>Static and dynamic analysis. Understand what malware does and how to stop it.</p>
-        <div class="px-tools"><b>ghidra</b><b>cutter</b><b>cuckoo</b><b>remnux</b></div>
+        <div class="n">TRACK_04</div><span class="ic">🟡</span>
+        <h3>Malware Analysis</h3><p>Static and dynamic analysis to IOCs, ATT&amp;CK, and validated detections.</p>
+        <div class="px-tools"><b>ghidra</b><b>cutter</b><b>capa</b><b>yara</b></div>
         <div class="px-more">View curriculum →</div>
       </a>
       <a class="px-track" href="{{ '05-cloud/' | url }}">
-        <div class="n">TRACK_05 · 7 modules</div><span class="ic">🟠</span>
-        <h3>Cloud Security</h3><p>Attack and defend cloud-native environments across AWS, GCP, and Azure.</p>
-        <div class="px-tools"><b>prowler</b><b>pacu</b><b>trivy</b><b>checkov</b></div>
+        <div class="n">TRACK_05</div><span class="ic">🟠</span>
+        <h3>Cloud &amp; Container Security</h3><p>IAM, posture, IaC, containers, and Kubernetes across AWS/GCP/Azure.</p>
+        <div class="px-tools"><b>prowler</b><b>pacu</b><b>trivy</b><b>falco</b></div>
+        <div class="px-more">View curriculum →</div>
+      </a>
+      <a class="px-track" href="{{ '06-active-directory/' | url }}">
+        <div class="n">TRACK_06</div><span class="ic">🪟</span>
+        <h3>Active Directory &amp; Windows</h3><p>Attack the enterprise's backbone, then close the paths as code.</p>
+        <div class="px-tools"><b>BloodHound</b><b>impacket</b><b>PingCastle</b></div>
+        <div class="px-more">View curriculum →</div>
+      </a>
+      <a class="px-track" href="{{ '07-endpoint-hardening/' | url }}">
+        <div class="n">TRACK_07</div><span class="ic">🛡️</span>
+        <h3>Endpoint &amp; Host Hardening</h3><p>Harden Windows and Linux to CIS as code, with scoring and drift detection.</p>
+        <div class="px-tools"><b>ansible</b><b>OpenSCAP</b><b>osquery</b><b>wazuh</b></div>
+        <div class="px-more">View curriculum →</div>
+      </a>
+      <a class="px-track" href="{{ '08-cryptography/' | url }}">
+        <div class="n">TRACK_08</div><span class="ic">🔑</span>
+        <h3>Cryptography, PKI &amp; Secrets</h3><p>Applied crypto, TLS, PKI, secrets management, and email authentication.</p>
+        <div class="px-tools"><b>openssl</b><b>vault</b><b>testssl</b><b>gitleaks</b></div>
+        <div class="px-more">View curriculum →</div>
+      </a>
+      <a class="px-track" href="{{ '09-python-for-security/' | url }}">
+        <div class="n">TRACK_09</div><span class="ic">🐍</span>
+        <h3>Python for Security</h3><p>Stop running tools and start writing them — and own the ones AI writes.</p>
+        <div class="px-tools"><b>python</b><b>requests</b><b>scapy</b><b>fastmcp</b></div>
+        <div class="px-more">View curriculum →</div>
+      </a>
+      <a class="px-track" href="{{ '10-automation/' | url }}">
+        <div class="n">TRACK_10</div><span class="ic">⚙️</span>
+        <h3>Security Automation</h3><p>IaC, CI/CD security gates, and SOAR. "I don't write the YAML, I own it."</p>
+        <div class="px-tools"><b>terraform</b><b>ansible</b><b>checkov</b><b>Shuffle</b></div>
+        <div class="px-more">View curriculum →</div>
+      </a>
+      <a class="px-track" href="{{ '11-ztna/' | url }}">
+        <div class="n">TRACK_11</div><span class="ic">🔒</span>
+        <h3>Zero Trust Network Access</h3><p>Identity-aware access with no inbound ports — the perimeter is dead.</p>
+        <div class="px-tools"><b>pomerium</b><b>OPA</b><b>keycloak</b><b>cilium</b></div>
+        <div class="px-more">View curriculum →</div>
+      </a>
+      <a class="px-track" href="{{ '12-ai-augmented-ops/' | url }}">
+        <div class="n">TRACK_12</div><span class="ic">🤖</span>
+        <h3>AI-Augmented Security Ops</h3><p>Local models, RAG, MCP copilots — then attack and harden the AI you built.</p>
+        <div class="px-tools"><b>ollama</b><b>chromadb</b><b>fastmcp</b><b>garak</b></div>
         <div class="px-more">View curriculum →</div>
       </a>
     </div>

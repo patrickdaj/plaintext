@@ -1,59 +1,52 @@
-# Track 03 — Digital Forensics
+# Track 03 — Digital Forensics & Incident Response
 
-Disk, memory, and network forensics. Reconstruct events from the artifacts left behind
-and tell the story of what happened on a system — defensibly, so the timeline holds up.
+**Reconstruct events from the artifacts left behind** and tell the story of what happened
+on a system — defensibly, so the timeline holds up. Acquisition through root-cause report.
 
 ## What you'll be able to do
-
 - Acquire and verify evidence without altering it.
-- Recover and interpret artifacts from disks, memory, and the file system.
+- Recover and interpret artifacts from disk, memory, and the network.
 - Build a super-timeline that correlates activity across sources.
-- Reconstruct an intrusion from network and host evidence and write a root-cause report.
-
-## The arc
-
-| Phase | Modules | Focus |
-|-------|---------|-------|
-| Handle evidence | 01 | Acquisition, integrity, chain of custody |
-| Examine sources | 02–05 | Disk, OS artifacts, memory, network |
-| Tell the story | 06–07 | Timeline correlation and reporting |
+- Drive an investigation to a root-cause verdict and write it up.
 
 ## Modules
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Forensic Fundamentals & Evidence Handling | Acquisition, hashing, write-blocking, chain of custody | `dc3dd`, `sleuthkit` |
-| 02 | Disk & File System Forensics | Partitions, file systems, deleted-file recovery, carving | `autopsy`, `sleuthkit` |
-| 03 | Operating System Artifacts | Registry, logs, browser, and execution artifacts (Windows + Linux) | `RegRipper`, `plaso` |
-| 04 | Memory Forensics | Processes, network connections, and injected code from a RAM image | `volatility3`, `MemProcFS` |
-| 05 | Network Forensics | Reconstructing sessions and extracting files from captures | `wireshark`, `zeek` |
-| 06 | Timeline Analysis | Building and pivoting through a super-timeline | `plaso`, `timesketch` |
-| 07 | Investigation & Reporting | Driving an investigation to root cause and documenting it | `Velociraptor` |
+| 01 | Forensic Fundamentals & Evidence Handling | Integrity, hashing, chain of custody | `dc3dd`, `sleuthkit` |
+| 02 | Acquisition & Imaging | Capturing disk and memory soundly | `dc3dd`, `avml` |
+| 03 | File Systems & Carving | NTFS/ext internals; recovering deleted data | `sleuthkit`, `foremost` |
+| 04 | Windows Artifacts | Registry, event logs, prefetch, execution | `RegRipper`, `EZ tools` |
+| 05 | Browser & Application Artifacts | User activity and app traces | `autopsy`, `hindsight` |
+| 06 | Memory Forensics | Processes, injection, connections from RAM | `volatility3`, `MemProcFS` |
+| 07 | Timeline Analysis | Building and pivoting a super-timeline | `plaso`, `timesketch` |
+| 08 | Triage & Live Response | Scaling collection across hosts | `velociraptor` |
+| 09 | Network Forensics | Reconstructing sessions and files from PCAP | `wireshark`, `zeek` |
+| 10 | Log & Cloud Forensics | Investigating from logs and cloud trails | `hayabusa`, `chainsaw` |
+| 11 | Anti-Forensics & Detecting It | Timestomping, wiping, and spotting them | `sleuthkit` |
+| 12 | Malware Artifacts in IR | Handing off to deep analysis (→ T04) | `capa`, `yara` |
+| 13 | Incident Response Process | The NIST lifecycle in practice | — |
+| 14 | Reporting & Root-Cause Analysis | A report that survives scrutiny | — |
 
 ## Prerequisites
-
 Complete Track 00 — Foundations first.
 
-> All labs use publicly available forensic images and sample memory dumps intended for
-> training (e.g. DFIR images, the Volatility sample set). Never examine evidence you are
+> Labs use public training images and sample memory dumps. Never examine evidence you're
 > not authorised to handle.
 
 ## Capstone
-
 Take a training disk or memory image to a root-cause incident report: acquire and verify,
-build a super-timeline, and reconstruct what happened — defensibly, every claim tied to an
-artifact. **Deliverable:** the timeline and a report that would survive scrutiny.
+build a super-timeline, and reconstruct what happened — every claim tied to an artifact.
+**Deliverable:** the timeline and a report that would survive scrutiny.
 
 ## AI & automation
-
-AI summarises timelines, correlates artifacts, and drafts the incident narrative far
-faster than you can by hand. Forensic soundness sets the limit: an AI summary is a lead,
-never evidence — every conclusion is traced back to the underlying artifact, and chain of
-custody is non-negotiable. Automate the collection and the parsing; never automate the
-judgment about what actually happened.
+AI summarises timelines, correlates artifacts, and drafts the incident narrative far faster
+than you can by hand. Forensic soundness sets the limit: an AI summary is a *lead*, never
+evidence — every conclusion traces back to the artifact. Automate collection and parsing;
+never automate the judgment about what happened.
 
 ## Standards & further reading
-
-- NIST SP 800-86 (Guide to Integrating Forensic Techniques into Incident Response)
+- NIST SP 800-86 (Forensic Techniques into Incident Response)
+- NIST SP 800-61 (Incident Handling Guide)
 - SWGDE best practices for digital evidence
-- The Volatility and Sleuth Kit documentation for artifact reference
+- Volatility and Sleuth Kit documentation

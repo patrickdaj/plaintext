@@ -1,69 +1,58 @@
 # Track 01 — Offensive Security
 
-Learn to think like an attacker. Work an engagement end to end — reconnaissance,
-exploitation, post-exploitation, and the professional reporting that makes the work
-useful to a defender. The goal is not to collect exploits; it is to understand *why*
-systems fall so you can explain and fix them.
+**Learn to think like an attacker.** Work an engagement end to end — recon, exploitation,
+post-exploitation, and the reporting that makes it useful to a defender. The goal isn't to
+collect exploits; it's to understand *why* systems fall so you can explain and fix them.
 
 ## What you'll be able to do
-
 - Map an attack surface from public information and active scanning.
-- Identify, validate, and responsibly exploit common vulnerability classes.
-- Attack web applications using the OWASP Top 10 as a guide.
-- Escalate privileges, move laterally, and understand post-exploitation tradecraft.
-- Write a clear, reproducible report that a defender can act on.
-
-## The arc
-
-| Phase | Modules | Focus |
-|-------|---------|-------|
-| Recon & mapping | 01–02 | Find and enumerate the attack surface |
-| Finding the way in | 03–05 | Identify and exploit vulnerabilities (network + web) |
-| After access | 06–08 | Credentials, privilege escalation, lateral movement |
-| Closing the loop | 09 | Reporting and remediation guidance |
+- Identify, validate, and responsibly exploit the major vulnerability classes.
+- Attack web applications across the OWASP Top 10.
+- Escalate privileges, move laterally, and run post-exploitation tradecraft.
+- Write a clear, reproducible report a defender can act on.
 
 ## Modules
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Reconnaissance & OSINT | Passive and active intel gathering; building a target picture | `amass`, `theHarvester`, `recon-ng` |
-| 02 | Scanning & Enumeration | Host discovery, service/version detection, and enumeration | `nmap`, `gobuster`, `enum4linux-ng` |
-| 03 | Vulnerability Identification | Mapping findings to known weaknesses (CVE/CWE) and verifying them | `nuclei`, `searchsploit` |
-| 04 | Exploitation Fundamentals | How exploits work; using and understanding a framework safely | `metasploit`, `msfvenom` |
-| 05 | Web Application Attacks | Injection, broken auth, access control — the OWASP Top 10 in practice | `burpsuite CE`, `sqlmap`, `OWASP ZAP`, `ffuf` |
-| 06 | Password & Credential Attacks | Hashing, cracking, spraying, and credential reuse | `hashcat`, `john`, `hydra` |
-| 07 | Privilege Escalation | Local enumeration and escalation on Linux and Windows | `linpeas`, `winpeas`, `pwncat` |
-| 08 | Post-Exploitation & Lateral Movement | Pivoting, tunneling, and AD attack paths | `BloodHound`, `chisel`, `ligolo-ng` |
-| 09 | Reporting & Remediation | Turning findings into a clear, prioritised, reproducible report | `ghostwriter` |
+| 01 | Reconnaissance & OSINT | Passive/active intel; building a target picture | `amass`, `theHarvester`, `recon-ng` |
+| 02 | Scanning & Enumeration | Host discovery, service/version detection | `nmap`, `gobuster`, `enum4linux-ng` |
+| 03 | Vulnerability Identification | Mapping findings to CVE/CWE and verifying | `nuclei`, `searchsploit` |
+| 04 | Exploitation Fundamentals | How exploits work; framework + manual | `metasploit`, `msfvenom` |
+| 05 | Memory Corruption Primer | Stack overflows and why exploits work | `gdb`, `pwntools` |
+| 06 | Web — Injection | SQLi and command injection in practice | `sqlmap`, `burpsuite CE` |
+| 07 | Web — Auth & Access Control | Broken auth, sessions, IDOR, privilege flaws | `burpsuite CE`, `ffuf` |
+| 08 | Web — SSRF, XXE & Deserialization | Server-side classes and file-upload abuse | `OWASP ZAP` |
+| 09 | Password & Credential Attacks | Hashing, cracking, spraying, reuse | `hashcat`, `john`, `hydra` |
+| 10 | Privilege Escalation — Linux | Local enumeration and escalation | `linpeas`, `pspy` |
+| 11 | Privilege Escalation — Windows | Token, service, and registry paths | `winpeas`, `PrivescCheck` |
+| 12 | Pivoting & Lateral Movement | Tunneling and moving between hosts | `chisel`, `ligolo-ng`, `proxychains` |
+| 13 | C2 & Post-Exploitation | Command-and-control and tradecraft | `sliver`, `pwncat` |
+| 14 | Living-off-the-Land & Evasion | Native tooling and basic AV/EDR evasion | `LOLBAS`, `GTFOBins` |
+| 15 | Cloud & Container Attack Primer | Where on-prem skills meet cloud (handoff to T05) | `pacu`, `peirates` |
+| 16 | Reporting & Remediation | Prioritised, reproducible, defender-ready reports | `ghostwriter` |
 
 ## Prerequisites
-
 Complete Track 00 — Foundations first.
 
 > **Authorization is mandatory.** Only test systems you own or have explicit written
-> permission to test. All labs use intentionally vulnerable targets (DVWA, locally spun
-> VMs, free CTF rooms such as TryHackMe/HackTheBox free tiers). Never point these
-> techniques at anything else.
+> permission to test. Labs use intentionally vulnerable targets (DVWA, locally spun VMs,
+> free CTF rooms). Never point these techniques at anything else.
 
 ## Capstone
-
 Run a full engagement against an intentionally vulnerable target — recon through
 exploitation, privilege escalation, and lateral movement — and deliver a professional
-report: findings, evidence, business impact, and prioritised remediation a defender can
-act on. **Deliverable:** the report is the artifact, not the shell.
+report: findings, evidence, business impact, and prioritised remediation. **Deliverable:**
+the report is the artifact, not the shell.
 
 ## AI & automation
-
-AI drafts; you verify and own it. Models accelerate recon synthesis, wordlist and
-payload generation, and turning raw findings into a readable report — but they do
-**not** get to decide what is true. Every vulnerability is validated by hand (no
-hallucinated findings), every action stays inside scope and authorization, and generated
-exploit code is read before it is ever run. Anyone can point a scanner at a host; the
-value is the operator who confirms, contextualises, and reports.
+AI drafts; you verify and own it. Models accelerate recon synthesis, payload and wordlist
+generation, and turning findings into a readable report — but every vulnerability is
+validated by hand (no hallucinated findings), every action stays in scope, and generated
+exploit code is read before it's run.
 
 ## Standards & further reading
-
-- OWASP Top 10 and the OWASP Testing Guide
+- OWASP Top 10 and the OWASP Web Security Testing Guide
 - MITRE ATT&CK (Enterprise) for technique mapping
 - MITRE CWE / NIST NVD for vulnerability classes
-- PTES (Penetration Testing Execution Standard) for engagement structure
+- PTES (Penetration Testing Execution Standard)

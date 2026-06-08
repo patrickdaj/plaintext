@@ -1,64 +1,55 @@
 # Track 02 — Defensive Operations
 
-Detection engineering, SIEM, log analysis, and incident triage at scale. Learn to find
-attackers in the noise and respond before they reach their goal. This track treats
-detection as code: telemetry in, tested detections out, mapped to attacker behaviour.
+**Find attackers in the noise and respond before they reach their goal.** Detection
+engineering, SIEM, log analysis, hunting, and incident response — treated as code:
+telemetry in, tested detections out, mapped to attacker behaviour.
 
 ## What you'll be able to do
-
-- Build a telemetry pipeline from hosts, network, and cloud into a searchable store.
-- Write, test, and version detections mapped to MITRE ATT&CK (detection-as-code).
-- Hunt proactively across endpoint and network data instead of waiting for alerts.
-- Triage and respond to an incident with a repeatable process and clear documentation.
-
-## The arc
-
-| Phase | Modules | Focus |
-|-------|---------|-------|
-| Get the data | 01–03 | Centralise host, network, and endpoint telemetry |
-| Find the attacker | 04–06 | Detection engineering and threat hunting |
-| Respond | 07–08 | Triage, response, and threat intelligence |
+- Build a telemetry pipeline from host, network, and cloud into a searchable store.
+- Write, test, and version detections mapped to MITRE ATT&CK.
+- Hunt proactively across endpoint and network data.
+- Triage and drive an incident from alert to root cause.
 
 ## Modules
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Telemetry & Log Centralisation | What to collect and how to ship it into one searchable place | `elastic`, `fluent-bit`, `vector` |
-| 02 | Network Security Monitoring | Turning packets into protocol logs and connection records | `zeek`, `arkime` |
-| 03 | Endpoint Detection & Host Telemetry | Process, file, and auth events from Windows and Linux hosts | `wazuh`, `osquery`, `sysmon`, `auditd` |
-| 04 | Intrusion Detection | Signature and anomaly detection on the wire | `suricata` |
-| 05 | Detection Engineering (detection-as-code) | Writing, testing, and versioning rules mapped to ATT&CK | `sigma`, ATT&CK Navigator |
-| 06 | Threat Hunting | Hypothesis-driven hunting across endpoint and network data | `zeek`, `jupyter` |
-| 07 | Incident Triage & Response | A repeatable IR process from alert to root cause | `TheHive`, `Velociraptor` |
-| 08 | Threat Intelligence | Managing IOCs and enriching detections with context | `MISP`, `OpenCTI` |
+| 01 | Telemetry & Log Centralisation | What to collect and how to ship it | `elastic`, `fluent-bit`, `vector` |
+| 02 | Windows & Endpoint Telemetry | Process/file/auth events worth alerting on | `sysmon`, `wazuh` |
+| 03 | Linux Telemetry | Auditd and kernel-level visibility | `auditd`, `osquery` |
+| 04 | Network Security Monitoring | Protocol logs and connection records | `zeek`, `arkime` |
+| 05 | Intrusion Detection | Signature and anomaly detection on the wire | `suricata` |
+| 06 | SIEM Fundamentals | Indexing, querying, and dashboards | `elastic`/`kibana`, `wazuh` |
+| 07 | Log Parsing & Normalisation | Turning raw logs into a common schema | `vector`, `logstash` |
+| 08 | Detection-as-Code | Writing portable rules in Sigma | `sigma` |
+| 09 | Detection Testing & Tuning | Validating coverage, cutting false positives | Atomic Red Team |
+| 10 | ATT&CK Mapping & Coverage | Measuring and closing detection gaps | ATT&CK Navigator |
+| 11 | Threat Hunting — Endpoint | Hypothesis-driven host hunting | `osquery`, `velociraptor` |
+| 12 | Threat Hunting — Network | Hunting across protocol and flow data | `zeek`, `jupyter` |
+| 13 | Alert Triage & Incident Response | A repeatable process from alert to verdict | `TheHive` |
+| 14 | Threat Intelligence | Managing IOCs and enriching detections | `MISP`, `OpenCTI` |
+| 15 | Response Automation (SOAR primer) | Automating enrich → contain → ticket | `Shuffle` |
 
 ## Prerequisites
-
 Complete Track 00 — Foundations first.
 
-> All labs use open source tooling and freely available sample datasets
-> (e.g. Malware-Traffic-Analysis.net, public PCAP repositories, EVTX-ATTACK-SAMPLES).
-> Only analyse data you are authorised to handle.
+> Labs use open-source tooling and free sample datasets (Malware-Traffic-Analysis.net,
+> public PCAPs, EVTX-ATTACK-SAMPLES). Only analyse data you're authorised to handle.
 
 ## Capstone
-
 Stand up a telemetry pipeline, simulate an attack (Atomic Red Team or a replayed PCAP),
 and catch it: ship the logs, write the detection-as-code mapped to ATT&CK, and produce an
-incident write-up from alert to root cause. **Deliverable:** the tested detections plus
-the investigation.
+incident write-up from alert to root cause. **Deliverable:** the tested detections plus the
+investigation.
 
 ## AI & automation
-
-This is where automation earns its keep — and where it is most dangerous. A small local
-model can triage and classify log lines cheaply at volume; a frontier model can draft an
-incident narrative or a Sigma rule. The skill is reviewing what they produce: a generated
-detection with broken logic ships false confidence, and automation that buries a real
-signal under auto-closed alerts is worse than none. AI authors the rule — you map it to
-ATT&CK, test it, and own the alert.
+A small local model triages and classifies log lines cheaply at volume; a frontier model
+drafts an incident narrative or a Sigma rule. The skill is review: a generated detection
+with broken logic ships false confidence, and automation that buries a real signal is
+worse than none. AI authors the rule — you map it to ATT&CK, test it, and own the alert.
 
 ## Standards & further reading
-
-- MITRE ATT&CK and the ATT&CK Navigator for coverage mapping
-- Sigma rule specification for portable detections
-- NIST SP 800-61 (Computer Security Incident Handling Guide)
-- The Pyramid of Pain for prioritising indicator types
+- MITRE ATT&CK and the ATT&CK Navigator
+- Sigma rule specification
+- NIST SP 800-61 (Incident Handling Guide)
+- The Pyramid of Pain

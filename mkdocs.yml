@@ -78,6 +78,13 @@ nav:
           - Lab: 00-foundations/modules/06-threat-modeling/lab.md
   - Offensive Security: 01-offensive/README.md
   - Defensive Operations: 02-defensive/README.md
-  - Digital Forensics: 03-forensics/README.md
+  - Digital Forensics & IR: 03-forensics/README.md
   - Malware Analysis: 04-malware/README.md
-  - Cloud Security: 05-cloud/README.md
+  - Cloud & Container Security: 05-cloud/README.md
+  - Active Directory & Windows: 06-active-directory/README.md
+  - Endpoint & Host Hardening: 07-endpoint-hardening/README.md
+  - Cryptography, PKI & Secrets: 08-cryptography/README.md
+  - Python for Security: 09-python-for-security/README.md
+  - Security Automation: 10-automation/README.md
+  - Zero Trust Network Access: 11-ztna/README.md
+  - AI-Augmented Security Ops: 12-ai-augmented-ops/README.md
