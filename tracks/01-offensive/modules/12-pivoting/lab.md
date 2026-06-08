@@ -1,49 +1,121 @@
 # Lab 12 — Pivot Into an Internal Network
 
 ## Setup
-Docker-first — a multi-host lab: a reachable "DMZ" host on a network you can touch, and an
-"internal" host reachable *only* through it. (A docker-compose with two networks, where one
-container bridges both, models this; or use a TryHackMe/HTB pivoting room.)
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/offensive/12-pivoting
+make up
+```
+
+The compose starts three containers:
+- **attacker** — on `dmz` network only; cannot reach `internal-target`
+- **pivot** — on both `dmz` and `internal`; runs a TCP relay (port 8888 → internal:80)
+- **internal-target** — on `internal` network only; serves a confidential systems inventory
+
+The `internal: true` flag on the Docker network prevents any routing from outside.
 
 ## Scenario
-From a foothold on the DMZ host, reach and interact with an internal host you cannot reach
-directly.
 
-> Your own lab / authorised practice ranges only.
+You've obtained a shell on `pivot` — Meridian's dual-homed DMZ server. The
+internal segment (`172.21.x.x`) is not reachable from your machine. You need to
+set up a tunnel so your traffic routes through the pivot host to reach internal
+systems.
+
+> **Authorization note:** Only pivot through hosts you own or have explicit written
+> authorisation to test. Never attempt this on production networks.
 
 ## Do
-1. [ ] Map the foothold's network position: what interfaces and routes does it have? What
-   internal range can it reach that you can't?
-2. [ ] Stand up a tunnel through the foothold (ligolo-ng or chisel) so your machine can route
-   into the internal network.
-3. [ ] Reach a service on the internal host through the tunnel — prove the pivot works.
-4. [ ] Move laterally: use credentials or an exploit to gain access to the internal host.
+
+1. [ ] Run the demo to see the full pivot in action:
+   ```bash
+   make demo
+   ```
+   Confirm that (a) the direct connection fails and (b) the tunnelled connection succeeds.
+
+2. [ ] Shell into the attacker container and confirm the network isolation:
+   ```bash
+   make shell
+   # From attacker:
+   ip addr show     # DMZ IP only
+   ip route         # no route to 172.21.x.x
+   curl http://internal-target/   # should fail (no DNS/route)
+   curl http://pivot:8888/        # should succeed (through relay)
+   ```
+
+3. [ ] Shell into the pivot container and examine the dual-homed setup:
+   ```bash
+   docker compose exec pivot bash
+   ip addr show     # two interfaces — DMZ and internal
+   ip route         # has route to both 172.20.x.x and 172.21.x.x
+   ps aux           # relay.py is running as the tunnel
+   ```
+
+4. [ ] Read `relay.py`. Trace the TCP relay logic:
+   - What does it bind to? What does it connect to?
+   - How many threads does it use per connection?
+   - What would change if you wanted to forward UDP instead of TCP?
+
+5. [ ] Map this to real-world pivoting tools — for each, state how you'd configure
+   the same `pivot:8888 → internal-target:80` forward:
+   - `ssh -L`
+   - `socat`
+   - `chisel`
+   - `ligolo-ng`
+
+6. [ ] Draw the full network topology: subnets, container IPs, the relay, and the
+   traffic path. Note which hop each defensive control (firewall, IDS, ZTNA) intercepts.
 
 ## Success criteria — you're done when
-- [ ] You reached an internal-only host from your own machine through the foothold.
-- [ ] You can draw the network and explain each hop of your tunnel.
-- [ ] You gained access to the second host and can name the lateral-movement technique.
+
+- [ ] You confirmed the direct connection to `internal-target` fails from the attacker.
+- [ ] You reached and read the confidential inventory through the `pivot:8888` relay.
+- [ ] You traced `relay.py` and can explain how a TCP relay works.
+- [ ] You can configure the same forward using two other tools (SSH, socat, chisel, or ligolo-ng).
+- [ ] You can draw the network diagram and name the defensive control that stops each hop.
 
 ## Deliverables
-`pivoting.md`: the network diagram, the tunnel setup, and how you reached and accessed the
-internal host.
 
-## AI acceleration
-Have a model sanity-check your routing/tunnel plan — then verify the subnets and routes
-yourself. A wrong route can sever your foothold.
-
-## Connects forward
-Lateral movement is the heart of Track 06 (Active Directory); the defensive inverse is
-segmentation (Track 11, ZTNA) and detection (Track 02).
-
-## Marketable proof
-> "I pivot through a compromised host into a segmented internal network and move laterally —
-> and can explain the segmentation and detection that stop it."
+`pivoting.md`: network diagram (subnets + container IPs), the tunnel setup
+(relay command or equivalent), proof of reaching internal-target (the inventory
+page), and two alternative tunnel tools you'd use on a real engagement.
 
 ## Automate & own it
-**Required.** Script your pivot setup (tunnel + proxychains config + the route commands) so
-it's repeatable from notes; AI drafts it, you verify the routes; commit it.
+
+**Required.** Write `setup-pivot.sh` (or a Python script) that:
+- Takes `PIVOT_HOST`, `PIVOT_PORT`, `TARGET_HOST`, `TARGET_PORT` as arguments
+- Checks the pivot is reachable
+- Starts the relay in the background
+- Confirms the tunnel is live by making a test connection
+- Logs the setup so you can reproduce it later
+
+AI drafts the script; you verify the routing logic before committing. Commit
+`setup-pivot.sh` and `pivoting.md`.
+
+## AI acceleration
+
+Ask a model to compare chisel vs ligolo-ng for a real engagement — both do SOCKS
+proxying, but their C2 traffic looks different on the wire. Ask it which generates
+less anomalous traffic, then verify by reading each tool's documentation.
+
+## Connects forward
+
+Pivoting is the core of lateral movement in Track 06 (Active Directory) — reaching
+domain controllers, passing hashes, and spraying credentials all start from being
+able to route into the internal segment. The defensive inverse is Track 11 (ZTNA) —
+zero-trust architecture removes the "once inside the DMZ, you can reach anything"
+assumption that makes pivoting possible.
+
+## Marketable proof
+
+> "I pivot through a compromised host into a segmented network — using TCP relays,
+> socat, and SSH tunnels — and can explain the segmentation and detection controls
+> that limit attacker reach."
 
 ## Stretch
-- Build a *double* pivot through two segments, and explain why each layer of segmentation
-  raises the attacker's cost.
+
+- Build a **double pivot**: add a second internal segment (`172.22.x.x`) behind
+  the first. Add a second relay on `internal-target` to forward to `internal2-target`.
+  Demonstrate the chain: `attacker → pivot → internal-target → internal2-target`.
+- Demonstrate why ZTNA collapses this attack: if `internal-target` required mutual
+  TLS and identity attestation for every request, what breaks in the pivot chain?

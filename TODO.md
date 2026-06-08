@@ -95,7 +95,7 @@ fits; don't claim a lab works unless you ran it.
 - [x] 09-password-attacks — *hashcat/john over a bundled hash set (fast vs slow KDF contrast)*
 - [x] 10-privesc-linux — *container/VM with a SUID/sudo/cron misconfig; linpeas → root*
 - [x] 11-privesc-windows — *(needs Windows — likely a documented VM, not a container; validate the path)*
-- [ ] 12-pivoting — *compose: attacker + dual-homed pivot host + hidden internal target; ligolo/chisel*
+- [x] 12-pivoting — *compose: attacker + dual-homed pivot host + hidden internal target; ligolo/chisel*
 - [ ] 13-c2-postex — *Sliver C2 server + a target implant in compose; managed session + post-ex*
 - [ ] 14-lolbins-evasion — *Linux LOLBin demo container (GTFOBins); Windows portion via VM/notes*
 - [ ] 15-cloud-primer — **wrap CloudGoat / flaws.cloud** (external, validate it resolves) + Pacu
