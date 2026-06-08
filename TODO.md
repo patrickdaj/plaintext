@@ -72,8 +72,8 @@ fits; don't claim a lab works unless you ran it.
 - [x] 01-telemetry — *suggest: ship a small log set + a shipper (fluent-bit/vector) to a file/stdout*
 - [ ] 02-endpoint-telemetry — *bundle Sysmon-shaped EVTX/JSON; read key Event IDs*
 - [x] 03-linux-telemetry — *osquery querying the container; auditd rules (deterministic query demo)*
-- [ ] 04-network-monitoring — *Zeek over a bundled/generated small pcap → read conn/dns/http logs*
-- [ ] 05-intrusion-detection — *Suricata + ET open rules over a sample pcap → alerts*
+- [x] 04-network-monitoring — *Zeek over a bundled/generated small pcap → read conn/dns/http logs*
+- [x] 05-intrusion-detection — *Suricata + ET open rules over a sample pcap → alerts*
 - [ ] 06-siem — *wrap the Wazuh image (heavy — verify it comes up) or a lighter OpenSearch+sample*
 - [ ] 09-detection-testing — *Atomic Red Team test + confirm the module-08 Sigma rule fires*
 - [x] 10-attack-coverage — *ATT&CK Navigator layer from a rule set (likely a script + sample rules)*
