@@ -115,9 +115,15 @@ The specific way AI/automation speeds this up — and what you must review and o
 A *reference* lab ships its one-command environment in the **`plaintext-labs`** companion repo at
 `plaintext-labs/<track>/<NN-module-name>/` (`docker-compose.yml` + a small bundled `data/` + a
 `Makefile` with `up`/`down`/`reset`/`demo`). The `lab.md` here links to it:
-`git clone …/plaintext-labs && cd <track>/<module> && make up`. Other labs may point at an external
-intentionally-vulnerable target (DVWA, Vulhub, CloudGoat) or a documented one-liner until a container
-is contributed. (VM or cloud free-tier only if the domain requires it.) Reproducible at zero cost.
+`git clone …/plaintext-labs && cd <track>/<module> && make up`. (VM or cloud free-tier only if the
+domain requires it.) Reproducible at zero cost.
+
+**Choosing a lab target, in order of preference:** (1) **wrap a known vulnerable image** when a mature
+one exists — Vulhub (per-CVE), OWASP Juice Shop, DVWA, CloudGoat — in your `docker-compose.yml`, with
+our `Makefile`/demo on top (the default; if Vulhub has it, prefer Vulhub); (2) **point at an external
+target** (PortSwigger Academy, a TryHackMe room) when hosting adds nothing; (3) **build a custom minimal
+target** only when it teaches the mechanism better — legible/deterministic demo, attacker→fixer on the
+source, or Meridian narrative. Never a toy standing in for a real CVE that already exists.
 
 ## Scenario
 What you're doing and why — against an intentionally vulnerable target.
