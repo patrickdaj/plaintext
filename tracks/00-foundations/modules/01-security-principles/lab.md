@@ -1,7 +1,14 @@
 # Lab 01 — Reason About a Breach with First Principles
 
 ## Setup
-No tooling — a recent, well-documented public breach write-up and a text file.
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/01-security-principles
+make demo   # print breach-analysis template + recent CISA KEV entries
+```
+
+No Docker required. Python 3 only.
 
 ## Scenario
 Pick a documented breach (a vendor post-mortem, or pivot from the

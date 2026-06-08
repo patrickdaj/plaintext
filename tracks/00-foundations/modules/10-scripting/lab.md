@@ -1,10 +1,16 @@
 # Lab 10 — A Failed-Login Parser in Python
 
 ## Setup
-Docker-first (mounts the current directory so your script persists):
+
 ```bash
-docker run --rm -it -v "$PWD":/work -w /work python:3.12-slim bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/10-scripting
+make up     # build Python 3.12 container (mounts current dir)
+make demo   # show expected output + Python building blocks
+make shell  # interactive Python shell with data/ mounted
 ```
+
+Your working directory is mounted into the container — write `topips.py` here and it persists on your host.
 
 ## Scenario
 Build a tool that reads an auth log and reports the top source IPs by failed-login count —

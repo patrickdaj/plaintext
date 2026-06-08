@@ -1,11 +1,14 @@
 # Lab 07 — Dissecting HTTP with curl
 
 ## Setup
-Docker-first — run a local echo server so you can see exactly what you send:
+
 ```bash
-docker run --rm -d -p 8080:80 --name httpbin kennethreitz/httpbin
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/07-web-http
+make up     # build + start the Flask echo server
+make demo   # run GET/POST/redirect/cookie/role-header demo
+make shell  # shell with curl available (server at http://echo-server:8080)
 ```
-Then use your host's `curl` against `http://localhost:8080`.
 
 ## Scenario
 Send requests to a local httpbin instance and read every part of the exchange.

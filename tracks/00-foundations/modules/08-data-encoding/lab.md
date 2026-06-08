@@ -1,12 +1,16 @@
 # Lab 08 — Decode the Layers (Real Artifacts)
 
 ## Setup
-Docker-first for the CLI tools, plus [CyberChef](https://gchq.github.io/CyberChef/) in the
-browser:
+
 ```bash
-docker run --rm -it alpine sh
-apk add coreutils jq xxd curl
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/08-data-encoding
+make up     # build container with xxd, jq, curl, python3
+make demo   # decode base64 PS command, hex C2 domain, URL traversal, KEV feed
+make shell  # interactive shell to try the encoding commands yourself
 ```
+
+CyberChef is also available in the browser at https://gchq.github.io/CyberChef/ for visual exploration.
 
 ## Scenario
 Decode the kinds of encoded artifacts you'll actually meet — a base64 PowerShell command and

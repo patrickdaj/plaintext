@@ -1,7 +1,14 @@
 # Lab 02 — Stand Up and Snapshot a Disposable Lab
 
 ## Setup
-A hypervisor (VirtualBox or similar) and Docker installed on your machine.
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/02-lab-setup
+make demo   # validate Docker is running + print VM isolation guide
+```
+
+No Docker image needed — just Docker itself installed.
 
 ## Scenario
 Build the sandbox you'll use for the rest of the curriculum: one isolated VM you can snapshot

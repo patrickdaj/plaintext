@@ -1,10 +1,13 @@
 # Lab 09 — Hashing, Encryption, and Certificates with openssl
 
 ## Setup
-Docker-first:
+
 ```bash
-docker run --rm -it alpine sh
-apk add openssl
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/09-cryptography
+make up     # build Debian + openssl container
+make demo   # SHA-256, AES round-trip, RSA, certificate read, bit-flip
+make shell  # interactive openssl shell
 ```
 
 ## Scenario

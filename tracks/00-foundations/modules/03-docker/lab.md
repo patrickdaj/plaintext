@@ -1,7 +1,14 @@
 # Lab 03 — Run, Build, and Inspect a Container
 
 ## Setup
-Docker installed (or Play with Docker in the browser).
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/03-docker
+make demo   # build and run the demo server, inspect the running user
+```
+
+Docker must be installed on your host. No compose needed — the demo uses Docker directly.
 
 ## Scenario
 Get fluent with the container lifecycle you'll use in every later lab — and notice one

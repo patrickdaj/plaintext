@@ -1,8 +1,21 @@
 # Lab 12 — Threat-Modeling a Small Application
 
 ## Setup
-No attack tooling — you need only a diagram and a list. Optionally model a real vulnerable
-app:
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/12-threat-modeling
+make demo   # validate the STRIDE template + print the threat modeling guide
+```
+
+No Docker required. Copy the template and validate your completed model:
+```bash
+cp data/threat-model-template.md threat-model.md
+# ... fill it in ...
+make validate FILE=threat-model.md
+```
+
+Optionally model a real vulnerable app:
 ```bash
 docker run --rm -d -p 3000:3000 bkimminich/juice-shop
 ```

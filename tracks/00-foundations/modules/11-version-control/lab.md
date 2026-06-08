@@ -1,7 +1,15 @@
 # Lab 11 — Build a Portfolio Repo (the Right Way)
 
 ## Setup
-Git installed and a free GitHub account.
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/11-version-control
+make demo   # check git + print portfolio setup guide and secret-hygiene instructions
+```
+
+No Docker required. Git must be installed (`git --version` to confirm).
+You also need a free [GitHub account](https://github.com/) to push your portfolio repo.
 
 ## Scenario
 Create the repository you'll commit your curriculum deliverables to — and prove you can keep a

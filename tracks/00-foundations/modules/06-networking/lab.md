@@ -1,9 +1,13 @@
 # Lab 06 — Capture and Dissect a Live Exchange
 
 ## Setup
-Docker-first — `netshoot` ships every tool you need (`tcpdump`, `curl`, `dig`):
+
 ```bash
-docker run --rm -it nicolaka/netshoot bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/06-networking
+make up     # start HTTP server + netshoot lab container
+make demo   # live DNS + HTTP demo + annotated capture walk-through
+make shell  # drop into netshoot container with tcpdump, dig, curl
 ```
 
 ## Scenario

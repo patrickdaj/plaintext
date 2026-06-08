@@ -1,10 +1,13 @@
 # Lab 04 — Investigating a Linux Host with Core Tools
 
 ## Setup
-Docker-first — work inside a disposable container so nothing touches your host:
+
 ```bash
-docker run --rm -it ubuntu:22.04 bash
-apt update && apt install -y procps   # provides ps
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/04-linux
+make up     # build + start the container (Ubuntu 22.04 with planted users + auth log)
+make demo   # show expected triage output: users, SUID, processes, log analysis
+make shell  # drop into the container to run the commands yourself
 ```
 
 ## Scenario

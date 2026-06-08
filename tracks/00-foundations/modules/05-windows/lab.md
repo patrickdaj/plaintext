@@ -1,10 +1,19 @@
 # Lab 05 — Inspect a Windows System (and Find a Real Attack in the Logs)
 
 ## Setup
-A Windows machine you own — a free
-[Windows evaluation VM](https://developer.microsoft.com/windows/downloads/virtual-machines/)
-in your lab (module 02) is ideal; snapshot it first. Also grab one real sample log to
-analyse:
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs.git
+cd plaintext-labs/foundations/05-windows
+make demo   # parse bundled EVTX-shaped sample + print PowerShell guide
+```
+
+No Docker required — the log analysis runs on macOS/Linux/Windows with Python 3.
+
+For the live Windows steps (local admins, services, Run keys), you need:
+- A Windows machine you own — a free
+  [Windows evaluation VM](https://developer.microsoft.com/windows/downloads/virtual-machines/)
+  in your lab (module 02) is ideal; snapshot it first.
 - [EVTX-ATTACK-SAMPLES](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES) — real Windows
   event logs (`.evtx`) captured during actual attack techniques.
 
