@@ -13,6 +13,26 @@ with, not noise you stare at.
 Read network traffic at the packet level: explain how a connection is established and how
 names resolve, then capture and dissect a real exchange yourself.
 
+## The core idea
+Every security discipline rides on the network — an attacker maps it, a defender watches it, a
+forensicator reconstructs it — so if you can't read a packet, every later track is built on sand. The
+model that unlocks everything is **layering**: data gets wrapped in headers on the way down the stack
+(application → TCP/UDP → IP → frame) and unwrapped on the way up, so one packet carries nested context
+— this IP, this port, this connection state. Reading a capture is just reading those layers. The
+**TCP three-way handshake** (SYN / SYN-ACK / ACK) is worth genuinely understanding because it's both
+how every connection begins *and* the thing scanning, firewalls, and SYN-floods all manipulate — see
+it once and half of offensive/defensive networking clicks into place.
+
+**DNS** is the other essential model: the resolution chain that turns a name into an IP through a
+hierarchy of resolvers. It matters because it's everywhere, implicitly trusted, and therefore abused —
+C2, tunnelling, and exfiltration all hide in DNS, which is exactly what the defensive hunting modules
+chase. Common ports and protocols (HTTP/S, SSH, DNS, SMTP) are the vocabulary you'll read every scan
+and capture with.
+
+The judgment: AI decodes a capture faster than you can and explains a baffling `tcpdump` filter well —
+but it occasionally invents fields, so verify against the RFC and the man page. Reading the packets
+yourself is the durable skill; the model is a faster route to fluency, not a replacement for it.
+
 ## Learn (~3–4 hrs)
 
 **The model & the protocols**
