@@ -1,0 +1,49 @@
+# .gitignore — Plaintext
+# Security labs drive tools (tcpdump, openssl, volatility, metasploit, prowler, …)
+# that emit captures, keys, dumps and logs. Per CLAUDE.md → "Secret & artifact
+# hygiene", those are referenced in the lab text, never committed.
+
+# === Secrets — never commit ===
+.env
+.env.*
+*.pem
+*.key
+*_rsa
+*_dsa
+*_ed25519
+*.kdbx
+*.token
+credentials
+
+# === Lab artifacts: captures, memory/disk images, logs ===
+*.pcap
+*.pcapng
+*.cap
+*.log
+*.dmp
+*.mem
+*.vmem
+*.raw
+*.lime
+*.E01
+*.aff4
+
+# === Malware samples — keep out of the repo entirely ===
+samples/
+*.malware
+
+# === Python (generators / tooling) ===
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# === Static-site build output (e.g. MkDocs) ===
+site/
+.cache/
+
+# === OS / editor cruft ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
