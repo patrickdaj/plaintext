@@ -123,7 +123,17 @@ module's two files:
 **Definition of done (a module is finished when):** "The core idea" is substantive original prose,
 not a list; **Learn** is grouped, time-boxed, and every link has a why-line; the lab follows the
 full template below including the required **Automate & own it** build; and any lab that attacks a
-target carries the authorization note.
+target carries the authorization note. **And — non-negotiable — the lab's environment is built and
+*validated*:** its `plaintext-labs` directory exists (a custom build or a wrapped known image), `make
+up` / `make demo` has actually been *run* and works, and `lab.md` links to it. A lab that only
+*references* an external target or a `docker run` one-liner that nobody has executed is **not done** —
+it's a stub. Bridge prose without a validated lab is half a module.
+
+**A track is done only when every one of its modules is done by the above — labs included.** We
+interleave: bridge prose and validated labs ship together per track; a track with great prose and
+untested labs does not count as complete. (As of the first rollout, prose for foundations/offensive/
+defensive shipped ahead of their labs — those three tracks owe a lab-validation backfill before they
+count as done.)
 
 **`lab.md` — the project**
 - **Setup** (Docker-first) and **Scenario** (with the authorization note where it attacks a target).

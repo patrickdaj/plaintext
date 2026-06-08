@@ -1,24 +1,36 @@
 # Lab 07 — Normalise a Real Messy Log
 
 ## Setup
-Docker-first — Vector:
+This is a **reference lab** — its environment lives in the companion
+[`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo:
+
 ```bash
-docker run --rm -it -v "$PWD":/etc/vector timberio/vector:latest-alpine --config /etc/vector/vector.toml
+git clone https://github.com/plaintext-security/plaintext-labs
+cd plaintext-labs/defensive/07-log-parsing
+make up
+make demo      # normalise the sample sshd log and print the parse rate (and the unparsed lines)
+make down
 ```
-Real data: a real raw log from [loghub](https://github.com/logpai/loghub) (e.g. Apache, Linux, or
-OpenSSH) — genuinely messy, with real variety.
+
+The lab bundles a deliberately messy sample (`data/auth_sample.txt` — real-shaped sshd auth lines from
+the Meridian bastion, plus a CRON line and a corrupt line that *don't* fit the sshd pattern) and a
+stdlib reference normaliser (`normalize.py`) that emits ECS-style events and reports the parse rate.
+That harness is your **spec**: your job is to reproduce the same normalisation in **Vector (VRL)** — the
+production tool — and match its output, then handle what it couldn't.
 
 ## Scenario
-Take a real, unstructured log and turn it into clean, normalised, queryable events — without losing
-lines.
+Turn an unstructured log into clean, normalised, queryable events — *without silently losing lines.*
 
 ## Do
-1. [ ] Pick a real loghub log and inspect its format(s). (How many distinct line shapes are there?)
-2. [ ] Write a parser (Vector VRL, or grok) that extracts the key fields (timestamp, source, severity,
-   message, IP).
-3. [ ] Normalise the field names to a common schema (ECS): e.g. `source.ip`, `event.action`.
-4. [ ] Handle the malformed lines deliberately — measure your parse rate and decide what to do with
-   the failures.
+1. [ ] `make demo` and read the output: **8 of 10** lines parse; the CRON line and the corrupt line do
+   not. That 80% is the whole lesson — note exactly which lines fell through and why.
+2. [ ] Inspect `data/auth_sample.txt`. How many distinct line shapes are there, and which fields
+   identify an auth event (outcome, user, source IP, port)?
+3. [ ] Reimplement the normalisation in **Vector VRL** (or grok): extract those fields and normalise to
+   ECS names (`source.ip`, `user.name`, `event.outcome`, `event.action`) so your output matches the
+   reference for the sshd lines.
+4. [ ] Handle the unparsed lines *deliberately* — route them to a dead-letter stream rather than
+   dropping them — and measure your parse rate the way the harness does.
 
 ## Success criteria — you're done when
 - [ ] The raw log is emitted as structured, normalised events.
