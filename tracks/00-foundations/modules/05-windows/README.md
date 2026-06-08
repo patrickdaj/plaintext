@@ -13,6 +13,27 @@ depend on.
 Navigate Windows for security work: the filesystem and registry, processes and services,
 event logs, and basic PowerShell.
 
+## The core idea
+It's tempting to stay Linux-only, but the enterprise runs on Windows and so do most attacks —
+Active Directory is the crown jewel attackers chase, and the AD, endpoint, and forensics tracks all
+assume you can navigate Windows. The mental shift for the Linux-comfortable: **Windows centralises
+where Linux scatters.** The **registry** is the big one — a single hierarchical database of
+configuration and runtime state — and because so much persistence and config lives there, it's both an
+attacker's favourite hiding spot and a forensic goldmine. **Event logs** (with their Event IDs) are
+the Windows answer to `/var/log`, and they're the raw material the entire defensive track reads.
+
+The literacy to build: the filesystem and its key paths, the registry (hives/keys and why they matter
+for persistence *and* forensics), processes/services/Task Scheduler (where persistence and privesc
+live), event logs, and enough **PowerShell** to inspect and automate. PowerShell is the through-line —
+it's simultaneously the native admin language, the attacker's tool of choice (signed, everywhere,
+often fileless), and the defender's — which is why it shows up again in the offensive, defensive, and
+AD tracks.
+
+The judgment: PowerShell runs with real privilege and is the exact surface attackers abuse, so read
+every generated command before running it — especially anything touching the registry, services, or
+`Invoke-*`. "I ran the AI's PowerShell" on a live system is how you damage a host or trip the very
+telemetry the blue team is watching for.
+
 ## Learn (~3 hrs)
 
 **Fundamentals, hands-on**

@@ -13,6 +13,26 @@ here.
 Operate confidently on a Linux command line and use core tools to investigate a host's
 users, processes, files, and logs.
 
+## The core idea
+Most of what you'll defend, attack, or investigate runs on Linux, and the shell is the universal
+interface — so the gap between *reading* a system and *guessing* at it is just fluency with a handful
+of tools. Two mental models carry most of the weight. **"Everything is a file":** processes, devices,
+even live kernel state (`/proc`) all appear as files you read with the same tools — which is why
+text-processing is a security superpower, not a chore. And the **permission model** (`rwx` for
+user/group/other, plus SUID/SGID) is the entire OS access-control story in a few bits — with SUID
+specifically being the seed of half of Linux privilege escalation: a file that runs as *its owner*,
+not as you.
+
+The text-processing pipeline (`grep | awk | cut | sort | uniq`) is what you'll actually live in — log
+triage, parsing tool output, finding the one line that matters among a million. It's worth real reps
+because every later track (privesc, forensics, detection) comes back to "read this host's users,
+processes, files, and logs, fast."
+
+The judgment: a model is a quick shell tutor and one-liner generator, but verify before you run —
+check flags against `man`, and never paste a generated command that touches files or permissions
+without reading it, because a wrong `rm` or `chmod` on a live box doesn't have an undo. The fluency is
+the point; AI accelerates building it, it doesn't replace it.
+
 ## Learn (~3 hrs)
 
 **The shell & the filesystem**

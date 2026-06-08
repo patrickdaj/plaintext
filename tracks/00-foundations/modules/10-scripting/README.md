@@ -13,6 +13,24 @@ to read it.
 ## Objective
 Turn a repetitive analysis task into a small, repeatable, reviewable Python tool.
 
+## The core idea
+Security work is repetition — parsing logs, enriching indicators, calling APIs, reshaping data — and
+Python is the field's lingua franca because its standard library already covers most of it. The goal
+here is explicitly *not* to become a software engineer; it's to automate the boring 80% so your
+attention goes to the 20% that needs judgment. The mental model is "small, repeatable, reviewable
+tool," not "application": read a file, extract with regex, reshape JSON, maybe call an HTTP API, print
+the answer. Four standard-library modules (`re`, `json`, `pathlib`, `argparse`) cover most of it.
+
+Regex earns its own mention — it's the analyst's scalpel for pulling the one field you want out of
+messy text, and it recurs in every log-parsing, detection, and triage task across the curriculum, so
+it's worth real practice (build and test patterns in regex101 before they go into code).
+
+The judgment, and where a curriculum-wide habit is born: **a model will happily write the whole
+script**, so your job shifts from *typing* to *reviewing* — check the regex actually matches, confirm
+it handles the malformed line, verify it does nothing unintended — then own it. This is the first
+concrete rep of **AI authors → you review → you own it**, the posture every later track assumes. Typing
+the code was never the skill; directing and reviewing it is.
+
 ## Learn (~4 hrs)
 
 **Python, fast**

@@ -13,6 +13,25 @@ Crypto/PKI tracks all inherit the mistake.
 Explain and exercise the core primitives — hashing, symmetric and asymmetric encryption,
 and certificates — with `openssl`, and recognise when one is misused.
 
+## The core idea
+Crypto is the trust layer under everything, and you don't need the math — you need to know what each
+primitive *guarantees* and, more importantly, what it *doesn't*. Three jobs, three tools. **Hashing**
+(SHA-256) proves **integrity** — same input, same fingerprint — and is one-way, not secret (this is the
+exact foundation the offensive password-cracking module stands on). **Symmetric** encryption (AES)
+gives **confidentiality** with one shared key — fast, but it raises the question "how do both sides get
+the key safely?" **Asymmetric** (RSA/EC) answers that with a keypair, which also enables signatures and
+underpins **certificates** — the chain of trust that lets you believe a server is who it claims (TLS).
+
+The judgment-laden insight that prevents real bugs: **"encrypted" ≠ "authenticated."** Encryption hides
+data; on its own it does *not* prove the data wasn't tampered with — which is why AEAD modes (that do
+both) exist and why authenticated encryption is the modern default. "I encrypted it, so it's secure" is
+precisely the mistake the Cloud, Web, and PKI tracks inherit when this module is skimmed.
+
+The judgment on tooling: crypto is where confident-but-wrong AI is most dangerous — models cheerfully
+suggest broken modes (ECB) and dead ciphers because those appear all over their training data. Use a
+model to *explain* a concept, then verify the actual command and parameters against the OpenSSL
+Cookbook before relying on them. In crypto, "looks right" and "is right" sit very far apart.
+
 ## Learn (~4 hrs)
 
 **Concepts**

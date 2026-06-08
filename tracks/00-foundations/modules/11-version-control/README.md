@@ -12,6 +12,25 @@ security role that touches detection-as-code, IaC, or tooling.
 Use git confidently — branch, commit, push, and collaborate via pull requests — and keep
 secrets and artifacts out of history.
 
+## The core idea
+This whole curriculum is "commit the artifact," so git isn't optional plumbing — it's how you build a
+portfolio, prove your work, and collaborate, and it's table stakes for any role touching
+detection-as-code, IaC, or tooling. The mental model worth holding: git is a *history of snapshots*,
+and branches are just cheap pointers into that history — which is why the fork → branch → pull-request
+flow (how the open-source world, and this project, collaborate) is the same three moves every time.
+
+The security-specific reason this module exists, beyond fluency: **git history is forever**, and that
+cuts both ways. It's why a portfolio of commits is credible — and why a leaked secret is the canonical
+disaster. A key or token committed even once and "deleted" in a later commit is *still in history*,
+retrievable by anyone who has the repo; the only real fix is to **rotate the secret**, not delete the
+file. That's the entire reason this repo ships a `.gitignore` and treats secret hygiene as a standing
+rule.
+
+The judgment: models explain a git error or draft a commit message well, but they'll also confidently
+propose history-rewriting commands (`reset --hard`, force-push) that can destroy work irrecoverably.
+Understand any state-changing git command before you run it — git's safety net has holes, and "the AI
+told me to force-push" is a bad incident story.
+
 ## Learn (~3 hrs)
 
 **Git, properly**
