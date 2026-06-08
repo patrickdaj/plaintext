@@ -75,7 +75,7 @@ fits; don't claim a lab works unless you ran it.
 - [x] 04-network-monitoring — *Zeek over a bundled/generated small pcap → read conn/dns/http logs*
 - [x] 05-intrusion-detection — *Suricata + ET open rules over a sample pcap → alerts*
 - [ ] 06-siem — *wrap the Wazuh image (heavy — verify it comes up) or a lighter OpenSearch+sample*
-- [ ] 09-detection-testing — *Atomic Red Team test + confirm the module-08 Sigma rule fires*
+- [x] 09-detection-testing — *Atomic Red Team test + confirm the module-08 Sigma rule fires*
 - [x] 10-attack-coverage — *ATT&CK Navigator layer from a rule set (likely a script + sample rules)*
 - [ ] 11-hunting-endpoint — *Velociraptor/osquery hunt over bundled endpoint data*
 - [ ] 12-hunting-network — *RITA over Zeek logs from a beaconing sample → find the beacon*
