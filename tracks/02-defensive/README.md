@@ -30,6 +30,21 @@ telemetry in, tested detections out, mapped to attacker behaviour.
 | 14 | Threat Intelligence | Managing IOCs and enriching detections | `MISP`, `OpenCTI` |
 | 15 | Response Automation (SOAR primer) | Automating enrich → contain → ticket | `Shuffle` |
 
+## Phases & projects
+
+The fifteen modules run in three phases; each ends in a **project** that integrates its modules.
+
+- **Phase 1 · Get the data** (01–07) — **Project:** a working telemetry pipeline that ingests host
+  *and* network data into a searchable SIEM, with a real attack dataset flowing through it.
+- **Phase 2 · Find the attacker** (08–12) — **Project:** a set of detections-as-code mapped to MITRE
+  ATT&CK, tested against a real attack dataset, plus one documented threat hunt.
+- **Phase 3 · Respond** (13–15) — **Project:** an incident handled from alert to root cause, with an
+  automated enrich → contain → ticket step (the track capstone).
+
+> **Standalone by design.** Every detection lab here sources a **real public dataset** (and a
+> generate-it-here option), so you can complete this track without having done Offensive. If you
+> *did* do Track 01, bring your own attack artifacts instead — same skill.
+
 ## Prerequisites
 Complete Track 00 — Foundations first.
 

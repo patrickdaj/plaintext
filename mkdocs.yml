@@ -144,7 +144,20 @@ nav:
       - "16 · Reporting & Remediation":
           - Concept: 01-offensive/modules/16-reporting/README.md
           - Lab: 01-offensive/modules/16-reporting/lab.md
-  - Defensive Operations: 02-defensive/README.md
+  - Defensive Operations:
+      - Overview: 02-defensive/README.md
+      - "01 · Telemetry & Log Centralisation":
+          - Concept: 02-defensive/modules/01-telemetry/README.md
+          - Lab: 02-defensive/modules/01-telemetry/lab.md
+      - "02 · Windows & Endpoint Telemetry":
+          - Concept: 02-defensive/modules/02-endpoint-telemetry/README.md
+          - Lab: 02-defensive/modules/02-endpoint-telemetry/lab.md
+      - "03 · Linux Telemetry":
+          - Concept: 02-defensive/modules/03-linux-telemetry/README.md
+          - Lab: 02-defensive/modules/03-linux-telemetry/lab.md
+      - "04 · Network Security Monitoring":
+          - Concept: 02-defensive/modules/04-network-monitoring/README.md
+          - Lab: 02-defensive/modules/04-network-monitoring/lab.md
   - Digital Forensics & IR: 03-forensics/README.md
   - Malware Analysis: 04-malware/README.md
   - Cloud & Container Security: 05-cloud/README.md
