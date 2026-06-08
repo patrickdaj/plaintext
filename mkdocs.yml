@@ -105,6 +105,21 @@ nav:
       - "03 · Vulnerability Identification":
           - Concept: 01-offensive/modules/03-vuln-id/README.md
           - Lab: 01-offensive/modules/03-vuln-id/lab.md
+      - "04 · Exploitation Fundamentals":
+          - Concept: 01-offensive/modules/04-exploitation/README.md
+          - Lab: 01-offensive/modules/04-exploitation/lab.md
+      - "05 · Memory Corruption Primer":
+          - Concept: 01-offensive/modules/05-memory-corruption/README.md
+          - Lab: 01-offensive/modules/05-memory-corruption/lab.md
+      - "06 · Web — Injection":
+          - Concept: 01-offensive/modules/06-web-injection/README.md
+          - Lab: 01-offensive/modules/06-web-injection/lab.md
+      - "07 · Web — Auth & Access Control":
+          - Concept: 01-offensive/modules/07-web-access-control/README.md
+          - Lab: 01-offensive/modules/07-web-access-control/lab.md
+      - "08 · Web — SSRF, XXE & Deserialization":
+          - Concept: 01-offensive/modules/08-web-ssrf-xxe/README.md
+          - Lab: 01-offensive/modules/08-web-ssrf-xxe/lab.md
   - Defensive Operations: 02-defensive/README.md
   - Digital Forensics & IR: 03-forensics/README.md
   - Malware Analysis: 04-malware/README.md
