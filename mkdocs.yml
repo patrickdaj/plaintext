@@ -20,8 +20,6 @@ theme:
     text: IBM Plex Sans
     code: IBM Plex Mono
   features:
-    - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.indexes
     - navigation.footer
