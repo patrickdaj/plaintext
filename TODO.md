@@ -93,7 +93,7 @@ fits; don't claim a lab works unless you ran it.
 - [x] 07-web-access-control — *vulnerable app with IDOR/role flaws (extend the 06 app or Juice Shop)*
 - [x] 08-web-ssrf-xxe — *app with SSRF to a mock metadata endpoint (compose: app + fake-metadata)*
 - [x] 09-password-attacks — *hashcat/john over a bundled hash set (fast vs slow KDF contrast)*
-- [ ] 10-privesc-linux — *container/VM with a SUID/sudo/cron misconfig; linpeas → root*
+- [x] 10-privesc-linux — *container/VM with a SUID/sudo/cron misconfig; linpeas → root*
 - [ ] 11-privesc-windows — *(needs Windows — likely a documented VM, not a container; validate the path)*
 - [ ] 12-pivoting — *compose: attacker + dual-homed pivot host + hidden internal target; ligolo/chisel*
 - [ ] 13-c2-postex — *Sliver C2 server + a target implant in compose; managed session + post-ex*
