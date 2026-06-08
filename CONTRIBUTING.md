@@ -37,6 +37,11 @@ The lab's *runnable* environment (Dockerfiles, `docker-compose`, seed data, harn
 live here — it lives in the companion repo **[`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs)**
 at `<track>/<NN-module-name>/`, and `lab.md` links to it. Prose here, runnable there.
 
+**A module is not done until its lab is built *and validated*** — the `plaintext-labs` directory exists
+(custom build or wrapped known image) and you have actually run `make up`/`make demo` and seen it work.
+A `lab.md` that only references an external target or an untested `docker run` line is a stub, not a
+finished lab. A track counts as complete only when all its labs meet this bar.
+
 Each **track** (`tracks/<NN>-<name>/README.md`) is a content map that ends in a
 **capstone** — a portfolio-worthy artifact (its starter lives in `plaintext-labs`) that proves the track.
 
