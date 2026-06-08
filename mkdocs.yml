@@ -129,6 +129,21 @@ nav:
       - "11 · Privilege Escalation — Windows":
           - Concept: 01-offensive/modules/11-privesc-windows/README.md
           - Lab: 01-offensive/modules/11-privesc-windows/lab.md
+      - "12 · Pivoting & Lateral Movement":
+          - Concept: 01-offensive/modules/12-pivoting/README.md
+          - Lab: 01-offensive/modules/12-pivoting/lab.md
+      - "13 · C2 & Post-Exploitation":
+          - Concept: 01-offensive/modules/13-c2-postex/README.md
+          - Lab: 01-offensive/modules/13-c2-postex/lab.md
+      - "14 · Living-off-the-Land & Evasion":
+          - Concept: 01-offensive/modules/14-lolbins-evasion/README.md
+          - Lab: 01-offensive/modules/14-lolbins-evasion/lab.md
+      - "15 · Cloud & Container Attack Primer":
+          - Concept: 01-offensive/modules/15-cloud-primer/README.md
+          - Lab: 01-offensive/modules/15-cloud-primer/lab.md
+      - "16 · Reporting & Remediation":
+          - Concept: 01-offensive/modules/16-reporting/README.md
+          - Lab: 01-offensive/modules/16-reporting/lab.md
   - Defensive Operations: 02-defensive/README.md
   - Digital Forensics & IR: 03-forensics/README.md
   - Malware Analysis: 04-malware/README.md
