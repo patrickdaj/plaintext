@@ -1,12 +1,26 @@
 # Lab 02 — Read Endpoint Telemetry From a Real Attack
 
 ## Setup
-A Windows VM you own (Sysmon + the SwiftOnSecurity config) to generate your own telemetry — **or**,
-fully self-contained, a real public sample:
-- [EVTX-ATTACK-SAMPLES](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES) — real Sysmon/Windows
-  event logs captured during actual attack techniques.
-- To generate your own: [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) runs real
-  ATT&CK techniques safely on your lab host.
+
+```bash
+git clone https://github.com/plaintext-security/plaintext-labs
+cd plaintext-labs/defensive/02-endpoint-telemetry
+make up
+```
+
+Run `make demo` to analyze a bundled `data/sysmon_events.json` — 10 events
+spanning a full spear-phishing attack chain (WINWORD.EXE → cmd → PowerShell
+encoded download → rundll32 LOLBin → LSASS dump → Run key persistence → C2
+callback). The script reconstructs the process tree, decodes the base64
+payload, and flags each technique by ATT&CK ID.
+
+For real Sysmon telemetry, deploy [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+with the [SwiftOnSecurity config](https://github.com/SwiftOnSecurity/sysmon-config)
+on your own Windows VM, export events with
+`Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' | ConvertTo-Json | Out-File events.json`,
+then `python3 analyze.py events.json`. For public sample EVTX files, see
+[EVTX-ATTACK-SAMPLES](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES) +
+[python-evtx](https://github.com/williballenthin/python-evtx) to export to JSON.
 
 ## Scenario
 Find an attacker's footprints in real endpoint telemetry — without needing to have run the attack
