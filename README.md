@@ -6,7 +6,7 @@ Plaintext is a community-built cybersecurity curriculum: hands-on, job-ready, an
 AI-augmented, built open-source-first. Professional-grade training from foundations to
 advanced specialisations — free to use, free to fork, free to improve.
 
-**Live site:** <https://patrickdaj.github.io/plaintext/> — built with Material for MkDocs
+**Live site:** <https://plaintext-security.github.io/plaintext/> — built with Material for MkDocs
 from the Markdown under `tracks/`.
 
 ## Tracks
