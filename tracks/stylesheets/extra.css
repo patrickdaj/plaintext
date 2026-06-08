@@ -1,0 +1,22 @@
+/* Nudge Material toward the Plaintext terminal aesthetic on content pages.
+   The landing hero carries its own scoped styles in overrides/home.html. */
+
+:root > * {
+  --md-accent-fg-color: #00ff88;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #00ff88;
+  --md-typeset-a-color: #00aaff;
+}
+
+/* Blockquotes are used for the standing authorization / safety notes —
+   give them a green left rule so they read as a callout. */
+.md-typeset blockquote {
+  border-left: 0.2rem solid #00ff88;
+}
+
+/* Inline code: subtle green, matching the curriculum's tool references. */
+.md-typeset code {
+  color: #8affc8;
+}

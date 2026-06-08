@@ -45,6 +45,13 @@ Complete Track 00 — Foundations first.
 > VMs, free CTF rooms such as TryHackMe/HackTheBox free tiers). Never point these
 > techniques at anything else.
 
+## Capstone
+
+Run a full engagement against an intentionally vulnerable target — recon through
+exploitation, privilege escalation, and lateral movement — and deliver a professional
+report: findings, evidence, business impact, and prioritised remediation a defender can
+act on. **Deliverable:** the report is the artifact, not the shell.
+
 ## AI & automation
 
 AI drafts; you verify and own it. Models accelerate recon synthesis, wordlist and

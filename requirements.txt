@@ -1,0 +1,3 @@
+# Site toolchain. Install with: python3 -m pip install -r requirements.txt
+# Preview locally with: mkdocs serve   ·   Build with: mkdocs build
+mkdocs-material==9.7.6

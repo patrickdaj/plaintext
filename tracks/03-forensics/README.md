@@ -38,6 +38,12 @@ Complete Track 00 — Foundations first.
 > training (e.g. DFIR images, the Volatility sample set). Never examine evidence you are
 > not authorised to handle.
 
+## Capstone
+
+Take a training disk or memory image to a root-cause incident report: acquire and verify,
+build a super-timeline, and reconstruct what happened — defensibly, every claim tied to an
+artifact. **Deliverable:** the timeline and a report that would survive scrutiny.
+
 ## AI & automation
 
 AI summarises timelines, correlates artifacts, and drafts the incident narrative far

@@ -39,6 +39,13 @@ Complete Track 00 — Foundations first.
 > environments (e.g. CloudGoat, flaws.cloud). Never test against accounts or tenants you
 > don't own or aren't authorised to assess, and tear down billable resources when done.
 
+## Capstone
+
+Find a privilege-escalation path in a deliberately vulnerable cloud account (CloudGoat or
+flaws.cloud), explain it, then close it as code — Terraform gated by a scanner in CI — and
+detect the attack from cloud logs. **Deliverable:** the attack path, the fix-as-code, and
+the detection.
+
 ## AI & automation
 
 In the cloud the infrastructure *is* code — and increasingly that code is AI-written,

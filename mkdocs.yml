@@ -1,0 +1,67 @@
+site_name: Plaintext
+site_description: Open security education for everyone. No paywalls. No gatekeeping. Forever free.
+site_url: https://patrickdaj.github.io/plaintext/
+repo_url: https://github.com/patrickdaj/plaintext
+repo_name: patrickdaj/plaintext
+copyright: CC BY 4.0 — use it, share it, build on it.
+
+# The curriculum Markdown under tracks/ is the source; MkDocs builds it into site/.
+docs_dir: tracks
+site_dir: site
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    scheme: slate
+    primary: black
+    accent: light green
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Foundations:
+      - 00-foundations/README.md
+      - Networking Fundamentals: 00-foundations/modules/01-networking/README.md
+      - "Networking — Lab": 00-foundations/modules/01-networking/lab.md
+  - Offensive Security: 01-offensive/README.md
+  - Defensive Operations: 02-defensive/README.md
+  - Digital Forensics: 03-forensics/README.md
+  - Malware Analysis: 04-malware/README.md
+  - Cloud Security: 05-cloud/README.md

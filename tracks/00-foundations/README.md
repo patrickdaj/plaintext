@@ -29,6 +29,13 @@ underpins trust. Build this floor solid and everything above it gets easier.
 Complete beginners and anyone wanting to solidify fundamentals before moving to a
 specialisation track. No prior security experience assumed.
 
+## Capstone
+
+Capture, dissect, and document a full request/response flow end to end — DNS lookup,
+TCP handshake, and a TLS session — from your own packet capture, scripted so it
+reproduces from scratch. **Deliverable:** a short write-up plus the script, proving you
+can read what is actually on the wire.
+
 ## AI & automation
 
 Automation and AI are assumed from day one — but as accelerators, not substitutes for

@@ -2,9 +2,12 @@
 
 > Open security education for everyone. No paywalls. No gatekeeping. Forever free.
 
-Plaintext is a community-built cybersecurity curriculum using only open source tools.
-Professional-grade training from foundations to advanced specialisations — free to use,
-free to fork, free to improve.
+Plaintext is a community-built cybersecurity curriculum: hands-on, job-ready, and
+AI-augmented, built open-source-first. Professional-grade training from foundations to
+advanced specialisations — free to use, free to fork, free to improve.
+
+**Live site:** <https://patrickdaj.github.io/plaintext/> — built with Material for MkDocs
+from the Markdown under `tracks/`.
 
 ## Tracks
 
@@ -20,12 +23,20 @@ free to fork, free to improve.
 ## Structure
 
 ```
-tracks/
+tracks/                         ← curriculum source (MkDocs builds this into the site)
 └── 00-foundations/
+    ├── README.md               ← track content map (overview, modules, capstone)
     └── modules/
         └── 01-networking/
-            ├── README.md   ← concept explanation
-            └── lab.md      ← hands-on exercise
+            ├── README.md       ← concept explanation
+            └── lab.md          ← hands-on, Docker-first exercise
+```
+
+## Run it locally
+
+```bash
+python3 -m pip install -r requirements.txt
+mkdocs serve     # live preview at http://127.0.0.1:8000
 ```
 
 ## Contributing

@@ -4,65 +4,66 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-Plaintext is an open security-education curriculum (CC BY 4.0). It is a **content repository plus a static landing page** — there is no application code, build system, package manager, or test suite. Work here is almost entirely Markdown authoring and editing one hand-written HTML page.
+Plaintext is an open security-education curriculum (CC BY 4.0). The curriculum is authored in **Markdown under `tracks/`** and published as a **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) static site**. There is no application code or test suite — work here is almost entirely Markdown authoring, plus the MkDocs config and one hand-authored landing-page template. The one build step is `mkdocs build` (see Deployment).
 
 ## Repo map
 
 ```
 plaintext/
-├── docs/                  # the published site — the ONLY directory GitHub Pages serves
-│   ├── index.html             # the landing page (standalone, CSS inlined)
-│   └── tracks/                # GENERATED curriculum-map pages — do not hand-edit
-│       ├── track.css             # shared styling for the map pages
-│       └── <NN-track-name>.html  # rendered from tracks/<NN>/README.md
-├── tracks/                # the Markdown curriculum — the SOURCE OF TRUTH for content
+├── tracks/                # the curriculum Markdown — the SOURCE OF TRUTH, and MkDocs' docs_dir
+│   ├── index.md               # landing page stub (uses the custom home template)
+│   ├── stylesheets/extra.css  # Material theme tuning (terminal palette)
 │   └── <NN-track-name>/
-│       ├── README.md          # track overview (intro + module table) → rendered to docs/tracks/
+│       ├── README.md          # track overview / content map (rendered at /<NN-track-name>/)
 │       └── modules/<NN-module-name>/
 │           ├── README.md      # concept explanation
-│           └── lab.md          # hands-on OSS-only exercise
-├── tools/build_track_pages.py # regenerates docs/tracks/*.html from tracks/*/README.md
+│           └── lab.md          # hands-on, OSS-first exercise
+├── overrides/home.html    # custom landing hero (Material theme override) — hand-authored
+├── mkdocs.yml             # site config: theme, nav, markdown extensions
+├── requirements.txt       # pinned site toolchain (mkdocs-material)
+├── site/                  # GENERATED build output — gitignored, never committed or edited
 ├── CONTRIBUTING.md        # canonical module/lab templates + content rules — read before authoring
 ├── README.md              # repo intro + track table
 ├── LICENSE                # CC BY 4.0
+├── .gitignore             # secrets, lab artifacts, build output
 └── .github/
-    ├── workflows/deploy.yml         # GitHub Pages deploy (push to main → publishes docs/)
-    └── ISSUE_TEMPLATE/new-module.md # how new modules are proposed
+    ├── workflows/deploy.yml         # CI: mkdocs build → GitHub Pages (push to main)
+    └── ISSUE_TEMPLATE/new-module.md # the per-module intake form
 ```
 
-## The site, the curriculum, and how they connect
+## How the site is built
 
-Two layers, with a one-way generator bridging them:
-
-1. **`docs/index.html`** — the hand-authored landing page. Standalone, all CSS inlined in a `<style>` block (no framework, no external assets except a Google Fonts link). Its track cards link to the generated map pages under `docs/tracks/`.
-2. **`tracks/`** — the curriculum, authored in Markdown. **This is the source of truth for all curriculum content.**
-3. **`docs/tracks/<NN>.html`** — published map pages, **generated** from each `tracks/<NN>/README.md` by `tools/build_track_pages.py`. They share `docs/tracks/track.css`.
-
-The critical rule:
-- **Never hand-edit `docs/tracks/*.html`.** Edit the track `README.md` under `tracks/`, then re-run `python3 tools/build_track_pages.py` to regenerate. Hand edits will be overwritten and the two will silently drift.
-- `index.html` is still hand-authored — it is *not* generated. Only the per-track map pages are.
-- Only `docs/` is published (see Deployment). The `tracks/` Markdown and `tools/` script are in the repo but **not** served; the live curriculum pages are the rendered copies under `docs/tracks/`.
-- The generator only renders track-level `README.md` files. Module `README.md`/`lab.md` content is **not** yet rendered to the site — if a task implies it should be, that wiring does not exist yet; flag it.
+- **`tracks/` is the single source of truth.** MkDocs is configured with `docs_dir: tracks` and builds the whole site into `site/`.
+- **Never edit `site/`** — it is generated and gitignored. Edit the Markdown (or `mkdocs.yml` / `overrides/`) and rebuild.
+- **The landing page** is `overrides/home.html` (the hand-authored terminal-style hero) wired to `tracks/index.md` via its `template:` front matter. Curriculum pages use the stock Material theme, tuned by `tracks/stylesheets/extra.css`.
+- **Nav is explicit** in `mkdocs.yml`. When you add a module (`README.md` / `lab.md`), add it to the `nav:` tree, or `mkdocs build --strict` will fail on a page that is not in the nav.
+- **Preview / build locally:**
+  ```bash
+  python3 -m pip install -r requirements.txt
+  mkdocs serve              # live preview at http://127.0.0.1:8000
+  mkdocs build --strict     # what CI runs; fails on broken links / orphan pages
+  ```
 
 ## Deployment
 
-`.github/workflows/deploy.yml` deploys to GitHub Pages via GitHub Actions, **on push to `main` only**. It uploads `./docs` as the Pages artifact — so only files inside `docs/` are published. The site is a project page served under the `/plaintext/` path (`https://patrickdaj.github.io/plaintext/`); keep that in mind for any absolute paths.
+`.github/workflows/deploy.yml` deploys to GitHub Pages via GitHub Actions, **on push to `main` only**. CI installs `requirements.txt`, runs `mkdocs build --strict`, and publishes `site/`. The site is a project page served under the `/plaintext/` path (`https://patrickdaj.github.io/plaintext/`); MkDocs handles base-path-relative links, so use the `url` filter in templates and normal relative links in Markdown.
 
-Deployment itself stays build-free: Pages serves the committed `docs/` as-is. The one generation step is **local and optional** — `tools/build_track_pages.py` (stdlib-only Python 3, no dependencies) renders the track maps into `docs/tracks/`. Run it after editing any track `README.md`, then commit the regenerated HTML alongside the Markdown so the published pages stay in sync. CI does not run it.
-
-To preview the site locally, open `docs/index.html` in a browser, or serve it with `python3 -m http.server` from the `docs/` directory. (The published Pages site may be unreachable from sandboxed environments that block `*.github.io`; verify a deploy succeeded via the GitHub Actions run status instead.)
+A failed build does **not** take down the live site — Pages keeps the last good deploy — but it does mean your change is not published until the build is green. (The published Pages site may be unreachable from sandboxed environments that block `*.github.io`; verify a deploy succeeded via the GitHub Actions run status instead.)
 
 ## Content structure and authoring rules
 
-Track and module directories are zero-padded and numbered (`00-foundations`, `modules/01-networking`); see the [Repo map](#repo-map) for the layout. The canonical templates for a module `README.md` and `lab.md`, plus the curriculum content rules, live in `CONTRIBUTING.md` — follow them when adding or editing modules. Key non-obvious rules from there:
+Track and module directories are zero-padded and numbered (`00-foundations`, `modules/01-networking`); see the [Repo map](#repo-map). The canonical templates for a module `README.md` and `lab.md` live in `CONTRIBUTING.md` — follow them when adding or editing modules. The binding rules:
 
-- All prose must be **original writing from primary sources**. Do not copy from SANS, Offensive Security, or other proprietary course material.
-- Reference and use **open source tools only**; labs must be reproducible with free tools.
-- Cite sources (CVEs, RFCs, tool docs, papers) in "Further reading".
-- Labs are **offensive-capable by nature** — keep the standing authorization rule explicit in any lab that attacks a target: only test systems you own or have explicit written permission to test, and point learners at intentionally vulnerable targets (DVWA, locally spun VMs, free CTF rooms).
+- **Original writing from primary sources.** Do not copy from SANS, Offensive Security, or other proprietary course material. Topic *coverage* may be informed by such courses; prose and structure must be original.
+- **Open-source first, not open-source only.** Prefer OSS tools; free/community editions (e.g. Burp CE) and the genuine real-world tool are acceptable where that is what the job actually uses. Labs must still be reproducible at zero cost.
+- **Hands-on and job-ready.** "In the dirt," not certification theory — every module ends in something the learner *does*, and every track ends in a **capstone** (a portfolio-worthy artifact).
+- **Docker-first labs.** Default to containers for reproducibility; use VMs or cloud free-tier accounts only where the domain demands it (Active Directory, cloud).
+- **AI is core.** Every track carries an `## AI & automation` section, and modules should weave in the AI-acceleration move for that topic. The standing posture: **AI authors → you review → you own it** — automation is assumed; the differentiating skill is directing and rigorously reviewing it.
+- **Cite multiple primary sources** (CVEs, RFCs, tool docs, papers, MITRE ATT&CK) in "Further reading".
+- **Labs are offensive-capable by nature** — keep the authorization rule explicit in any lab that attacks a target: only test systems you own or have explicit written permission to test, and point learners at intentionally vulnerable targets (DVWA, CloudGoat, locally spun VMs, free CTF rooms).
 
-New modules are proposed via the `.github/ISSUE_TEMPLATE/new-module.md` issue template.
+New modules are proposed via the `.github/ISSUE_TEMPLATE/new-module.md` issue template (which doubles as the per-module intake form: track, title, objective, tools, time, background).
 
 ## Secret & artifact hygiene
 
-This repo has **no `.gitignore`**, yet the labs drive tools (tcpdump, openssl, metasploit, volatility, prowler, …) that emit exactly the kind of files you must never commit: packet captures (`*.pcap`), keys and credentials (`*.pem`, `*.key`, `*_rsa`), tokens, and verbose logs. When a lab generates artifacts, keep them out of commits — reference them in the lab text rather than checking them in, or add a scoped `.gitignore` for that work. Never commit real secrets or capture data into curriculum content.
+The labs drive tools (tcpdump, openssl, metasploit, volatility, prowler, …) that emit exactly the kind of files you must never commit: packet captures (`*.pcap`), keys and credentials (`*.pem`, `*.key`, `*_rsa`), memory/disk images, tokens, and verbose logs. The repo's `.gitignore` covers these plus malware sample dirs and the `site/` build output — keep it current, reference lab artifacts in the prose rather than committing them, and never commit real secrets or capture data into curriculum content.

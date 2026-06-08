@@ -40,6 +40,13 @@ Complete Track 00 — Foundations first.
 > (e.g. Malware-Traffic-Analysis.net, public PCAP repositories, EVTX-ATTACK-SAMPLES).
 > Only analyse data you are authorised to handle.
 
+## Capstone
+
+Stand up a telemetry pipeline, simulate an attack (Atomic Red Team or a replayed PCAP),
+and catch it: ship the logs, write the detection-as-code mapped to ATT&CK, and produce an
+incident write-up from alert to root cause. **Deliverable:** the tested detections plus
+the investigation.
+
 ## AI & automation
 
 This is where automation earns its keep — and where it is most dangerous. A small local
