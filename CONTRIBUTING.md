@@ -30,11 +30,16 @@ When you add a module, also add its pages to the `nav:` tree in `mkdocs.yml`
 
 Each module lives at `tracks/<track>/modules/<NN>-<name>/` and contains:
 
-- `README.md` — concept explanation (your own original writing)
-- `lab.md` — a hands-on, Docker-first exercise
+- `README.md` — the concept **and the guided study path** (the *Learn* section)
+- `lab.md` — the hands-on, Docker-first **project**
 
 Each **track** (`tracks/<NN>-<name>/README.md`) is a content map that ends in a
 **capstone** — a portfolio-worthy artifact that proves the track.
+
+**A module is a guided learning unit, not a summary page.** The most important — and most
+commonly skipped — part is **Learn**: a curated, time-boxed, opinionated study path with
+real links. A concept paragraph plus three bare links is *not* a finished module. See
+"Module anatomy" in `CLAUDE.md`.
 
 ## Content rules
 
@@ -45,7 +50,7 @@ Each **track** (`tracks/<NN>-<name>/README.md`) is a content map that ends in a
   and the genuine real-world tool are fine where that is what the job uses. Labs must
   stay reproducible at zero cost.
 - **Hands-on and job-ready** — "in the dirt," not certification theory. Every module ends
-  in something the learner *does*.
+  in something the learner *does* and *commits*.
 - **Docker-first labs.** Default to containers; use VMs or cloud free-tier accounts only
   where the domain demands it (Active Directory, cloud).
 - **AI woven through.** Show the AI-acceleration move for the topic, and the judgment that
@@ -57,13 +62,23 @@ Each **track** (`tracks/<NN>-<name>/README.md`) is a content map that ends in a
 ## Module README template
 
 ```markdown
-# Module Title
+# Module NN — Title
+
+**<Track>** — *one-line hook: why this is worth your time.*
+
+## Why this matters
+The 90-second "so what" — and where this gets reused in later tracks.
 
 ## Objective
-What the learner will be able to do after this module (job-relevant, one sentence).
+What the learner will be able to do after this module (measurable, job-relevant).
 
-## Background
-Core concept explanation, written originally from primary sources.
+## Learn (~N hrs)
+A curated, time-boxed, opinionated study path — the core of the module. Group it, lead
+with video where it helps, and say why each resource earns the time.
+
+**<Sub-topic>**
+- [Resource title](https://…) — one line on what it gives you and why it's here.
+- [Resource title](https://…) — …
 
 ## Key concepts
 - Concept 1
@@ -71,36 +86,43 @@ Core concept explanation, written originally from primary sources.
 
 ## AI acceleration
 The specific way AI/automation speeds this up — and what you must review and own.
-
-## Further reading
-- Multiple primary sources: RFC / CVE / OSS docs / ATT&CK / paper
 ```
 
 ## Lab template
 
 ```markdown
-# Lab: Title
+# Lab NN — Title
 
 ## Setup
-Docker-first: the container(s) / image(s) to run, and how. (VM or cloud free-tier only
-if the domain requires it.) Keep it reproducible at zero cost.
+Docker-first: the container(s)/image(s) to run, and how. (VM or cloud free-tier only if
+the domain requires it.) Reproducible at zero cost.
 
 ## Scenario
-What you're trying to do and why — against an intentionally vulnerable target.
+What you're doing and why — against an intentionally vulnerable target.
 
 > Only test systems you own or have explicit written permission to test.
 
-## Steps
-1. Step one
-2. Step two
+## Do
+1. [ ] Step one
+2. [ ] Step two   (each step feeds the next)
 
-## Expected output
-What success looks like. (Reference any captures/artifacts — do not commit them.)
+## Success criteria — you're done when
+- [ ] Measurable outcome 1
+- [ ] Measurable outcome 2
+
+## Deliverables
+What gets committed (the portfolio artifact). Reference captures/keys/dumps — never
+commit them.
 
 ## AI acceleration
 Where a model helps (triage, generation, summarising) and what you verify by hand.
 
-## Questions
-1. What did you observe?
-2. How would you detect or defend against this?
+## Connects forward
+Which later modules/tracks build on this.
+
+## Marketable proof
+> The résumé bullet / interview sentence the learner can now honestly say.
+
+## Stretch (optional)
+- A harder extension for the motivated.
 ```

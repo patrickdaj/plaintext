@@ -64,6 +64,26 @@ Track and module directories are zero-padded and numbered (`00-foundations`, `mo
 
 New modules are proposed via the `.github/ISSUE_TEMPLATE/new-module.md` issue template (which doubles as the per-module intake form: track, title, objective, tools, time, background).
 
+## Module anatomy — every module is a guided learning unit
+
+A module is **not** a summary page. It is a self-contained unit that takes a learner from *why* all the way to a committed artifact — a full study unit, not a blurb. The failure mode to avoid is the thin module: a paragraph of concept plus three bare links. In particular the **Learn** path is mandatory — it is the actual studying (curated, time-boxed, opinionated), not an afterthought tacked on as "Further reading." The anatomy spreads across the module's two files:
+
+**`README.md` — concept + study path**
+- **Why this matters** — the 90-second "so what," and where it gets reused in later tracks.
+- **Objective** — measurable and job-relevant.
+- **Learn (~N hrs)** — a curated, time-boxed, *opinionated* path: grouped resources (video-first where that helps) with real links and a line on why each earns the time. **This is the core of the module** and the thing thin modules lack.
+- **Key concepts** — the original-prose explanation.
+- **AI acceleration** — the AI/automation move for this topic, and what the learner must review and own.
+
+**`lab.md` — the project**
+- **Setup** (Docker-first) and **Scenario** (with the authorization note where it attacks a target).
+- **Do** — an ordered checklist; each step feeds the next.
+- **Success criteria** — measurable "you're done when…" checkboxes.
+- **Deliverables** — exactly what gets committed (the portfolio artifact); lab *artifacts* (captures, keys, dumps) stay out of commits.
+- **AI acceleration**, **Connects forward**, **Marketable proof**, and an optional **Stretch**.
+
+The canonical fill-in templates for both files live in `CONTRIBUTING.md`.
+
 ## Secret & artifact hygiene
 
 The labs drive tools (tcpdump, openssl, metasploit, volatility, prowler, …) that emit exactly the kind of files you must never commit: packet captures (`*.pcap`), keys and credentials (`*.pem`, `*.key`, `*_rsa`), memory/disk images, tokens, and verbose logs. The repo's `.gitignore` covers these plus malware sample dirs and the `site/` build output — keep it current, reference lab artifacts in the prose rather than committing them, and never commit real secrets or capture data into curriculum content.

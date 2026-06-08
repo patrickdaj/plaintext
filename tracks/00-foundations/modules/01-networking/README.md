@@ -1,28 +1,41 @@
 # Module 01 — Networking Fundamentals
 
-## Objective
-Understand how data moves across networks and how to capture and
-analyse that traffic.
+**Foundations** — *you can't attack, defend, or investigate what you can't read on the wire.*
 
-## Background
-Every security discipline — offensive, defensive, forensics — requires
-a solid understanding of how packets travel from source to destination.
-The TCP/IP model describes communication in four layers: Link, Internet,
-Transport, and Application.
+## Why this matters
+Every security discipline rides on the network. An attacker maps it, a defender watches
+it, a forensicator reconstructs it from what was captured. If you can't read a packet
+capture and explain a TCP handshake or a DNS lookup, every later track is built on sand.
+This module makes traffic legible — so `tcpdump` and Wireshark become tools you reason
+with, not noise you stare at.
+
+## Objective
+Read network traffic at the packet level: explain how a connection is established and how
+names resolve, then capture and dissect a real exchange yourself.
+
+## Learn (~3–4 hrs)
+
+**The model & the protocols**
+- [Cloudflare — What is the OSI model?](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/) and [What is TCP/IP?](https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/) — the layered model in plain language; read these first.
+- [PracticalNetworking — Packet Traveling](https://www.practicalnetworking.net/series/packet-traveling/packet-traveling/) — walks a packet hop by hop; the clearest mental model out there.
+- [Cloudflare — What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/) — the resolution chain you'll watch in the lab.
+
+**Reading packets (video first, then hands-on)**
+- [Chris Greer — TCP handshake & packet analysis (YouTube)](https://www.youtube.com/@ChrisGreer) — watch the 3-way-handshake walkthrough; he reads real captures the way you will.
+- [Julia Evans — "tcpdump is amazing"](https://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/) — a short, practical on-ramp to the exact tool the lab uses.
+- [Wireshark — Sample Captures](https://wiki.wireshark.org/SampleCaptures) — open a few and practice "Follow TCP Stream" before you make your own.
+
+**Reference (skim, return as needed)**
+- RFC 9293 (TCP) and RFC 791 (IP) — the source of truth; skim the headers, don't read cover to cover.
 
 ## Key concepts
 - IP addressing and subnetting (IPv4/IPv6)
-- TCP three-way handshake
+- The TCP three-way handshake (SYN / SYN-ACK / ACK)
 - UDP and when it's used
-- DNS resolution chain
-- Common ports and protocols (HTTP/S, SSH, FTP, SMTP)
+- The DNS resolution chain
+- Common ports and protocols (HTTP/S, SSH, DNS, SMTP)
 
 ## AI acceleration
 AI can decode a capture faster than you can — paste a confusing `tcpdump` filter and it
 will explain the flags and the handshake. Verify against the RFC and the man page; models
 occasionally invent fields. Reading the packets yourself is still the skill.
-
-## Further reading
-- RFC 791 (IP): https://datatracker.ietf.org/doc/html/rfc791
-- RFC 793 (TCP): https://datatracker.ietf.org/doc/html/rfc793
-- tcpdump man page: https://www.tcpdump.org/manpages/tcpdump.1.html
