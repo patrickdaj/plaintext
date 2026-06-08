@@ -16,9 +16,9 @@ names resolve, then capture and dissect a real exchange yourself.
 ## Learn (~3–4 hrs)
 
 **The model & the protocols**
-- [Cloudflare — What is the OSI model?](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/) and [What is TCP/IP?](https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/) — the layered model in plain language; read these first.
-- [PracticalNetworking — Packet Traveling](https://www.practicalnetworking.net/series/packet-traveling/packet-traveling/) — walks a packet hop by hop; the clearest mental model out there.
-- [Cloudflare — What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/) — the resolution chain you'll watch in the lab.
+- [Cloudflare — What is the OSI model?](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/) — the layered model in plain language; read it first.
+- [PracticalNetworking — Packet Traveling](https://www.practicalnetworking.net/series/packet-traveling/packet-traveling/) — walks a packet hop by hop, TCP/IP and all; the clearest mental model out there.
+- [How DNS Works (comic)](https://howdns.works/) — the resolution chain you'll watch in the lab, told as a friendly comic.
 
 **Reading packets (video first, then hands-on)**
 - [Chris Greer — TCP handshake & packet analysis (YouTube)](https://www.youtube.com/@ChrisGreer) — watch the 3-way-handshake walkthrough; he reads real captures the way you will.

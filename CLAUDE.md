@@ -60,6 +60,7 @@ Track and module directories are zero-padded and numbered (`00-foundations`, `mo
 - **Docker-first labs.** Default to containers for reproducibility; use VMs or cloud free-tier accounts only where the domain demands it (Active Directory, cloud).
 - **AI is core.** Every track carries an `## AI & automation` section, and modules should weave in the AI-acceleration move for that topic. The standing posture: **AI authors → you review → you own it** — automation is assumed; the differentiating skill is directing and rigorously reviewing it.
 - **Cite multiple primary sources** (CVEs, RFCs, tool docs, papers, MITRE ATT&CK) in "Further reading".
+- **Keep resources fresh.** Vary the sources cited in *Learn* across modules — don't send learners to the same site or author every time. Reuse a resource only when it is genuinely the best fit for that topic; otherwise prefer a different high-quality source so the curriculum has breadth.
 - **Labs are offensive-capable by nature** — keep the authorization rule explicit in any lab that attacks a target: only test systems you own or have explicit written permission to test, and point learners at intentionally vulnerable targets (DVWA, CloudGoat, locally spun VMs, free CTF rooms).
 
 New modules are proposed via the `.github/ISSUE_TEMPLATE/new-module.md` issue template (which doubles as the per-module intake form: track, title, objective, tools, time, background).
@@ -71,7 +72,7 @@ A module is **not** a summary page. It is a self-contained unit that takes a lea
 **`README.md` — concept + study path**
 - **Why this matters** — the 90-second "so what," and where it gets reused in later tracks.
 - **Objective** — measurable and job-relevant.
-- **Learn (~N hrs)** — a curated, time-boxed, *opinionated* path: grouped resources (video-first where that helps) with real links and a line on why each earns the time. **This is the core of the module** and the thing thin modules lack.
+- **Learn (~N hrs)** — a curated, time-boxed, *opinionated* path: grouped resources (video-first where that helps) with real links and a line on why each earns the time. **This is the core of the module** and the thing thin modules lack. Keep the sources fresh across modules — don't lean on the same few sites or authors.
 - **Key concepts** — the original-prose explanation.
 - **AI acceleration** — the AI/automation move for this topic, and what the learner must review and own.
 

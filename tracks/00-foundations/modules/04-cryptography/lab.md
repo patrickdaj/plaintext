@@ -8,43 +8,54 @@ apk add openssl
 ```
 
 ## Scenario
-Exercise each primitive once so the guarantees become concrete rather than abstract.
+Exercise each primitive once so its guarantee becomes concrete rather than abstract.
 
-## Steps
-1. Hash for integrity:
+## Do
+1. [ ] Hash for integrity:
    ```bash
    echo "transfer 100 to alice" > msg.txt
    openssl dgst -sha256 msg.txt
    ```
-2. Symmetric encryption (AES) — round-trip it:
+2. [ ] Symmetric round-trip (AES):
    ```bash
    openssl enc -aes-256-cbc -pbkdf2 -in msg.txt -out msg.enc
    openssl enc -d -aes-256-cbc -pbkdf2 -in msg.enc
    ```
-3. Asymmetric keys (RSA):
+3. [ ] Asymmetric (RSA):
    ```bash
    openssl genrsa -out priv.pem 2048
    openssl rsa -in priv.pem -pubout -out pub.pem
    openssl pkeyutl -encrypt -pubin -inkey pub.pem -in msg.txt -out msg.rsa
    openssl pkeyutl -decrypt -inkey priv.pem -in msg.rsa
    ```
-4. Inspect a real certificate chain (needs outbound network):
+4. [ ] Inspect a real certificate (needs outbound network):
    ```bash
    echo | openssl s_client -connect example.com:443 -servername example.com 2>/dev/null \
      | openssl x509 -noout -issuer -subject -dates
    ```
+5. [ ] Flip one byte of `msg.enc` and try to decrypt it — observe.
 
-## Expected output
-A SHA-256 digest; ciphertext that decrypts back to the plaintext; an RSA blob that only
-the private key recovers; and the issuer, subject, and validity dates of example.com's
-certificate.
+## Success criteria — you're done when
+- [ ] You produce a SHA-256 digest and can say why it proves integrity, not secrecy.
+- [ ] You round-trip a message through both AES and RSA.
+- [ ] You can read a certificate's issuer, subject, and validity, and name who vouches for it.
+
+## Deliverables
+`crypto-notes.md`: one line per primitive — what it guaranteed — plus what happened when
+you flipped a byte of the AES ciphertext.
 
 ## AI acceleration
-Ask a model why CBC *without* authentication is unsafe and what AEAD (e.g. AES-GCM) fixes
-— then confirm against the OpenSSL docs, and note anywhere it gets the flags wrong.
+Ask a model why CBC without authentication is unsafe and what AES-GCM fixes — then confirm
+against the OpenSSL Cookbook, noting anywhere it gets the flags wrong.
 
-## Questions
-1. Flip one byte of `msg.enc` and decrypt it — what happens, and what does that reveal
-   about the difference between secrecy and integrity?
-2. Who signed example.com's certificate, and how does your browser decide to trust that
-   signer?
+## Connects forward
+This underpins Track 05 (TLS and secrets in the cloud), Track 08 (PKI and secrets in
+depth), and any HTTPS you inspect in Track 01.
+
+## Marketable proof
+> "I can exercise and audit the core crypto primitives with openssl — hashing, AES, RSA,
+> and a live certificate chain — and explain what each does and doesn't guarantee."
+
+## Stretch
+- Redo the symmetric step with `-aes-256-gcm` (AEAD) and explain what the authentication
+  tag changes.

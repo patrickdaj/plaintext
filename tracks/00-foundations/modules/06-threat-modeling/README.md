@@ -1,31 +1,39 @@
 # Module 06 — Security Fundamentals & Threat Modeling
 
-## Objective
-Frame any system in terms of assets, threats, and trust boundaries before you attack or
-defend it.
+**Foundations** — *judgment before tools: what are we protecting, from whom, and where can it go wrong?*
 
-## Background
-Tools come later; judgment comes first. Security rests on a few durable ideas — the CIA
-triad (confidentiality, integrity, availability), authentication versus authorization, and
-defense in depth — and on a habit: **threat modeling**, the discipline of asking "what are
-we protecting, from whom, and where can it go wrong?" before writing a line of config.
-STRIDE is a simple lens for that: Spoofing, Tampering, Repudiation, Information disclosure,
-Denial of service, Elevation of privilege.
+## Why this matters
+Tools come later; judgment comes first. The durable ideas — CIA, authentication vs
+authorization, defense in depth — and the habit of threat modeling are what turn a pile of
+techniques into security thinking. Every later track is an answer to a threat; this module
+teaches you to ask the question first, so you attack and defend on purpose rather than by
+reflex.
+
+## Objective
+Frame a system in terms of assets, trust boundaries, and threats, and produce a STRIDE
+threat model with mitigations.
+
+## Learn (~3 hrs)
+
+**The mindset**
+- [The Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org/) — the four questions and the values, in two pages; foundational.
+- [Adam Shostack — Threat Modeling resources & the 4-Question Framework](https://shostack.org/resources/threat-modeling) — from the person who wrote the book; practical and free.
+
+**STRIDE, hands-on**
+- [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html) — a working method you can apply today.
+- [Elevation of Privilege (free card game)](https://shostack.org/games/elevation-of-privilege) — learn STRIDE by playing it against a design; genuinely the fastest way it clicks.
+
+**Reference**
+- [Microsoft — STRIDE threat categories](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats) — a clean catalog to map against.
 
 ## Key concepts
-- The CIA triad and the AAA model (authentication, authorization, accounting)
+- The CIA triad and AAA (authentication, authorization, accounting)
 - Trust boundaries and data-flow thinking
 - STRIDE as a threat-enumeration lens
-- Attacker goals and the idea of an attack surface
+- Attack surface and attacker goals
 - Defense in depth and least privilege
 
 ## AI acceleration
-A model is a strong brainstorming partner for threat modeling — feed it a data-flow
-description and it will enumerate plausible STRIDE threats fast. The skill is *pruning*:
-discard the irrelevant, add the context-specific threats it can't know, and own the final
-model.
-
-## Further reading
-- Microsoft STRIDE / Threat Modeling: https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats
-- OWASP Threat Modeling: https://owasp.org/www-community/Threat_Modeling
-- NIST SP 800-160 Vol. 1 (Systems Security Engineering): https://csrc.nist.gov/pubs/sp/800/160/v1/r1/final
+A model is a strong brainstorming partner — feed it a data-flow description and it
+enumerates plausible STRIDE threats fast. The skill is *pruning*: discard the irrelevant,
+add the context-specific threats it can't know, and own the final model.

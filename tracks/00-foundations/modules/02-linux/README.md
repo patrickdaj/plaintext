@@ -25,7 +25,7 @@ users, processes, files, and logs.
 - [DigitalOcean — An Introduction to Linux Permissions](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions) — read the SUID section twice; it underpins half of privilege escalation.
 
 **Text processing (the security power tool)**
-- [Julia Evans — "grep, awk, sed" wizard zines](https://wizardzines.com/) plus `man grep`, `man awk` — you'll live in these for log triage.
+- [The Grymoire — awk and sed tutorials](https://www.grymoire.com/Unix/Awk.html) plus `man grep` — the classic deep references; you'll live in these for log triage.
 
 ## Key concepts
 - The filesystem hierarchy and "everything is a file"
