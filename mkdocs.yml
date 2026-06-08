@@ -1,8 +1,8 @@
 site_name: Plaintext
 site_description: Open security education for everyone. No paywalls. No gatekeeping. Forever free.
-site_url: https://patrickdaj.github.io/plaintext/
-repo_url: https://github.com/patrickdaj/plaintext
-repo_name: patrickdaj/plaintext
+site_url: https://plaintext-security.github.io/plaintext/
+repo_url: https://github.com/plaintext-security/plaintext
+repo_name: plaintext-security/plaintext
 copyright: CC BY 4.0 — use it, share it, build on it.
 
 # The curriculum Markdown under tracks/ is the source; MkDocs builds it into site/.
@@ -57,8 +57,8 @@ plugins:
 # (2) installing the giscus GitHub App, (3) creating the 3 Discussion categories.
 extra:
   giscus:
-    repo: patrickdaj/plaintext
-    repo_id: ""            # giscus.app → Repository
+    repo: plaintext-security/plaintext
+    repo_id: "R_kgDOSzzNhw"  # GraphQL node ID of plaintext-security/plaintext
     category_feedback: ""  # category ID for "Feedback"
     category_hints: ""     # category ID for "Hints"
     category_general: ""   # category ID for "General"

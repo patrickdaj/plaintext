@@ -46,7 +46,7 @@ plaintext/
 
 ## Deployment
 
-`.github/workflows/deploy.yml` deploys to GitHub Pages via GitHub Actions, **on push to `main` only**. CI installs `requirements.txt`, runs `mkdocs build --strict`, and publishes `site/`. The site is a project page served under the `/plaintext/` path (`https://patrickdaj.github.io/plaintext/`); MkDocs handles base-path-relative links, so use the `url` filter in templates and normal relative links in Markdown.
+`.github/workflows/deploy.yml` deploys to GitHub Pages via GitHub Actions, **on push to `main` only**. CI installs `requirements.txt`, runs `mkdocs build --strict`, and publishes `site/`. The site is a project page served under the `/plaintext/` path (`https://plaintext-security.github.io/plaintext/`); MkDocs handles base-path-relative links, so use the `url` filter in templates and normal relative links in Markdown.
 
 A failed build does **not** take down the live site — Pages keeps the last good deploy — but it does mean your change is not published until the build is green. (The published Pages site may be unreachable from sandboxed environments that block `*.github.io`; verify a deploy succeeded via the GitHub Actions run status instead.)
 
