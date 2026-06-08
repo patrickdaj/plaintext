@@ -127,3 +127,28 @@ fits; don't claim a lab works unless you ran it.
 - [ ] **README track table is stale** — lists 6 tracks; 12 exist. Fix it.
 - [ ] **Author the 9 stub tracks** from scratch (prose + labs together), track-by-track, full modules.
   Likely order: cloud / forensics / malware first (flagship-adjacent).
+
+---
+
+## Future work: an automated lab grader
+
+A grader automates each lab's **"Success criteria — you're done when"** checklist into executable
+checks. It's not one grader — it's a small set of **check types**, and each lab declares which it uses
+via a `grade.yaml` manifest + a `make grade` target (alongside `up`/`down`/`reset`/`demo`), backed by a
+shared grader library in `plaintext-labs`.
+
+**Check types:**
+- **Flag** — submit a secret only completion exposes; compare hash. *(offensive: SQLi secret, root-only token)*
+- **Artifact — functional** — run the learner's file against **held-out labeled data**, assert outputs. *(Sigma fires on bad / quiet on good; parser hits parse-rate + schema)*
+- **Artifact — structural** — schema/lint *(valid Sigma, ECS fields, `terraform validate`, CI workflow present)*
+- **Target-state** — inspect the live env for proof *(root-written marker, service down, config now passes a CIS check)*
+- **Detection-efficacy** — run the detection over a labeled attack+benign corpus, score TP/FP/FN vs a threshold
+- **Rubric / AI-judge** — *advisory feedback only*, never a hard gate *(threat-modeling, reporting)*
+
+**Key design points:**
+- Use a **held-out** dataset for grading (the `demo` set is the train split; the `grade` set is the test split) so a pass means a *general* solution, not one overfit to the example.
+- Open repo ⇒ answer keys are visible ⇒ the grader is **self-verification + portfolio evidence**, not proctoring. (A real credential would need server-side grading with private keys — out of scope for now.)
+- A passing `make grade` can emit a **completion receipt** (JSON: lab id, timestamp, checks passed, artifact hash) the learner commits to their own repo — and since labs are Docker+make, it runs as a green check in their **GitHub Actions**.
+- Design/paper labs don't hard-grade — rubric/AI feedback only.
+
+**Where to start:** `detection-as-code` already *is* a grader (`detect.py`) — retrofit it first (point it at a held-out set), then `web-injection` (flag) and `log-parsing` (artifact) for one proof per check type. Treat as a **second pass** after labs exist; consider a charter change to add `make grade` to the lab convention when we commit to it.
