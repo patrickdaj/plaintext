@@ -35,7 +35,7 @@ enumerating the system and exploiting one of the misconfigurations.
    your enumeration *after* you've done it yourself.
 
 2. [ ] For Vector 1 (SUID binary): look the binary up on
-   [GTFOBins](https://gtfobins.github.io/), work out the invocation that spawns a shell
+   [GTFOBins](https://gtfobins.org/), work out the invocation that spawns a shell
    with its elevated privileges, run it, and confirm `id` shows you reached root. (Why does
    the `-p` flag matter for a SUID shell?)
 
