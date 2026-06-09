@@ -117,6 +117,70 @@ def color_to_int(value: Any) -> int:
     return int(s, 16)
 
 
+def validate_spec(spec: Any) -> None:
+    """Offline structural validation of the desired-state file.
+
+    Catches the mistakes a reviewer would otherwise only discover at apply time —
+    bad permission/color values, unknown channel types, forum-only fields on
+    non-forum channels, overwrites that reference an undeclared role, and duplicate
+    names. Contacts nothing and needs no credentials, so it is safe to run on
+    untrusted pull-request code. Raises ValueError on the first problem.
+    """
+    if not isinstance(spec, dict):
+        raise ValueError("top-level YAML must be a mapping")
+
+    role_names: set[str] = set()
+    for r in spec.get("roles", []) or []:
+        name = r.get("name")
+        if not name:
+            raise ValueError(f"role missing a name: {r!r}")
+        if name in role_names:
+            raise ValueError(f"duplicate role name: {name!r}")
+        role_names.add(name)
+        perms_to_int(r.get("permissions"))  # raises on an unknown permission flag
+        color_to_int(r.get("color"))        # raises on a bad color
+
+    def check_channel(ch: dict, where: str) -> None:
+        name = ch.get("name")
+        if not name:
+            raise ValueError(f"channel missing a name in {where}: {ch!r}")
+        ctype = ch.get("type", "text")
+        if ctype not in CHANNEL_TYPES:
+            raise ValueError(f"{where}/{name}: unknown channel type {ctype!r}")
+        if ch.get("tags") and ctype != "forum":
+            raise ValueError(f"{where}/{name}: 'tags' is only valid on forum channels")
+        for ov in ch.get("overwrites", []) or []:
+            rn = ov.get("role")
+            if rn != "@everyone" and rn not in role_names:
+                raise ValueError(
+                    f"{where}/{name}: overwrite references role {rn!r} not declared under roles"
+                )
+            perms_to_int(ov.get("allow"))
+            perms_to_int(ov.get("deny"))
+
+    cat_names: set[str] = set()
+    nchan = 0
+    for c in spec.get("categories", []) or []:
+        cn = c.get("name")
+        if not cn:
+            raise ValueError(f"category missing a name: {c!r}")
+        if cn in cat_names:
+            raise ValueError(f"duplicate category name: {cn!r}")
+        cat_names.add(cn)
+        local: set[str] = set()
+        for ch in c.get("channels", []) or []:
+            check_channel(ch, cn)
+            if ch["name"] in local:
+                raise ValueError(f"{cn}: duplicate channel name {ch['name']!r}")
+            local.add(ch["name"])
+            nchan += 1
+    for ch in spec.get("channels", []) or []:
+        check_channel(ch, "(top-level)")
+        nchan += 1
+
+    print(f"Spec valid: {len(role_names)} roles, {len(cat_names)} categories, {nchan} channels")
+
+
 class Discord:
     """Thin Discord REST client with rate-limit handling."""
 
@@ -396,11 +460,25 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("spec", help="path to the desired-state YAML (e.g. server.yaml)")
+    ap.add_argument("--check", action="store_true",
+                    help="offline: validate the YAML and exit (no token, no network)")
     ap.add_argument("--dry-run", action="store_true",
                     help="print the plan without making any changes")
     ap.add_argument("--prune", action="store_true",
                     help="delete roles/channels on the server that are absent from the YAML")
     args = ap.parse_args()
+
+    with open(args.spec, encoding="utf-8") as fh:
+        spec = yaml.safe_load(fh)
+
+    # Always validate structure first; --check stops here (safe for untrusted PR code).
+    try:
+        validate_spec(spec)
+    except ValueError as exc:
+        print(f"error: invalid spec: {exc}", file=sys.stderr)
+        return 1
+    if args.check:
+        return 0
 
     token = os.environ.get("DISCORD_BOT_TOKEN")
     guild = os.environ.get("DISCORD_GUILD_ID")
@@ -408,9 +486,6 @@ def main() -> int:
         print("error: set DISCORD_BOT_TOKEN and DISCORD_GUILD_ID in the environment",
               file=sys.stderr)
         return 2
-
-    with open(args.spec, encoding="utf-8") as fh:
-        spec = yaml.safe_load(fh)
 
     dc = Discord(token, guild, dry_run=args.dry_run)
     mode = " (dry-run — no changes)" if args.dry_run else ""

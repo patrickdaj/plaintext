@@ -37,6 +37,30 @@ Always run `--dry-run` first and read the plan. `--prune` is destructive — it 
 channels (and their message history) that are absent from `server.yaml`; it never touches
 `@everyone` or integration/bot-managed roles.
 
+## CI: automatic sync
+
+[`.github/workflows/discord-sync.yml`](../.github/workflows/discord-sync.yml) keeps the live server
+in step with this file:
+
+- **On pull requests** touching `community/**`: a `validate` job runs `--check` only. It executes
+  PR-authored code, so by design it has **no secrets** — purely offline validation.
+- **On push to `main`** (or a manual *Run workflow*): an `apply` job runs the real dry-run plan and
+  then applies. It never runs on `pull_request`.
+
+### Secure setup (do this once, before enabling the workflow)
+
+1. Create a **protected Environment** named `discord` (Repo → Settings → Environments → New): add
+   yourself as a **required reviewer** and restrict deployment to the `main` branch. This makes
+   every live apply pause for a human click.
+2. Add the secrets **to that environment** (not as repo-wide secrets):
+   `DISCORD_BOT_TOKEN` and `DISCORD_GUILD_ID`. Environment-scoped secrets are unreadable by any job
+   that doesn't enter the `discord` environment — so the PR `validate` job can never see them.
+3. (Recommended) Pin the `actions/checkout` and `actions/setup-python` steps to a full commit SHA
+   rather than `@v4`/`@v5` for supply-chain hardening.
+
+The workflow grants `GITHUB_TOKEN` only `contents: read`, never uses `pull_request_target`, and
+never runs `--prune`. Keep destructive prunes manual and local.
+
 ## How it works / limits
 
 - **Matching is by name** — roles by name, channels by name within their category. Renaming an

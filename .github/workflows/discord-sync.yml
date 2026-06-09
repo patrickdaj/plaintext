@@ -1,0 +1,76 @@
+name: Discord sync
+
+# Keeps the live Discord server in sync with community/server.yaml.
+#
+# Security model:
+#   - The `validate` job runs PR-authored (untrusted) code, so it gets NO secrets — it only does
+#     an offline `--check` (no token, no network). Fork PRs never receive secrets regardless.
+#   - The `apply` job is the only place the token is referenced. It NEVER runs on `pull_request`,
+#     and it runs inside the protected `discord` Environment, so each live apply pauses for the
+#     required reviewer and the token is an *environment* secret unreadable by any other job.
+#   - GITHUB_TOKEN is read-only (contents: read). `--prune` (destructive) is intentionally never
+#     run in CI — do that by hand.
+
+on:
+  pull_request:
+    paths:
+      - "community/**"
+      - ".github/workflows/discord-sync.yml"
+  push:
+    branches: [main]
+    paths:
+      - "community/server.yaml"
+      - "community/discord_sync.py"
+      - ".github/workflows/discord-sync.yml"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to do on manual run"
+        default: dry-run
+        type: choice
+        options: [dry-run, apply]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: discord-sync
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    # Offline structural validation. No secrets — safe for untrusted PR / fork code.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r community/requirements.txt
+      - name: Validate spec (offline — no token)
+        run: python community/discord_sync.py community/server.yaml --check
+
+  apply:
+    # Talks to Discord. Only on push to main or a manual dispatch — never on pull_request.
+    needs: validate
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment: discord   # protected: add required reviewers + restrict to `main` in repo settings
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r community/requirements.txt
+      - name: Plan (dry-run)
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_GUILD_ID: ${{ secrets.DISCORD_GUILD_ID }}
+        run: python community/discord_sync.py community/server.yaml --dry-run
+      - name: Apply
+        # On push to main: apply. On manual dispatch: only when mode=apply.
+        if: github.event_name == 'push' || inputs.mode == 'apply'
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_GUILD_ID: ${{ secrets.DISCORD_GUILD_ID }}
+        run: python community/discord_sync.py community/server.yaml
