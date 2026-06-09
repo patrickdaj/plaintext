@@ -1,0 +1,102 @@
+# Plaintext Discord — desired state.
+# Apply with:  python discord_sync.py server.yaml --dry-run   (then drop --dry-run)
+# This file is the source of truth; COMMUNITY.md is the human-readable narrative of it.
+# Matching is by name — rename deliberately (a rename reads as delete+create).
+
+# A reusable anchor for "this channel is read-only to @everyone" (staff can still post).
+_read_only: &read_only
+  overwrites:
+    - role: "@everyone"
+      deny: [send_messages, create_public_threads, create_private_threads, send_messages_in_threads]
+      allow: [view_channel, read_message_history]
+
+roles:
+  - name: Maintainer
+    color: "#ff5555"
+    hoist: true
+    mentionable: true
+    permissions: [administrator]
+  - name: Mentor
+    color: "#ffcc00"
+    hoist: true
+    mentionable: true
+    permissions: [manage_messages, manage_threads, moderate_members, kick_members]
+  - name: Contributor
+    color: "#00cc66"
+    hoist: true
+    mentionable: false
+  - name: Member
+    color: "#9aa0a6"
+    mentionable: false
+  # Track self-assign roles (one per curriculum track). Mentionable so a cohort can be pinged.
+  - { name: Foundations,        color: "#3399ff", mentionable: true }
+  - { name: Offensive,          color: "#3399ff", mentionable: true }
+  - { name: Defensive,          color: "#3399ff", mentionable: true }
+  - { name: Forensics,          color: "#3399ff", mentionable: true }
+  - { name: Malware,            color: "#3399ff", mentionable: true }
+  - { name: Cloud,              color: "#3399ff", mentionable: true }
+  - { name: AD,                 color: "#3399ff", mentionable: true }
+  - { name: Endpoint,           color: "#3399ff", mentionable: true }
+  - { name: Crypto,             color: "#3399ff", mentionable: true }
+  - { name: Python,             color: "#3399ff", mentionable: true }
+  - { name: Automation,         color: "#3399ff", mentionable: true }
+  - { name: ZTNA,               color: "#3399ff", mentionable: true }
+  - { name: AI-Ops,             color: "#3399ff", mentionable: true }
+
+categories:
+  - name: START HERE
+    channels:
+      - name: welcome
+        type: text
+        topic: "What Plaintext is and where to start. See #rules, then say hi."
+        <<: *read_only
+      - name: rules
+        type: text
+        topic: "Community rules. Hack only what's yours. Be decent."
+        <<: *read_only
+      - name: announcements        # requires the server's Community feature enabled
+        type: announcement
+        topic: "Project news and new module drops."
+        <<: *read_only
+      - name: introduce-yourself
+        type: text
+        topic: "Where you're coming from, the track you're starting, what you want out of this."
+
+  - name: COMMUNITY
+    channels:
+      - { name: general,          type: text, topic: "Anything Plaintext." }
+      - { name: wins,             type: text, topic: "Portfolio pieces, capstones, first jobs — show your work." }
+      - { name: resources,        type: text, topic: "Share links, tools, write-ups." }
+      - { name: career-and-jobs,  type: text, topic: "Roles, interviews, getting hired." }
+      - { name: off-topic,        type: text, topic: "Everything else." }
+
+  # One forum channel per track — numbered to mirror the curriculum (00–12) so they sort in order.
+  - name: HELP
+    channels:
+      - { name: 00-foundations-help,        type: forum, tags: [Solved], topic: "Track 00 — Foundations." }
+      - { name: 01-offensive-help,          type: forum, tags: [Solved], topic: "Track 01 — Offensive Security." }
+      - { name: 02-defensive-help,          type: forum, tags: [Solved], topic: "Track 02 — Defensive Operations." }
+      - { name: 03-forensics-help,          type: forum, tags: [Solved], topic: "Track 03 — Digital Forensics & IR." }
+      - { name: 04-malware-help,            type: forum, tags: [Solved], topic: "Track 04 — Malware Analysis." }
+      - { name: 05-cloud-help,              type: forum, tags: [Solved], topic: "Track 05 — Cloud & Container Security." }
+      - { name: 06-active-directory-help,   type: forum, tags: [Solved], topic: "Track 06 — Active Directory & Windows." }
+      - { name: 07-endpoint-hardening-help, type: forum, tags: [Solved], topic: "Track 07 — Endpoint & Host Hardening." }
+      - { name: 08-cryptography-help,       type: forum, tags: [Solved], topic: "Track 08 — Cryptography, PKI & Secrets." }
+      - { name: 09-python-help,             type: forum, tags: [Solved], topic: "Track 09 — Python for Security." }
+      - { name: 10-automation-help,         type: forum, tags: [Solved], topic: "Track 10 — Security Automation." }
+      - { name: 11-ztna-help,               type: forum, tags: [Solved], topic: "Track 11 — Zero Trust Network Access." }
+      - { name: 12-ai-ops-help,             type: forum, tags: [Solved], topic: "Track 12 — AI-Augmented Security Ops." }
+      - { name: labs-and-docker,            type: forum, tags: [Solved], topic: "Cross-cutting: lab env / Makefile / docker-compose issues." }
+
+  - name: CONTRIBUTE
+    channels:
+      - { name: contributing,     type: text,  topic: "PRs, the hybrid-module model, CONTRIBUTING.md." }
+      - { name: module-proposals, type: forum, tags: [Accepted, Needs-info], topic: "Propose new modules — mirrors the new-module issue template." }
+      - { name: site-and-bugs,    type: text,  topic: "Site, build, and content bugs." }
+
+  - name: VOICE
+    channels:
+      - { name: Office Hours, type: voice }
+      - { name: Study Room 1, type: voice }
+      - { name: Study Room 2, type: voice }
+      - { name: Co-working,   type: voice }

@@ -14,6 +14,10 @@ giscus on its page; bring live questions, "did this work for you?", and show-you
 
 ## Server setup
 
+The structure below (roles, categories, channels) is also encoded as **server-as-code** in
+[`community/server.yaml`](community/) — run `community/discord_sync.py` to apply it idempotently
+via the Discord API instead of clicking it together by hand.
+
 Enable **Community** in Server Settings first (unlocks the Welcome Screen, rules screening, forum
 channels, and onboarding).
 
