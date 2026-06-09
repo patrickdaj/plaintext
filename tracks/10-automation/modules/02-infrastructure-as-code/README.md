@@ -1,5 +1,8 @@
 # Module 02 — Infrastructure as Code
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *if you clicked it into existence, you can't prove it's correct and you can't reproduce it.*
 
 ## Why this matters

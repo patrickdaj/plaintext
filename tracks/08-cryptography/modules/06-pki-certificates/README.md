@@ -1,5 +1,8 @@
 # Module 06 — PKI & Certificate Management
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *Certificates solve the "who are you talking to" problem — the chain of trust is only as strong as the weakest CA in it.*
 
 ## Why this matters

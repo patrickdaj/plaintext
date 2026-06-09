@@ -1,5 +1,8 @@
 # Module 08 — Data & Encoding
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *security data is a mess of formats; reading them is a daily skill.*
 
 ## Why this matters

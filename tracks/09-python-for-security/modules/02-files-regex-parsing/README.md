@@ -1,5 +1,8 @@
 # Module 02 — Files, Regex & Log Parsing
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *logs are the ground truth; parsing them is the first craft.*
 
 ## Why this matters

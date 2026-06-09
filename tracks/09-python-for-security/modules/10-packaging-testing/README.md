@@ -1,5 +1,8 @@
 # Module 10 — Packaging, Testing & Owning AI Code
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *the code an AI generates is a first draft; the tests you write turn it into software.*
 
 ## Why this matters

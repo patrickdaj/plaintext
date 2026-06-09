@@ -1,5 +1,8 @@
 # Module 09 — Local Privilege-Escalation Defense
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *The hardening baseline gets an attacker to user-level access; privilege-escalation defense is what stops them from going further.*
 
 ## Why this matters

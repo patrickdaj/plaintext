@@ -1,5 +1,8 @@
 # Module 11 — Version Control & Working in the Open
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *if it isn't committed, it didn't happen — and this whole curriculum is "commit the artifact."*
 
 ## Why this matters

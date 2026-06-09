@@ -1,5 +1,8 @@
 # Module 12 — Kubernetes — RBAC & Network Policy
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *in Kubernetes, the IAM is the cluster; getting RBAC wrong is a blast-radius problem, not an account problem.*
 
 ## Why this matters

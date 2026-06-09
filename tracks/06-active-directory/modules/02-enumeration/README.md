@@ -1,5 +1,8 @@
 # Module 02 — Enumeration
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *you can't attack what you can't see; every domain-level attack starts with a read.*
 
 ## Why this matters

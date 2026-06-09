@@ -1,5 +1,8 @@
 # Module 11 — Defending Identity
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *the attacks in modules 03-08 are symptoms; the tiered admin model is the architecture that makes them structurally impossible.*
 
 ## Why this matters

@@ -13,16 +13,16 @@ recognised benchmarks — as code, with compliance scoring and drift detection.
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Threat Model of the Endpoint | What you're defending and from what | — |
-| 02 | Windows Hardening to CIS | Baseline configuration that holds up | `LGPO`, CIS-CAT-lite |
-| 03 | Linux Hardening to CIS | Securing the Linux host as a baseline | `OpenSCAP`, `Lynis` |
-| 04 | Exploit Mitigation & Allowlisting | ASLR/DEP, app control, attack-surface reduction | `AppLocker`, `fapolicyd` |
-| 05 | Endpoint Telemetry & EDR | Visibility into process/file/auth events | `osquery`, `wazuh` |
-| 06 | Configuration Management | Hardening at scale, as code | `ansible` |
-| 07 | Compliance Scoring & Auditing | Measuring posture against a benchmark | `OpenSCAP` |
-| 08 | Patch & Vulnerability Management | Finding and closing exposure | `osquery`, `grype` |
-| 09 | Local Privilege-Escalation Defense | Closing the paths Track 01 abuses | — |
-| 10 | Detecting Host Compromise | Catching what the baseline didn't stop | `wazuh`, `sigma` |
+| 01 | [Threat Model of the Endpoint](modules/01-endpoint-threat-model/README.md) | What you're defending and from what | — |
+| 02 | [Windows Hardening to CIS](modules/02-windows-hardening/README.md) | Baseline configuration that holds up | `LGPO`, CIS-CAT-lite |
+| 03 | [Linux Hardening to CIS](modules/03-linux-hardening/README.md) | Securing the Linux host as a baseline | `OpenSCAP`, `Lynis` |
+| 04 | [Exploit Mitigation & Allowlisting](modules/04-exploit-mitigations/README.md) | ASLR/DEP, app control, attack-surface reduction | `AppLocker`, `fapolicyd` |
+| 05 | [Endpoint Telemetry & EDR](modules/05-endpoint-telemetry/README.md) | Visibility into process/file/auth events | `osquery`, `wazuh` |
+| 06 | [Configuration Management](modules/06-configuration-management/README.md) | Hardening at scale, as code | `ansible` |
+| 07 | [Compliance Scoring & Auditing](modules/07-compliance-auditing/README.md) | Measuring posture against a benchmark | `OpenSCAP` |
+| 08 | [Patch & Vulnerability Management](modules/08-patch-vuln-management/README.md) | Finding and closing exposure | `osquery`, `grype` |
+| 09 | [Local Privilege-Escalation Defense](modules/09-privesc-defense/README.md) | Closing the paths Track 01 abuses | — |
+| 10 | [Detecting Host Compromise](modules/10-detecting-host-compromise/README.md) | Catching what the baseline didn't stop | `wazuh`, `sigma` |
 
 ## Prerequisites
 Complete Track 00 — Foundations first.

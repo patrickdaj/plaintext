@@ -1,5 +1,8 @@
 # Lab 08 — Decode the Layers (Real Artifacts)
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

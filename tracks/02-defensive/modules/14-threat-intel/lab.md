@@ -1,5 +1,8 @@
 # Lab 14 — Work Real Threat Intel
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

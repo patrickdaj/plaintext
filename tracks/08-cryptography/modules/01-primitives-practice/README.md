@@ -1,5 +1,8 @@
 # Module 01 — Primitives in Practice
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *Every cryptographic system is built from a small set of primitives — choose the wrong one and the system is broken before you write a line of code.*
 
 ## Why this matters

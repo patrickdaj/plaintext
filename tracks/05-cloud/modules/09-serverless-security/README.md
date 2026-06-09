@@ -1,5 +1,8 @@
 # Module 09 — Serverless Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *serverless doesn't eliminate the attack surface — it moves it into IAM, event triggers, and the runtime environment.*
 
 ## Why this matters

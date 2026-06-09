@@ -1,5 +1,8 @@
 # Lab 04 — Find Malware on the Wire with Zeek
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

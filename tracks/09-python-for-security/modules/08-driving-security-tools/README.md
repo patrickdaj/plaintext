@@ -1,5 +1,8 @@
 # Module 08 — Driving Security Tools
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *the best tool is the one you can script; scripting it means you can scale it.*
 
 ## Why this matters

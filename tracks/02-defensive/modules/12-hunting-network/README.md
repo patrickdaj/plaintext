@@ -1,5 +1,8 @@
 # Module 12 — Threat Hunting: Network
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *C2 hides in plain sight; beaconing is how you find it.*
 
 ## Why this matters

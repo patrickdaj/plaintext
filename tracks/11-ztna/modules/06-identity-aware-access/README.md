@@ -1,5 +1,8 @@
 # Module 06 — Identity-Aware Access
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *every request carries proof of who you are before a packet reaches your service.*
 
 ## Why this matters

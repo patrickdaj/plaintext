@@ -1,5 +1,8 @@
 # Module 09 — Cryptography Basics
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *the trust layer under every secure system.*
 
 ## Why this matters

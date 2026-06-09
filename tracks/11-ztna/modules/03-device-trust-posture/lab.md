@@ -1,5 +1,8 @@
 # Lab 03 — Device Trust & Posture: headscale + WireGuard
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **reference lab** with a one-command environment in the companion

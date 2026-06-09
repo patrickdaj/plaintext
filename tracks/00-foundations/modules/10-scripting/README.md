@@ -1,5 +1,8 @@
 # Module 10 — Scripting & Automation
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *stop doing by hand what a 20-line script does reliably.*
 
 ## Why this matters

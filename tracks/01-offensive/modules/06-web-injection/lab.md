@@ -1,5 +1,8 @@
 # Lab 06 — Exploit SQL Injection
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — it ships its own deliberately vulnerable app in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo (no external target
@@ -34,8 +37,8 @@ extraction — pulling the credentials out of the `users` table.
    (Hint: the directory shows two fields per person.)
 3. [ ] Craft a `UNION SELECT` that extracts `username, password` from the `users` table. Confirm you
    pulled `admin`'s credentials.
-4. [ ] Re-run the same finding with **`sqlmap`** (`sqlmap -u "http://localhost:8080/search?name=x" --dump`)
-   and compare: what did it automate that you did by hand?
+4. [ ] Re-run the same finding with **`sqlmap`** and have it dump the table contents. (Which flag dumps
+   the data?) Compare: what did it automate that you did by hand?
 5. [ ] State the root cause in one sentence, and rewrite the vulnerable line as a **parameterised
    query** — explain why that closes it where escaping wouldn't.
 

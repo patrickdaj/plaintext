@@ -1,5 +1,8 @@
 # Lab 04 — Investigating a Linux Host with Core Tools
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

@@ -1,5 +1,8 @@
 # Lab 03 — From Service Version to Known Vulnerability
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

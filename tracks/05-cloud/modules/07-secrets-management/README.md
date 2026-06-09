@@ -1,5 +1,8 @@
 # Module 07 — Secrets Management & Detection
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *the credential you don't know is in git is the one that gets you breached.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Lab 03 — Make a Linux Host Talk
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

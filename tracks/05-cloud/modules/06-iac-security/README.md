@@ -1,5 +1,8 @@
 # Module 06 — Infrastructure-as-Code Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *scan the blueprint before the building goes up.*
 
 ## Why this matters

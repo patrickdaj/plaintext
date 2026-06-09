@@ -1,5 +1,8 @@
 # Module 01 — The Hybrid AI Pattern
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *not every task needs a frontier model — the decision of what runs where is itself a security posture.*
 
 ## Why this matters

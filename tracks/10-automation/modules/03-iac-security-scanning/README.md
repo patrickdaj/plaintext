@@ -1,5 +1,8 @@
 # Module 03 — IaC Security Scanning
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *the misconfiguration that never deploys is the cheapest one to fix.*
 
 ## Why this matters

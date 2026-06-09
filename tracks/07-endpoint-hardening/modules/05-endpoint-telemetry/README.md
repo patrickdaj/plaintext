@@ -1,5 +1,8 @@
 # Module 05 — Endpoint Telemetry & EDR
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *Hardening reduces the attack surface; telemetry tells you when an attacker found the part you missed.*
 
 ## Why this matters

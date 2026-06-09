@@ -15,22 +15,22 @@ collect exploits; it's to understand *why* systems fall so you can explain and f
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Reconnaissance & OSINT | Passive/active intel; building a target picture | `amass`, `theHarvester`, `recon-ng` |
-| 02 | Scanning & Enumeration | Host discovery, service/version detection | `nmap`, `gobuster`, `enum4linux-ng` |
-| 03 | Vulnerability Identification | Mapping findings to CVE/CWE and verifying | `nuclei`, `searchsploit` |
-| 04 | Exploitation Fundamentals | How exploits work; framework + manual | `metasploit`, `msfvenom` |
-| 05 | Memory Corruption Primer | Stack overflows and why exploits work | `gdb`, `pwntools` |
-| 06 | Web — Injection | SQLi and command injection in practice | `sqlmap`, `burpsuite CE` |
-| 07 | Web — Auth & Access Control | Broken auth, sessions, IDOR, privilege flaws | `burpsuite CE`, `ffuf` |
-| 08 | Web — SSRF, XXE & Deserialization | Server-side classes and file-upload abuse | `OWASP ZAP` |
-| 09 | Password & Credential Attacks | Hashing, cracking, spraying, reuse | `hashcat`, `john`, `hydra` |
-| 10 | Privilege Escalation — Linux | Local enumeration and escalation | `linpeas`, `pspy` |
-| 11 | Privilege Escalation — Windows | Token, service, and registry paths | `winpeas`, `PrivescCheck` |
-| 12 | Pivoting & Lateral Movement | Tunneling and moving between hosts | `chisel`, `ligolo-ng`, `proxychains` |
-| 13 | C2 & Post-Exploitation | Command-and-control and tradecraft | `sliver`, `pwncat` |
-| 14 | Living-off-the-Land & Evasion | Native tooling and basic AV/EDR evasion | `LOLBAS`, `GTFOBins` |
-| 15 | Cloud & Container Attack Primer | Where on-prem skills meet cloud (handoff to T05) | `pacu`, `peirates` |
-| 16 | Reporting & Remediation | Prioritised, reproducible, defender-ready reports | `ghostwriter` |
+| 01 | [Reconnaissance & OSINT](modules/01-recon/README.md) | Passive/active intel; building a target picture | `amass`, `theHarvester`, `recon-ng` |
+| 02 | [Scanning & Enumeration](modules/02-scanning/README.md) | Host discovery, service/version detection | `nmap`, `gobuster`, `enum4linux-ng` |
+| 03 | [Vulnerability Identification](modules/03-vuln-id/README.md) | Mapping findings to CVE/CWE and verifying | `nuclei`, `searchsploit` |
+| 04 | [Exploitation Fundamentals](modules/04-exploitation/README.md) | How exploits work; framework + manual | `metasploit`, `msfvenom` |
+| 05 | [Memory Corruption Primer](modules/05-memory-corruption/README.md) | Stack overflows and why exploits work | `gdb`, `pwntools` |
+| 06 | [Web — Injection](modules/06-web-injection/README.md) | SQLi and command injection in practice | `sqlmap`, `burpsuite CE` |
+| 07 | [Web — Auth & Access Control](modules/07-web-access-control/README.md) | Broken auth, sessions, IDOR, privilege flaws | `burpsuite CE`, `ffuf` |
+| 08 | [Web — SSRF, XXE & Deserialization](modules/08-web-ssrf-xxe/README.md) | Server-side classes and file-upload abuse | `OWASP ZAP` |
+| 09 | [Password & Credential Attacks](modules/09-password-attacks/README.md) | Hashing, cracking, spraying, reuse | `hashcat`, `john`, `hydra` |
+| 10 | [Privilege Escalation — Linux](modules/10-privesc-linux/README.md) | Local enumeration and escalation | `linpeas`, `pspy` |
+| 11 | [Privilege Escalation — Windows](modules/11-privesc-windows/README.md) | Token, service, and registry paths | `winpeas`, `PrivescCheck` |
+| 12 | [Pivoting & Lateral Movement](modules/12-pivoting/README.md) | Tunneling and moving between hosts | `chisel`, `ligolo-ng`, `proxychains` |
+| 13 | [C2 & Post-Exploitation](modules/13-c2-postex/README.md) | Command-and-control and tradecraft | `sliver`, `pwncat` |
+| 14 | [Living-off-the-Land & Evasion](modules/14-lolbins-evasion/README.md) | Native tooling and basic AV/EDR evasion | `LOLBAS`, `GTFOBins` |
+| 15 | [Cloud & Container Attack Primer](modules/15-cloud-primer/README.md) | Where on-prem skills meet cloud (handoff to T05) | `pacu`, `peirates` |
+| 16 | [Reporting & Remediation](modules/16-reporting/README.md) | Prioritised, reproducible, defender-ready reports | `ghostwriter` |
 
 ## Phases & projects
 

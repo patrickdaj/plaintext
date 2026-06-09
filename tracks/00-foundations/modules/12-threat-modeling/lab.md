@@ -1,5 +1,8 @@
 # Lab 12 — Threat-Modeling a Small Application
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

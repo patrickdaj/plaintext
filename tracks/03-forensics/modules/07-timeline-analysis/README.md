@@ -1,5 +1,8 @@
 # Module 07 — Timeline Analysis
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *a timeline is the one artifact that turns a pile of evidence into a story.*
 
 ## Why this matters

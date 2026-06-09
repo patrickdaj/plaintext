@@ -1,5 +1,8 @@
 # Lab 12 — Kubernetes RBAC Audit and Network Policy
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 **Prerequisites:** Docker (running) and `kind` and `kubectl` installed.

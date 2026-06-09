@@ -1,5 +1,8 @@
 # Module 07 — Automating the Web
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *an unprotected endpoint is only hidden if nobody looks; a scraper looks.*
 
 ## Why this matters

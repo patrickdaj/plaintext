@@ -14,21 +14,21 @@ telemetry in, tested detections out, mapped to attacker behaviour.
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Telemetry & Log Centralisation | What to collect and how to ship it | `elastic`, `fluent-bit`, `vector` |
-| 02 | Windows & Endpoint Telemetry | Process/file/auth events worth alerting on | `sysmon`, `wazuh` |
-| 03 | Linux Telemetry | Auditd and kernel-level visibility | `auditd`, `osquery` |
-| 04 | Network Security Monitoring | Protocol logs and connection records | `zeek`, `arkime` |
-| 05 | Intrusion Detection | Signature and anomaly detection on the wire | `suricata` |
-| 06 | SIEM Fundamentals | Indexing, querying, and dashboards | `elastic`/`kibana`, `wazuh` |
-| 07 | Log Parsing & Normalisation | Turning raw logs into a common schema | `vector`, `logstash` |
-| 08 | Detection-as-Code | Writing portable rules in Sigma | `sigma` |
-| 09 | Detection Testing & Tuning | Validating coverage, cutting false positives | Atomic Red Team |
-| 10 | ATT&CK Mapping & Coverage | Measuring and closing detection gaps | ATT&CK Navigator |
-| 11 | Threat Hunting — Endpoint | Hypothesis-driven host hunting | `osquery`, `velociraptor` |
-| 12 | Threat Hunting — Network | Hunting across protocol and flow data | `zeek`, `jupyter` |
-| 13 | Alert Triage & Incident Response | A repeatable process from alert to verdict | `TheHive` |
-| 14 | Threat Intelligence | Managing IOCs and enriching detections | `MISP`, `OpenCTI` |
-| 15 | Response Automation (SOAR primer) | Automating enrich → contain → ticket | `Shuffle` |
+| 01 | [Telemetry & Log Centralisation](modules/01-telemetry/README.md) | What to collect and how to ship it | `elastic`, `fluent-bit`, `vector` |
+| 02 | [Windows & Endpoint Telemetry](modules/02-endpoint-telemetry/README.md) | Process/file/auth events worth alerting on | `sysmon`, `wazuh` |
+| 03 | [Linux Telemetry](modules/03-linux-telemetry/README.md) | Auditd and kernel-level visibility | `auditd`, `osquery` |
+| 04 | [Network Security Monitoring](modules/04-network-monitoring/README.md) | Protocol logs and connection records | `zeek`, `arkime` |
+| 05 | [Intrusion Detection](modules/05-intrusion-detection/README.md) | Signature and anomaly detection on the wire | `suricata` |
+| 06 | [SIEM Fundamentals](modules/06-siem/README.md) | Indexing, querying, and dashboards | `elastic`/`kibana`, `wazuh` |
+| 07 | [Log Parsing & Normalisation](modules/07-log-parsing/README.md) | Turning raw logs into a common schema | `vector`, `logstash` |
+| 08 | [Detection-as-Code](modules/08-detection-as-code/README.md) | Writing portable rules in Sigma | `sigma` |
+| 09 | [Detection Testing & Tuning](modules/09-detection-testing/README.md) | Validating coverage, cutting false positives | Atomic Red Team |
+| 10 | [ATT&CK Mapping & Coverage](modules/10-attack-coverage/README.md) | Measuring and closing detection gaps | ATT&CK Navigator |
+| 11 | [Threat Hunting — Endpoint](modules/11-hunting-endpoint/README.md) | Hypothesis-driven host hunting | `osquery`, `velociraptor` |
+| 12 | [Threat Hunting — Network](modules/12-hunting-network/README.md) | Hunting across protocol and flow data | `zeek`, `jupyter` |
+| 13 | [Alert Triage & Incident Response](modules/13-triage-ir/README.md) | A repeatable process from alert to verdict | `TheHive` |
+| 14 | [Threat Intelligence](modules/14-threat-intel/README.md) | Managing IOCs and enriching detections | `MISP`, `OpenCTI` |
+| 15 | [Response Automation (SOAR primer)](modules/15-soar/README.md) | Automating enrich → contain → ticket | `Shuffle` |
 
 ## Phases & projects
 

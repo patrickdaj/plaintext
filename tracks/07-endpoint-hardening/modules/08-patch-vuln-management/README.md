@@ -1,5 +1,8 @@
 # Module 08 — Patch & Vulnerability Management
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *Hardening reduces the attack surface of the software you need; patch management eliminates the vulnerabilities in it.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Lab 01 — The Automation Mindset
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 No container for this module — it's a structured thinking exercise.
 

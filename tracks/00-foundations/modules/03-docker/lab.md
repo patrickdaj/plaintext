@@ -1,5 +1,8 @@
 # Lab 03 — Run, Build, and Inspect a Container
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

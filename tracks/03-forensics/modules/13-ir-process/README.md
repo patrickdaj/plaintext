@@ -1,5 +1,8 @@
 # Module 13 — Incident Response Process
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *the investigation without a process is just a fire drill — the process is what turns technical findings into organisational decisions.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 04 — Cloud Network Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *the cloud network looks like what you know, until it doesn't — and the differences are where attackers hide.*
 
 ## Why this matters

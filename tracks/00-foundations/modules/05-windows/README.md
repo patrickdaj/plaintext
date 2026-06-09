@@ -1,5 +1,8 @@
 # Module 05 — Windows for Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *the enterprise runs on Windows, and so do most attacks; you can't stay Linux-only.*
 
 ## Why this matters

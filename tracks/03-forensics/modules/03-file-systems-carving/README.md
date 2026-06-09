@@ -1,5 +1,8 @@
 # Module 03 — File Systems & Carving
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *deleted files don't disappear — they just become invisible to the OS, and visible to you.*
 
 ## Why this matters

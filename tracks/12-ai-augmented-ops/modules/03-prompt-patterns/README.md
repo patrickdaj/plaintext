@@ -1,5 +1,8 @@
 # Module 03 — Prompt Patterns for Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *the prompt is the program; write it like one.*
 
 ## Why this matters

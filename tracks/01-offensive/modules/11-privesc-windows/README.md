@@ -1,5 +1,8 @@
 # Module 11 — Privilege Escalation: Windows
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *from a user shell to SYSTEM, usually via misconfiguration.*
 
 ## Why this matters

@@ -14,16 +14,16 @@ direct and review the ones AI writes.
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Setup & Security Idioms | A clean, repeatable Python toolchain | `python3`, `venv` |
-| 02 | Files, Regex & Log Parsing | Extracting signal from raw logs | `re`, `pathlib` |
-| 03 | Structured Data & Reporting | JSON/CSV in and out; readable output | `json`, `csv`, `rich` |
-| 04 | HTTP & APIs for Enrichment | Querying threat-intel and tool APIs | `requests`, `httpx` |
-| 05 | Building CLI Tools | Real tools with arguments and help | `argparse`, `typer` |
-| 06 | Network Programming | Sockets and packet crafting | `socket`, `scapy` |
-| 07 | Automating the Web | Responsible scraping and session handling | `requests`, `beautifulsoup4` |
-| 08 | Driving Security Tools | Wrapping VirusTotal, MISP, and friends | `requests`, `pymisp` |
-| 09 | Building an MCP Server | Exposing a tool to an LLM | `fastmcp` |
-| 10 | Packaging, Testing & Owning AI Code | Reviewing, testing, and shipping | `pytest`, `ruff` |
+| 01 | [Setup & Security Idioms](modules/01-setup-idioms/README.md) | A clean, repeatable Python toolchain | `python3`, `venv` |
+| 02 | [Files, Regex & Log Parsing](modules/02-files-regex-parsing/README.md) | Extracting signal from raw logs | `re`, `pathlib` |
+| 03 | [Structured Data & Reporting](modules/03-structured-data-reporting/README.md) | JSON/CSV in and out; readable output | `json`, `csv`, `rich` |
+| 04 | [HTTP & APIs for Enrichment](modules/04-http-apis-enrichment/README.md) | Querying threat-intel and tool APIs | `requests`, `httpx` |
+| 05 | [Building CLI Tools](modules/05-building-cli-tools/README.md) | Real tools with arguments and help | `argparse`, `typer` |
+| 06 | [Network Programming](modules/06-network-programming/README.md) | Sockets and packet crafting | `socket`, `scapy` |
+| 07 | [Automating the Web](modules/07-automating-the-web/README.md) | Responsible scraping and session handling | `requests`, `beautifulsoup4` |
+| 08 | [Driving Security Tools](modules/08-driving-security-tools/README.md) | Wrapping VirusTotal, MISP, and friends | `requests`, `pymisp` |
+| 09 | [Building an MCP Server](modules/09-building-mcp-server/README.md) | Exposing a tool to an LLM | `fastmcp` |
+| 10 | [Packaging, Testing & Owning AI Code](modules/10-packaging-testing/README.md) | Reviewing, testing, and shipping | `pytest`, `ruff` |
 
 ## Prerequisites
 Complete Track 00 — Foundations (module 10 — Scripting & Automation).

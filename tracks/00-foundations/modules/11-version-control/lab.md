@@ -1,5 +1,8 @@
 # Lab 11 — Build a Portfolio Repo (the Right Way)
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

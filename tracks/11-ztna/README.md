@@ -14,15 +14,15 @@ tools.
 
 | # | Module | What you'll learn | OSS / free tools |
 |---|--------|-------------------|--------------------|
-| 01 | Zero Trust Principles | Why the perimeter failed; the core tenets and the SASE landscape | — |
-| 02 | Identity as the Control Plane | Authentication, SSO, and authorization; OIDC/SAML federation with enterprise IdPs | `keycloak` |
-| 03 | Device Trust & Posture | Tying access to device health; hardware-bound auth and network-level device trust | `tailscale`, `headscale`, FIDO2/passkeys |
-| 04 | ZTNA Architectures | OSS vs. cloud-delivered patterns and trade-offs | — |
-| 05 | SASE & Cloud-Delivered Zero Trust | Managed ZT at the edge; when SASE beats self-hosted | Cloudflare Zero Trust (free tier) |
-| 06 | Identity-Aware Access | Per-request access with no open ports; self-hosted vs. managed | `pomerium`, `tailscale` |
-| 07 | Microsegmentation | Limiting blast radius between workloads | `cilium` |
-| 08 | Policy as Code | Continuous, versioned authorization | `OPA` |
-| 09 | Monitoring & Detection in Zero Trust | What "trust nothing" means for logging and detection | `sigma` |
+| 01 | [Zero Trust Principles](modules/01-zero-trust-principles/README.md) | Why the perimeter failed; the core tenets and the SASE landscape | — |
+| 02 | [Identity as the Control Plane](modules/02-identity-control-plane/README.md) | Authentication, SSO, and authorization; OIDC/SAML federation with enterprise IdPs | `keycloak` |
+| 03 | [Device Trust & Posture](modules/03-device-trust-posture/README.md) | Tying access to device health; hardware-bound auth and network-level device trust | `tailscale`, `headscale`, FIDO2/passkeys |
+| 04 | [ZTNA Architectures](modules/04-ztna-architectures/README.md) | OSS vs. cloud-delivered patterns and trade-offs | — |
+| 05 | [SASE & Cloud-Delivered Zero Trust](modules/05-sase-cloud-delivered/README.md) | Managed ZT at the edge; when SASE beats self-hosted | Cloudflare Zero Trust (free tier) |
+| 06 | [Identity-Aware Access](modules/06-identity-aware-access/README.md) | Per-request access with no open ports; self-hosted vs. managed | `pomerium`, `tailscale` |
+| 07 | [Microsegmentation](modules/07-microsegmentation/README.md) | Limiting blast radius between workloads | `cilium` |
+| 08 | [Policy as Code](modules/08-policy-as-code/README.md) | Continuous, versioned authorization | `OPA` |
+| 09 | [Monitoring & Detection in Zero Trust](modules/09-monitoring-detection/README.md) | What "trust nothing" means for logging and detection | `sigma` |
 
 ## Prerequisites
 Complete Track 00 — Foundations; Track 05 — Cloud helps.

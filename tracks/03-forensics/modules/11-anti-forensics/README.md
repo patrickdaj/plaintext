@@ -1,5 +1,8 @@
 # Module 11 — Anti-Forensics & Detecting It
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *recognise the attacker's attempts to erase their tracks — and understand why those attempts rarely succeed completely.*
 
 ## Why this matters

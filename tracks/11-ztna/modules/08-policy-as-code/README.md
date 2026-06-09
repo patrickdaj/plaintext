@@ -1,5 +1,8 @@
 # Module 08 — Policy as Code
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *authorization logic that lives in git, gets reviewed, and can be tested like software.*
 
 ## Why this matters

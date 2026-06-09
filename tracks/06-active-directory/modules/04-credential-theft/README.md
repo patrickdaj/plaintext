@@ -1,5 +1,8 @@
 # Module 04 — Credential Theft & Replay
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *a password hash is not a password, but in Windows it is often just as good.*
 
 ## Why this matters

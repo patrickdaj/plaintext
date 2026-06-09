@@ -1,5 +1,8 @@
 # Module 12 — Pivoting & Lateral Movement
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *one foothold is rarely the goal; this is how access spreads through a network.*
 
 ## Why this matters

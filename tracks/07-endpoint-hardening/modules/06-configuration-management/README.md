@@ -1,5 +1,8 @@
 # Module 06 — Configuration Management
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *Hardening that lives in a runbook dies in a ticket queue; hardening expressed as code survives team changes, scales to thousands of hosts, and can be tested.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 07 — Web Attacks: Authentication & Access Control
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *broken access control is OWASP's #1 risk for a reason.*
 
 ## Why this matters

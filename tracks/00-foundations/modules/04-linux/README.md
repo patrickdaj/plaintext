@@ -1,5 +1,8 @@
 # Module 04 — Linux for Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *most of what you'll defend, attack, or investigate runs on Linux.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 04 — Retrieval-Augmented Generation
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *a model without your data is answering from memory; RAG is how you give it the right context.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 01 — Security First Principles
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *the vocabulary and mental models the whole field is built on.*
 
 ## Why this matters

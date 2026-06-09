@@ -1,5 +1,8 @@
 # Module 10 — Auditing Applied-Crypto Failures
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *Applied cryptography fails in patterns — knowing the pattern tells you exactly where to look in an audit.*
 
 ## Why this matters

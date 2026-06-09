@@ -1,5 +1,8 @@
 # Module 02 — Building a Safe Lab
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *you need somewhere safe to break things before you break anything for real.*
 
 ## Why this matters

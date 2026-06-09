@@ -16,18 +16,18 @@ work in the open with git. Build this floor solid and everything above it gets e
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | Security First Principles | CIA, AAA, defense in depth, and the security mindset | — |
-| 02 | Building a Safe Lab | Isolated, snapshot-able VMs, and when to use a VM vs a container | VirtualBox, Docker |
-| 03 | Docker & Containers | Run, build, and inspect containers; the isolation model | `docker` |
-| 04 | Linux for Security | Shell, permissions, processes, logs, and text processing | `bash`, `coreutils` |
-| 05 | Windows for Security | Filesystem, registry, services, event logs, and PowerShell | `powershell` |
-| 06 | Networking Fundamentals | TCP/IP, the handshake, DNS, and reading a capture | `tcpdump`, `wireshark` |
-| 07 | Web & HTTP Fundamentals | Requests, responses, sessions, and security-relevant headers | `curl` |
-| 08 | Data & Encoding | Hex, base64, URL encoding, and querying JSON | `cyberchef`, `jq` |
-| 09 | Cryptography Basics | Hashing, symmetric/asymmetric, certificates, and TLS | `openssl` |
-| 10 | Scripting & Automation | Turning repetitive analysis into reviewable Python tools | `python3` |
-| 11 | Version Control & Working in the Open | git, pull requests, and keeping secrets out of history | `git` |
-| 12 | Threat Modeling | Trust boundaries and STRIDE — model before you test | — |
+| 01 | [Security First Principles](modules/01-security-principles/README.md) | CIA, AAA, defense in depth, and the security mindset | — |
+| 02 | [Building a Safe Lab](modules/02-lab-setup/README.md) | Isolated, snapshot-able VMs, and when to use a VM vs a container | VirtualBox, Docker |
+| 03 | [Docker & Containers](modules/03-docker/README.md) | Run, build, and inspect containers; the isolation model | `docker` |
+| 04 | [Linux for Security](modules/04-linux/README.md) | Shell, permissions, processes, logs, and text processing | `bash`, `coreutils` |
+| 05 | [Windows for Security](modules/05-windows/README.md) | Filesystem, registry, services, event logs, and PowerShell | `powershell` |
+| 06 | [Networking Fundamentals](modules/06-networking/README.md) | TCP/IP, the handshake, DNS, and reading a capture | `tcpdump`, `wireshark` |
+| 07 | [Web & HTTP Fundamentals](modules/07-web-http/README.md) | Requests, responses, sessions, and security-relevant headers | `curl` |
+| 08 | [Data & Encoding](modules/08-data-encoding/README.md) | Hex, base64, URL encoding, and querying JSON | `cyberchef`, `jq` |
+| 09 | [Cryptography Basics](modules/09-cryptography/README.md) | Hashing, symmetric/asymmetric, certificates, and TLS | `openssl` |
+| 10 | [Scripting & Automation](modules/10-scripting/README.md) | Turning repetitive analysis into reviewable Python tools | `python3` |
+| 11 | [Version Control & Working in the Open](modules/11-version-control/README.md) | git, pull requests, and keeping secrets out of history | `git` |
+| 12 | [Threat Modeling](modules/12-threat-modeling/README.md) | Trust boundaries and STRIDE — model before you test | — |
 
 ## Phases & projects
 

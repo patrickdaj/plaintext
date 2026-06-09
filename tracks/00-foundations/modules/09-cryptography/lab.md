@@ -1,5 +1,8 @@
 # Lab 09 — Hashing, Encryption, and Certificates with openssl
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

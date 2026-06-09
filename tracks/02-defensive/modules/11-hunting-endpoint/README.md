@@ -1,5 +1,8 @@
 # Module 11 — Threat Hunting: Endpoint
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *don't wait for an alert — go looking for what your detections missed.*
 
 ## Why this matters

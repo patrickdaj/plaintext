@@ -1,5 +1,8 @@
 # Module 08 — Triage & Live Response
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *get the right data off the right hosts in minutes, before the attacker cleans up or the machine reboots.*
 
 ## Why this matters

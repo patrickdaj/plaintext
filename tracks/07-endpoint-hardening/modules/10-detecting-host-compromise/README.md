@@ -1,5 +1,8 @@
 # Module 10 — Detecting Host Compromise
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *Hardening raises the cost of attack; detection ensures the cost is paid visibly, not silently.*
 
 ## Why this matters

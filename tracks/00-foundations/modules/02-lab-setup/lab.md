@@ -1,5 +1,8 @@
 # Lab 02 — Stand Up and Snapshot a Disposable Lab
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

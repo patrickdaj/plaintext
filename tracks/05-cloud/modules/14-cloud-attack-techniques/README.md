@@ -1,5 +1,8 @@
 # Module 14 — Cloud Attack Techniques
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *you can't defend what you haven't attacked: simulate adversary techniques safely, in your own environment.*
 
 ## Why this matters

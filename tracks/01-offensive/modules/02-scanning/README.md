@@ -1,5 +1,8 @@
 # Module 02 — Scanning & Enumeration
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *turn a list of hosts into a map of services, versions, and ways in.*
 
 ## Why this matters

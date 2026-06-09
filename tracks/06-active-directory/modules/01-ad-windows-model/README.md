@@ -1,5 +1,8 @@
 # Module 01 — AD & Windows Security Model
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *before you can attack or defend a domain, you need an accurate map of how Windows decides "yes" or "no."*
 
 ## Why this matters

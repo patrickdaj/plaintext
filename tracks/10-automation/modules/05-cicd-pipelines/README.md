@@ -1,5 +1,8 @@
 # Module 05 — CI/CD Pipelines & Gates
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *the security check that runs before the merge is the one that can't be bypassed.*
 
 ## Why this matters

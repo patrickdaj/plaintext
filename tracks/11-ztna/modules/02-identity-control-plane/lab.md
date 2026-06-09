@@ -1,5 +1,8 @@
 # Lab 02 — Identity as the Control Plane: Keycloak + OIDC
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **reference lab** with a one-command environment in the companion

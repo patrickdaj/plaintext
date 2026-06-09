@@ -1,5 +1,8 @@
 # Module 04 — Configuration Management
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *if you hardened it once by hand, a configuration management tool can harden a thousand more.*
 
 ## Why this matters

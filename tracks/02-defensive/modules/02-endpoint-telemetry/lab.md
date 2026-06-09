@@ -1,5 +1,8 @@
 # Lab 02 — Read Endpoint Telemetry From a Real Attack
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

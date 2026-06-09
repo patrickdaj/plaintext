@@ -1,5 +1,8 @@
 # Module 10 — Log & Cloud Forensics
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *investigate from the paper trail when the disk is gone, the instance is terminated, and the only artifact is what the platform logged.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 13 — Kubernetes — Admission & Runtime
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *policy-as-code: the control you apply before a workload starts is worth ten detections after it does.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 05 — Browser & Application Artifacts
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *the browser is the most detailed diary of what a user actually did — and most people forget it exists.*
 
 ## Why this matters

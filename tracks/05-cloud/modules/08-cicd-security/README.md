@@ -1,5 +1,8 @@
 # Module 08 — CI/CD Pipeline Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *the build pipeline is the highest-trust path in your environment — and frequently the least scrutinised.*
 
 ## Why this matters

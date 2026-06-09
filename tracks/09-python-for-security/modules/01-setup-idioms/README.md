@@ -1,5 +1,8 @@
 # Module 01 — Setup & Security Idioms
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *build a toolchain you'd trust with production data, starting from the first line.*
 
 ## Why this matters

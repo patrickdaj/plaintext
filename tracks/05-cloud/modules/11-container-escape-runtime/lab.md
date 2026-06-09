@@ -1,5 +1,8 @@
 # Lab 11 — Container Escape and Runtime Detection
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — it ships a one-command environment in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo:
@@ -45,7 +48,8 @@ Meridian Financial's platform team received a Dependabot alert about a compromis
 4. [ ] Read the host-side secret: `cat /mnt/host/host-secret.txt` (or the hostPath volume path as configured). What file did you access, and from which UID?
 
 5. [ ] **Reflect:** what three configuration changes in the compose file would close this escape?
-   (`--privileged`, `/dev` bind mount, and running as root `USER` — name all three.)
+   Name all three — look at the privilege level the container runs with, what host paths it
+   bind-mounts, and the UID its process runs as.
 
 **Scenario B — Falco runtime detection**
 

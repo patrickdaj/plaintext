@@ -1,5 +1,8 @@
 # Lab 13 — Incident Response Process: Mapping the Meridian Incident to NIST SP 800-61
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **concept and exercise module** — no container required. The exercise works from the

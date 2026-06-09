@@ -1,5 +1,8 @@
 # Module 07 — Log Parsing & Normalisation
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *raw logs are chaos; a common schema is what makes detection scale.*
 
 ## Why this matters

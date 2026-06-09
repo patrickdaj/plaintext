@@ -1,5 +1,8 @@
 # Lab 07 — Microsegmentation with Cilium
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This lab requires **Docker**, **kind**, and **kubectl** installed on your host.

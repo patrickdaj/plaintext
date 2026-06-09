@@ -1,5 +1,8 @@
 # Module 08 — Secret Detection & Leakage
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *Secrets that escaped into source control don't expire when you remove them from the latest commit — they live in every clone of the repository's history.*
 
 ## Why this matters

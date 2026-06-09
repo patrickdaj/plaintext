@@ -1,5 +1,8 @@
 # Lab 02 — Windows Hardening to CIS
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — it ships support files in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo:

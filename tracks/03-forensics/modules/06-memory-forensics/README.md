@@ -1,5 +1,8 @@
 # Module 06 — Memory Forensics
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *RAM is the one place an attacker cannot clean up and leave — everything running exists in memory.*
 
 ## Why this matters

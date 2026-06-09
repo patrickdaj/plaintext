@@ -1,5 +1,8 @@
 # Module 09 — Password & Credential Attacks
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *credentials are the keys; cracking and capturing them is how access spreads.*
 
 ## Why this matters

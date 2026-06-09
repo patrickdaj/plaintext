@@ -1,5 +1,8 @@
 # Lab 05 — Building MCP Servers
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 ```bash
 git clone https://github.com/plaintext-security/plaintext-labs

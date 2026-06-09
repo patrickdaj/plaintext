@@ -1,5 +1,8 @@
 # Module 16 — Cloud Incident Response
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *the attacker left in the API log; your job is to find the thread and pull it.*
 
 ## Why this matters

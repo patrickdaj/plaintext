@@ -1,5 +1,8 @@
 # Module 09 — Detecting AD Attacks
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *every attack in modules 03-08 left a signal; this module is about turning those signals into detections that fire before the attacker reaches the DC.*
 
 ## Why this matters

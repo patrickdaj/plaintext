@@ -1,5 +1,8 @@
 # Lab 01 — Map an Attack Surface
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

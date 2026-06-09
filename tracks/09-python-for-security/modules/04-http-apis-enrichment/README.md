@@ -1,5 +1,8 @@
 # Module 04 — HTTP & APIs for Enrichment
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *every IOC you can't explain is a ticket you can't close; APIs give you the context.*
 
 ## Why this matters

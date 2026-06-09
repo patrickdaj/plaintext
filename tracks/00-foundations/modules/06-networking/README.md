@@ -1,5 +1,8 @@
 # Module 06 — Networking Fundamentals
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *you can't attack, defend, or investigate what you can't read on the wire.*
 
 ## Why this matters

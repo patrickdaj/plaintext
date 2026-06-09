@@ -1,5 +1,8 @@
 # Module 05 — Building CLI Tools
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *a tool that takes arguments and has a `--help` is a tool someone else can use.*
 
 ## Why this matters

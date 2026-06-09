@@ -1,5 +1,8 @@
 # Lab 04 — Credential Theft & Pass-the-Hash
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash
@@ -19,34 +22,17 @@ You have cracked `svc-mssql`'s password from module 03 (or use `jsmith:Welcome1!
 
 ## Do
 
-1. [ ] **Secretsdump the DC.** Using domain admin credentials (the lab seeds `tallen:T@ll3n_IT@dmin!` for demonstration), dump all domain credentials:
-   ```
-   secretsdump.py MERIDIAN.LOCAL/tallen:'T@ll3n_IT@dmin!'@dc01.meridian.local
-   ```
-   Note the output format: `domain\username:RID:LM_hash:NT_hash:::`. The NT hash is the third field. What's the NT hash for `Administrator`? For `jsmith`? For `krbtgt`?
+1. [ ] **Secretsdump the DC.** Using a domain-admin credential, dump every domain credential. Read the output format and record the NT hash for `Administrator`, `jsmith`, and `krbtgt`.
 
-2. [ ] **DCSync — pull a single account.** DCSync simulates a DC replication request. Pull just the `Administrator` account's hash:
-   ```
-   secretsdump.py MERIDIAN.LOCAL/tallen:'T@ll3n_IT@dmin!'@dc01.meridian.local \
-     -just-dc-user Administrator
-   ```
-   Note: DCSync does NOT require access to the physical NTDS.dit file. It uses the DRSUAPI replication protocol over RPC. This is why monitoring for unusual replication requests (Event 4662 with GUID for DS-Replication-Get-Changes) matters.
+2. [ ] **DCSync a single account.** Pull just `Administrator`'s hash by asking the DC to replicate it, rather than touching `NTDS.dit`. Which replication protocol does this ride on, and which event (and object GUID) would a defender watch for? Answer in your notes.
 
-3. [ ] **Pass the hash with psexec.** Take the Administrator NT hash from step 1 and authenticate without the password:
-   ```
-   psexec.py -hashes :NTLM_HASH_HERE MERIDIAN.LOCAL/Administrator@dc01.meridian.local
-   ```
-   Replace `NTLM_HASH_HERE` with the actual NT hash. You should get a shell. Run `whoami` — you are `NT AUTHORITY\SYSTEM` on the DC.
+3. [ ] **Pass the hash with psexec.** Take the Administrator NT hash from step 1 and authenticate to the DC with the hash alone — no plaintext. Confirm your privilege level on the resulting shell.
 
-4. [ ] **Try smbexec for comparison.**
-   ```
-   smbexec.py -hashes :NTLM_HASH_HERE MERIDIAN.LOCAL/Administrator@dc01.meridian.local
-   ```
-   Run `whoami` again. What is different about the shell quality? What is different about the artefacts each technique leaves?
+4. [ ] **Try smbexec for comparison.** Get execution on the DC the same way but via smbexec. How does the shell quality differ from psexec, and how do the on-disk / service artefacts each technique leaves differ?
 
-5. [ ] **Understand the hash chain.** Draw the path: `jsmith` (credential from foothold) → Kerberoast `svc-mssql` → crack hash → use credential → ... → `tallen` (DA) → secretsdump DC → `Administrator` NT hash → PTH to DC SYSTEM. How many distinct credentials were involved? How many were cracked vs. replayed?
+5. [ ] **Understand the hash chain.** Draw the path: `jsmith` (foothold) → Kerberoast `svc-mssql` → crack → … → `tallen` (DA) → secretsdump DC → `Administrator` NT hash → PTH to DC SYSTEM. How many distinct credentials were involved, and how many were *cracked* vs *replayed*?
 
-6. [ ] **Identify LAPS gaps.** In the Meridian domain spec (`data/meridian-domain.md`), LAPS is deployed on IT computers but not Finance or HR workstations. What is the implication if you crack a local admin password on one Finance workstation?
+6. [ ] **Identify LAPS gaps.** In `data/meridian-domain.md`, LAPS covers IT computers but not Finance or HR workstations. What does cracking one Finance workstation's local admin password get an attacker, given that gap?
 
 ## Success criteria — you're done when
 

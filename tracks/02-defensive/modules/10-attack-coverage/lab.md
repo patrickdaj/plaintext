@@ -1,5 +1,8 @@
 # Lab 10 — Map Your Coverage
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

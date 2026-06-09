@@ -1,5 +1,8 @@
 # Module 12 — Threat Modeling
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *judgment before tools: what are we protecting, from whom, and where can it go wrong?*
 
 ## Why this matters
