@@ -202,11 +202,88 @@ nav:
           - Lab: 02-defensive/modules/15-soar/lab.md
   - Digital Forensics & IR: 03-forensics/README.md
   - Malware Analysis: 04-malware/README.md
-  - Cloud & Container Security: 05-cloud/README.md
+  - Cloud & Container Security:
+      - Overview: 05-cloud/README.md
+      - "01 · Cloud Fundamentals":
+          - Concept: 05-cloud/modules/01-cloud-fundamentals/README.md
+          - Lab: 05-cloud/modules/01-cloud-fundamentals/lab.md
+      - "02 · Cloud Identity & IAM":
+          - Concept: 05-cloud/modules/02-cloud-identity-iam/README.md
+          - Lab: 05-cloud/modules/02-cloud-identity-iam/lab.md
+      - "03 · IAM Attack Paths":
+          - Concept: 05-cloud/modules/03-iam-attack-paths/README.md
+          - Lab: 05-cloud/modules/03-iam-attack-paths/lab.md
+      - "04 · Cloud Network Security":
+          - Concept: 05-cloud/modules/04-cloud-network-security/README.md
+          - Lab: 05-cloud/modules/04-cloud-network-security/lab.md
+      - "05 · Posture & Misconfiguration Auditing":
+          - Concept: 05-cloud/modules/05-posture-auditing/README.md
+          - Lab: 05-cloud/modules/05-posture-auditing/lab.md
+      - "06 · Infrastructure-as-Code Security":
+          - Concept: 05-cloud/modules/06-iac-security/README.md
+          - Lab: 05-cloud/modules/06-iac-security/lab.md
+      - "07 · Secrets Management & Detection":
+          - Concept: 05-cloud/modules/07-secrets-management/README.md
+          - Lab: 05-cloud/modules/07-secrets-management/lab.md
+      - "08 · CI/CD Pipeline Security":
+          - Concept: 05-cloud/modules/08-cicd-security/README.md
+          - Lab: 05-cloud/modules/08-cicd-security/lab.md
+      - "09 · Serverless Security":
+          - Concept: 05-cloud/modules/09-serverless-security/README.md
+          - Lab: 05-cloud/modules/09-serverless-security/lab.md
+      - "10 · Container & Image Security":
+          - Concept: 05-cloud/modules/10-container-image-security/README.md
+          - Lab: 05-cloud/modules/10-container-image-security/lab.md
+      - "11 · Container Escape & Runtime":
+          - Concept: 05-cloud/modules/11-container-escape-runtime/README.md
+          - Lab: 05-cloud/modules/11-container-escape-runtime/lab.md
+      - "12 · Kubernetes — RBAC & Network Policy":
+          - Concept: 05-cloud/modules/12-kubernetes-rbac-network/README.md
+          - Lab: 05-cloud/modules/12-kubernetes-rbac-network/lab.md
+      - "13 · Kubernetes — Admission & Runtime":
+          - Concept: 05-cloud/modules/13-kubernetes-admission-runtime/README.md
+          - Lab: 05-cloud/modules/13-kubernetes-admission-runtime/lab.md
+      - "14 · Cloud Attack Techniques":
+          - Concept: 05-cloud/modules/14-cloud-attack-techniques/README.md
+          - Lab: 05-cloud/modules/14-cloud-attack-techniques/lab.md
+      - "15 · Cloud Logging & Detection":
+          - Concept: 05-cloud/modules/15-cloud-logging-detection/README.md
+          - Lab: 05-cloud/modules/15-cloud-logging-detection/lab.md
+      - "16 · Cloud Incident Response":
+          - Concept: 05-cloud/modules/16-cloud-incident-response/README.md
+          - Lab: 05-cloud/modules/16-cloud-incident-response/lab.md
   - Active Directory & Windows: 06-active-directory/README.md
   - Endpoint & Host Hardening: 07-endpoint-hardening/README.md
   - Cryptography, PKI & Secrets: 08-cryptography/README.md
   - Python for Security: 09-python-for-security/README.md
   - Security Automation: 10-automation/README.md
-  - Zero Trust Network Access: 11-ztna/README.md
+  - Zero Trust Network Access:
+      - Overview: 11-ztna/README.md
+      - "01 · Zero Trust Principles":
+          - Concept: 11-ztna/modules/01-zero-trust-principles/README.md
+          - Lab: 11-ztna/modules/01-zero-trust-principles/lab.md
+      - "02 · Identity as the Control Plane":
+          - Concept: 11-ztna/modules/02-identity-control-plane/README.md
+          - Lab: 11-ztna/modules/02-identity-control-plane/lab.md
+      - "03 · Device Trust & Posture":
+          - Concept: 11-ztna/modules/03-device-trust-posture/README.md
+          - Lab: 11-ztna/modules/03-device-trust-posture/lab.md
+      - "04 · ZTNA Architectures":
+          - Concept: 11-ztna/modules/04-ztna-architectures/README.md
+          - Lab: 11-ztna/modules/04-ztna-architectures/lab.md
+      - "05 · SASE & Cloud-Delivered Zero Trust":
+          - Concept: 11-ztna/modules/05-sase-cloud-delivered/README.md
+          - Lab: 11-ztna/modules/05-sase-cloud-delivered/lab.md
+      - "06 · Identity-Aware Access":
+          - Concept: 11-ztna/modules/06-identity-aware-access/README.md
+          - Lab: 11-ztna/modules/06-identity-aware-access/lab.md
+      - "07 · Microsegmentation":
+          - Concept: 11-ztna/modules/07-microsegmentation/README.md
+          - Lab: 11-ztna/modules/07-microsegmentation/lab.md
+      - "08 · Policy as Code":
+          - Concept: 11-ztna/modules/08-policy-as-code/README.md
+          - Lab: 11-ztna/modules/08-policy-as-code/lab.md
+      - "09 · Monitoring & Detection":
+          - Concept: 11-ztna/modules/09-monitoring-detection/README.md
+          - Lab: 11-ztna/modules/09-monitoring-detection/lab.md
   - AI-Augmented Security Ops: 12-ai-augmented-ops/README.md
