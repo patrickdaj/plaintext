@@ -10,6 +10,10 @@ the site itself.
 Discord and the site comments are complementary, not redundant: comment on a specific lesson via
 giscus on its page; bring live questions, "did this work for you?", and show-your-work to Discord.
 
+> **Standing up the server?** Follow the step-by-step runbook in
+> [`community/SETUP.md`](community/SETUP.md) — it covers server creation, the bot, applying this
+> layout as code, the secure CI wiring, and the manual bits (welcome screen, onboarding, seed text).
+
 ---
 
 ## Server setup

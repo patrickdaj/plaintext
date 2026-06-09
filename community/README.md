@@ -6,6 +6,9 @@ like — it creates what's missing, patches what drifted, and leaves correct thi
 
 [`../COMMUNITY.md`](../COMMUNITY.md) is the human-readable narrative of this same layout.
 
+**First time setting up the server?** Follow [`SETUP.md`](SETUP.md) — the full end-to-end runbook
+(server, bot, apply, CI, and the manual bits). This file is the tool reference for day-to-day use.
+
 ## One-time setup
 
 1. **Enable Community** on the server (Server Settings → Enable Community). Forum and
