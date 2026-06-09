@@ -200,8 +200,91 @@ nav:
       - "15 · Response Automation (SOAR)":
           - Concept: 02-defensive/modules/15-soar/README.md
           - Lab: 02-defensive/modules/15-soar/lab.md
-  - Digital Forensics & IR: 03-forensics/README.md
-  - Malware Analysis: 04-malware/README.md
+  - Digital Forensics & IR:
+      - Overview: 03-forensics/README.md
+      - "01 · Forensic Fundamentals & Evidence Handling":
+          - Concept: 03-forensics/modules/01-forensic-fundamentals/README.md
+          - Lab: 03-forensics/modules/01-forensic-fundamentals/lab.md
+      - "02 · Acquisition & Imaging":
+          - Concept: 03-forensics/modules/02-acquisition-imaging/README.md
+          - Lab: 03-forensics/modules/02-acquisition-imaging/lab.md
+      - "03 · File Systems & Carving":
+          - Concept: 03-forensics/modules/03-file-systems-carving/README.md
+          - Lab: 03-forensics/modules/03-file-systems-carving/lab.md
+      - "04 · Windows Artifacts":
+          - Concept: 03-forensics/modules/04-windows-artifacts/README.md
+          - Lab: 03-forensics/modules/04-windows-artifacts/lab.md
+      - "05 · Browser & App Artifacts":
+          - Concept: 03-forensics/modules/05-browser-app-artifacts/README.md
+          - Lab: 03-forensics/modules/05-browser-app-artifacts/lab.md
+      - "06 · Memory Forensics":
+          - Concept: 03-forensics/modules/06-memory-forensics/README.md
+          - Lab: 03-forensics/modules/06-memory-forensics/lab.md
+      - "07 · Timeline Analysis":
+          - Concept: 03-forensics/modules/07-timeline-analysis/README.md
+          - Lab: 03-forensics/modules/07-timeline-analysis/lab.md
+      - "08 · Triage & Live Response":
+          - Concept: 03-forensics/modules/08-triage-live-response/README.md
+          - Lab: 03-forensics/modules/08-triage-live-response/lab.md
+      - "09 · Network Forensics":
+          - Concept: 03-forensics/modules/09-network-forensics/README.md
+          - Lab: 03-forensics/modules/09-network-forensics/lab.md
+      - "10 · Log & Cloud Forensics":
+          - Concept: 03-forensics/modules/10-log-cloud-forensics/README.md
+          - Lab: 03-forensics/modules/10-log-cloud-forensics/lab.md
+      - "11 · Anti-Forensics & Detecting It":
+          - Concept: 03-forensics/modules/11-anti-forensics/README.md
+          - Lab: 03-forensics/modules/11-anti-forensics/lab.md
+      - "12 · Malware Artifacts in IR":
+          - Concept: 03-forensics/modules/12-malware-artifacts-ir/README.md
+          - Lab: 03-forensics/modules/12-malware-artifacts-ir/lab.md
+      - "13 · Incident Response Process":
+          - Concept: 03-forensics/modules/13-ir-process/README.md
+          - Lab: 03-forensics/modules/13-ir-process/lab.md
+      - "14 · Reporting & Root-Cause Analysis":
+          - Concept: 03-forensics/modules/14-reporting-root-cause/README.md
+          - Lab: 03-forensics/modules/14-reporting-root-cause/lab.md
+  - Malware Analysis:
+      - Overview: 04-malware/README.md
+      - "01 · Analysis Lab Setup & Safety":
+          - Concept: 04-malware/modules/01-analysis-lab-setup/README.md
+          - Lab: 04-malware/modules/01-analysis-lab-setup/lab.md
+      - "02 · File Triage & Identification":
+          - Concept: 04-malware/modules/02-file-triage/README.md
+          - Lab: 04-malware/modules/02-file-triage/lab.md
+      - "03 · Static Analysis — Strings & PE":
+          - Concept: 04-malware/modules/03-static-strings-pe/README.md
+          - Lab: 04-malware/modules/03-static-strings-pe/lab.md
+      - "04 · Static Analysis — Capabilities":
+          - Concept: 04-malware/modules/04-static-capabilities/README.md
+          - Lab: 04-malware/modules/04-static-capabilities/lab.md
+      - "05 · Dynamic Analysis — Behavioural":
+          - Concept: 04-malware/modules/05-dynamic-behavioural/README.md
+          - Lab: 04-malware/modules/05-dynamic-behavioural/lab.md
+      - "06 · Dynamic Analysis — Network":
+          - Concept: 04-malware/modules/06-dynamic-network/README.md
+          - Lab: 04-malware/modules/06-dynamic-network/lab.md
+      - "07 · Disassembly Basics":
+          - Concept: 04-malware/modules/07-disassembly-basics/README.md
+          - Lab: 04-malware/modules/07-disassembly-basics/lab.md
+      - "08 · Decompilation & Code Analysis":
+          - Concept: 04-malware/modules/08-decompilation-code-analysis/README.md
+          - Lab: 04-malware/modules/08-decompilation-code-analysis/lab.md
+      - "09 · Unpacking & Obfuscation":
+          - Concept: 04-malware/modules/09-unpacking-obfuscation/README.md
+          - Lab: 04-malware/modules/09-unpacking-obfuscation/lab.md
+      - "10 · Anti-Analysis Techniques":
+          - Concept: 04-malware/modules/10-anti-analysis/README.md
+          - Lab: 04-malware/modules/10-anti-analysis/lab.md
+      - "11 · Document & Script Malware":
+          - Concept: 04-malware/modules/11-document-script-malware/README.md
+          - Lab: 04-malware/modules/11-document-script-malware/lab.md
+      - "12 · IOC Extraction & ATT&CK Mapping":
+          - Concept: 04-malware/modules/12-ioc-extraction-attck/README.md
+          - Lab: 04-malware/modules/12-ioc-extraction-attck/lab.md
+      - "13 · Detection Authoring & Reporting":
+          - Concept: 04-malware/modules/13-detection-reporting/README.md
+          - Lab: 04-malware/modules/13-detection-reporting/lab.md
   - Cloud & Container Security:
       - Overview: 05-cloud/README.md
       - "01 · Cloud Fundamentals":
@@ -252,11 +335,169 @@ nav:
       - "16 · Cloud Incident Response":
           - Concept: 05-cloud/modules/16-cloud-incident-response/README.md
           - Lab: 05-cloud/modules/16-cloud-incident-response/lab.md
-  - Active Directory & Windows: 06-active-directory/README.md
-  - Endpoint & Host Hardening: 07-endpoint-hardening/README.md
-  - Cryptography, PKI & Secrets: 08-cryptography/README.md
-  - Python for Security: 09-python-for-security/README.md
-  - Security Automation: 10-automation/README.md
+  - Active Directory & Windows:
+      - Overview: 06-active-directory/README.md
+      - "01 · AD & Windows Security Model":
+          - Concept: 06-active-directory/modules/01-ad-windows-model/README.md
+          - Lab: 06-active-directory/modules/01-ad-windows-model/lab.md
+      - "02 · Enumeration":
+          - Concept: 06-active-directory/modules/02-enumeration/README.md
+          - Lab: 06-active-directory/modules/02-enumeration/lab.md
+      - "03 · Kerberos Attacks":
+          - Concept: 06-active-directory/modules/03-kerberos-attacks/README.md
+          - Lab: 06-active-directory/modules/03-kerberos-attacks/lab.md
+      - "04 · Credential Theft & Replay":
+          - Concept: 06-active-directory/modules/04-credential-theft/README.md
+          - Lab: 06-active-directory/modules/04-credential-theft/lab.md
+      - "05 · ACL & Delegation Abuse":
+          - Concept: 06-active-directory/modules/05-acl-delegation-abuse/README.md
+          - Lab: 06-active-directory/modules/05-acl-delegation-abuse/lab.md
+      - "06 · Lateral Movement":
+          - Concept: 06-active-directory/modules/06-lateral-movement/README.md
+          - Lab: 06-active-directory/modules/06-lateral-movement/lab.md
+      - "07 · Persistence in AD":
+          - Concept: 06-active-directory/modules/07-persistence-ad/README.md
+          - Lab: 06-active-directory/modules/07-persistence-ad/lab.md
+      - "08 · Path to Domain Admin":
+          - Concept: 06-active-directory/modules/08-path-to-da/README.md
+          - Lab: 06-active-directory/modules/08-path-to-da/lab.md
+      - "09 · Detecting AD Attacks":
+          - Concept: 06-active-directory/modules/09-detecting-ad-attacks/README.md
+          - Lab: 06-active-directory/modules/09-detecting-ad-attacks/lab.md
+      - "10 · Hardening AD as Code":
+          - Concept: 06-active-directory/modules/10-hardening-ad/README.md
+          - Lab: 06-active-directory/modules/10-hardening-ad/lab.md
+      - "11 · Defending Identity":
+          - Concept: 06-active-directory/modules/11-defending-identity/README.md
+          - Lab: 06-active-directory/modules/11-defending-identity/lab.md
+  - Endpoint & Host Hardening:
+      - Overview: 07-endpoint-hardening/README.md
+      - "01 · Endpoint Threat Model":
+          - Concept: 07-endpoint-hardening/modules/01-endpoint-threat-model/README.md
+          - Lab: 07-endpoint-hardening/modules/01-endpoint-threat-model/lab.md
+      - "02 · Windows Hardening to CIS":
+          - Concept: 07-endpoint-hardening/modules/02-windows-hardening/README.md
+          - Lab: 07-endpoint-hardening/modules/02-windows-hardening/lab.md
+      - "03 · Linux Hardening to CIS":
+          - Concept: 07-endpoint-hardening/modules/03-linux-hardening/README.md
+          - Lab: 07-endpoint-hardening/modules/03-linux-hardening/lab.md
+      - "04 · Exploit Mitigation & Allowlisting":
+          - Concept: 07-endpoint-hardening/modules/04-exploit-mitigations/README.md
+          - Lab: 07-endpoint-hardening/modules/04-exploit-mitigations/lab.md
+      - "05 · Endpoint Telemetry & EDR":
+          - Concept: 07-endpoint-hardening/modules/05-endpoint-telemetry/README.md
+          - Lab: 07-endpoint-hardening/modules/05-endpoint-telemetry/lab.md
+      - "06 · Configuration Management":
+          - Concept: 07-endpoint-hardening/modules/06-configuration-management/README.md
+          - Lab: 07-endpoint-hardening/modules/06-configuration-management/lab.md
+      - "07 · Compliance Scoring & Auditing":
+          - Concept: 07-endpoint-hardening/modules/07-compliance-auditing/README.md
+          - Lab: 07-endpoint-hardening/modules/07-compliance-auditing/lab.md
+      - "08 · Patch & Vulnerability Management":
+          - Concept: 07-endpoint-hardening/modules/08-patch-vuln-management/README.md
+          - Lab: 07-endpoint-hardening/modules/08-patch-vuln-management/lab.md
+      - "09 · Local Privilege-Escalation Defense":
+          - Concept: 07-endpoint-hardening/modules/09-privesc-defense/README.md
+          - Lab: 07-endpoint-hardening/modules/09-privesc-defense/lab.md
+      - "10 · Detecting Host Compromise":
+          - Concept: 07-endpoint-hardening/modules/10-detecting-host-compromise/README.md
+          - Lab: 07-endpoint-hardening/modules/10-detecting-host-compromise/lab.md
+  - Cryptography, PKI & Secrets:
+      - Overview: 08-cryptography/README.md
+      - "01 · Primitives in Practice":
+          - Concept: 08-cryptography/modules/01-primitives-practice/README.md
+          - Lab: 08-cryptography/modules/01-primitives-practice/lab.md
+      - "02 · Symmetric & AEAD":
+          - Concept: 08-cryptography/modules/02-symmetric-aead/README.md
+          - Lab: 08-cryptography/modules/02-symmetric-aead/lab.md
+      - "03 · Asymmetric & Key Exchange":
+          - Concept: 08-cryptography/modules/03-asymmetric-key-exchange/README.md
+          - Lab: 08-cryptography/modules/03-asymmetric-key-exchange/lab.md
+      - "04 · Hashing, MACs & Passwords":
+          - Concept: 08-cryptography/modules/04-hashing-macs-passwords/README.md
+          - Lab: 08-cryptography/modules/04-hashing-macs-passwords/lab.md
+      - "05 · TLS Deep Dive":
+          - Concept: 08-cryptography/modules/05-tls-deep-dive/README.md
+          - Lab: 08-cryptography/modules/05-tls-deep-dive/lab.md
+      - "06 · PKI & Certificate Management":
+          - Concept: 08-cryptography/modules/06-pki-certificates/README.md
+          - Lab: 08-cryptography/modules/06-pki-certificates/lab.md
+      - "07 · Secrets Management":
+          - Concept: 08-cryptography/modules/07-secrets-management/README.md
+          - Lab: 08-cryptography/modules/07-secrets-management/lab.md
+      - "08 · Secret Detection & Leakage":
+          - Concept: 08-cryptography/modules/08-secret-detection/README.md
+          - Lab: 08-cryptography/modules/08-secret-detection/lab.md
+      - "09 · Email Authentication":
+          - Concept: 08-cryptography/modules/09-email-authentication/README.md
+          - Lab: 08-cryptography/modules/09-email-authentication/lab.md
+      - "10 · Auditing Applied-Crypto Failures":
+          - Concept: 08-cryptography/modules/10-auditing-crypto-failures/README.md
+          - Lab: 08-cryptography/modules/10-auditing-crypto-failures/lab.md
+  - Python for Security:
+      - Overview: 09-python-for-security/README.md
+      - "01 · Setup & Security Idioms":
+          - Concept: 09-python-for-security/modules/01-setup-idioms/README.md
+          - Lab: 09-python-for-security/modules/01-setup-idioms/lab.md
+      - "02 · Files, Regex & Log Parsing":
+          - Concept: 09-python-for-security/modules/02-files-regex-parsing/README.md
+          - Lab: 09-python-for-security/modules/02-files-regex-parsing/lab.md
+      - "03 · Structured Data & Reporting":
+          - Concept: 09-python-for-security/modules/03-structured-data-reporting/README.md
+          - Lab: 09-python-for-security/modules/03-structured-data-reporting/lab.md
+      - "04 · HTTP & APIs for Enrichment":
+          - Concept: 09-python-for-security/modules/04-http-apis-enrichment/README.md
+          - Lab: 09-python-for-security/modules/04-http-apis-enrichment/lab.md
+      - "05 · Building CLI Tools":
+          - Concept: 09-python-for-security/modules/05-building-cli-tools/README.md
+          - Lab: 09-python-for-security/modules/05-building-cli-tools/lab.md
+      - "06 · Network Programming":
+          - Concept: 09-python-for-security/modules/06-network-programming/README.md
+          - Lab: 09-python-for-security/modules/06-network-programming/lab.md
+      - "07 · Automating the Web":
+          - Concept: 09-python-for-security/modules/07-automating-the-web/README.md
+          - Lab: 09-python-for-security/modules/07-automating-the-web/lab.md
+      - "08 · Driving Security Tools":
+          - Concept: 09-python-for-security/modules/08-driving-security-tools/README.md
+          - Lab: 09-python-for-security/modules/08-driving-security-tools/lab.md
+      - "09 · Building an MCP Server":
+          - Concept: 09-python-for-security/modules/09-building-mcp-server/README.md
+          - Lab: 09-python-for-security/modules/09-building-mcp-server/lab.md
+      - "10 · Packaging, Testing & Owning AI Code":
+          - Concept: 09-python-for-security/modules/10-packaging-testing/README.md
+          - Lab: 09-python-for-security/modules/10-packaging-testing/lab.md
+  - Security Automation:
+      - Overview: 10-automation/README.md
+      - "01 · The Automation Mindset":
+          - Concept: 10-automation/modules/01-automation-mindset/README.md
+          - Lab: 10-automation/modules/01-automation-mindset/lab.md
+      - "02 · Infrastructure as Code":
+          - Concept: 10-automation/modules/02-infrastructure-as-code/README.md
+          - Lab: 10-automation/modules/02-infrastructure-as-code/lab.md
+      - "03 · IaC Security Scanning":
+          - Concept: 10-automation/modules/03-iac-security-scanning/README.md
+          - Lab: 10-automation/modules/03-iac-security-scanning/lab.md
+      - "04 · Configuration Management":
+          - Concept: 10-automation/modules/04-configuration-management/README.md
+          - Lab: 10-automation/modules/04-configuration-management/lab.md
+      - "05 · CI/CD Pipelines & Gates":
+          - Concept: 10-automation/modules/05-cicd-pipelines/README.md
+          - Lab: 10-automation/modules/05-cicd-pipelines/lab.md
+      - "06 · Containerising Tooling":
+          - Concept: 10-automation/modules/06-containerising-tooling/README.md
+          - Lab: 10-automation/modules/06-containerising-tooling/lab.md
+      - "07 · Enrichment & Data Pipelines":
+          - Concept: 10-automation/modules/07-enrichment-pipelines/README.md
+          - Lab: 10-automation/modules/07-enrichment-pipelines/lab.md
+      - "08 · SOAR Fundamentals":
+          - Concept: 10-automation/modules/08-soar-fundamentals/README.md
+          - Lab: 10-automation/modules/08-soar-fundamentals/lab.md
+      - "09 · Detection-as-Code Pipelines":
+          - Concept: 10-automation/modules/09-detection-as-code-pipelines/README.md
+          - Lab: 10-automation/modules/09-detection-as-code-pipelines/lab.md
+      - "10 · Reviewing AI-Generated Automation":
+          - Concept: 10-automation/modules/10-reviewing-ai-automation/README.md
+          - Lab: 10-automation/modules/10-reviewing-ai-automation/lab.md
   - Zero Trust Network Access:
       - Overview: 11-ztna/README.md
       - "01 · Zero Trust Principles":
@@ -286,4 +527,35 @@ nav:
       - "09 · Monitoring & Detection":
           - Concept: 11-ztna/modules/09-monitoring-detection/README.md
           - Lab: 11-ztna/modules/09-monitoring-detection/lab.md
-  - AI-Augmented Security Ops: 12-ai-augmented-ops/README.md
+  - AI-Augmented Security Ops:
+      - Overview: 12-ai-augmented-ops/README.md
+      - "01 · The Hybrid AI Pattern":
+          - Concept: 12-ai-augmented-ops/modules/01-hybrid-ai-pattern/README.md
+          - Lab: 12-ai-augmented-ops/modules/01-hybrid-ai-pattern/lab.md
+      - "02 · Running Local Models":
+          - Concept: 12-ai-augmented-ops/modules/02-running-local-models/README.md
+          - Lab: 12-ai-augmented-ops/modules/02-running-local-models/lab.md
+      - "03 · Prompt Patterns for Security":
+          - Concept: 12-ai-augmented-ops/modules/03-prompt-patterns/README.md
+          - Lab: 12-ai-augmented-ops/modules/03-prompt-patterns/lab.md
+      - "04 · Retrieval-Augmented Generation":
+          - Concept: 12-ai-augmented-ops/modules/04-rag/README.md
+          - Lab: 12-ai-augmented-ops/modules/04-rag/lab.md
+      - "05 · Building MCP Servers":
+          - Concept: 12-ai-augmented-ops/modules/05-building-mcp-servers/README.md
+          - Lab: 12-ai-augmented-ops/modules/05-building-mcp-servers/lab.md
+      - "06 · A SoC Copilot (MCP + RAG)":
+          - Concept: 12-ai-augmented-ops/modules/06-soc-copilot/README.md
+          - Lab: 12-ai-augmented-ops/modules/06-soc-copilot/lab.md
+      - "07 · AI-Assisted Detection & Triage":
+          - Concept: 12-ai-augmented-ops/modules/07-ai-detection-triage/README.md
+          - Lab: 12-ai-augmented-ops/modules/07-ai-detection-triage/lab.md
+      - "08 · SOAR + AI":
+          - Concept: 12-ai-augmented-ops/modules/08-soar-ai/README.md
+          - Lab: 12-ai-augmented-ops/modules/08-soar-ai/lab.md
+      - "09 · Securing the AI You Run":
+          - Concept: 12-ai-augmented-ops/modules/09-securing-ai/README.md
+          - Lab: 12-ai-augmented-ops/modules/09-securing-ai/lab.md
+      - "10 · Attacking AI Systems":
+          - Concept: 12-ai-augmented-ops/modules/10-attacking-ai/README.md
+          - Lab: 12-ai-augmented-ops/modules/10-attacking-ai/lab.md
