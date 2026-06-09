@@ -1,5 +1,8 @@
 # Module 07 — Web & HTTP Fundamentals
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *almost every web attack and defense is just manipulating these fields.*
 
 ## Why this matters

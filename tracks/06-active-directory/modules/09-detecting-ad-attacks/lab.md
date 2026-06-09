@@ -1,5 +1,8 @@
 # Lab 09 — Detect AD Attacks with Sigma and Chainsaw
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

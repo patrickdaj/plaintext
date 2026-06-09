@@ -1,5 +1,8 @@
 # Lab 10 — Escalate to Root on Linux
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

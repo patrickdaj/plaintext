@@ -1,5 +1,8 @@
 # Module 04 — ZTNA Architectures
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *four patterns, one principle: match the architecture to the threat model, not to the vendor's marketing.*
 
 ## Why this matters

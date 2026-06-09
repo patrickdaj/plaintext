@@ -1,5 +1,8 @@
 # Lab 06 — Catch an Attack in a SIEM
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

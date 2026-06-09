@@ -1,5 +1,8 @@
 # Lab 14 — Live Off the Land (LOLBins)
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

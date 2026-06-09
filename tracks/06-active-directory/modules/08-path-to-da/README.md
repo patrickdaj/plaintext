@@ -1,5 +1,8 @@
 # Module 08 — Path to Domain Admin
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *the skill is not running the tools — it is reading the graph and writing the narrative.*
 
 ## Why this matters

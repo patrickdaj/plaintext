@@ -1,5 +1,8 @@
 # Lab 05 — Posture & Misconfiguration Auditing
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

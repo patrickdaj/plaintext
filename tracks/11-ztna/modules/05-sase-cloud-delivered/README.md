@@ -1,5 +1,8 @@
 # Module 05 — SASE & Cloud-Delivered Zero Trust
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *SASE is Zero Trust principles delivered as a managed global edge, not a data-centre appliance.*
 
 ## Why this matters

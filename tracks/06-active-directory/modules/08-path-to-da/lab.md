@@ -1,5 +1,8 @@
 # Lab 08 — Path to Domain Admin
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is an analysis lab — no container needed for the core exercise. The BloodHound dataset and attack path JSON are in `data/`.

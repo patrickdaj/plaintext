@@ -1,5 +1,8 @@
 # Module 09 — Detection Testing & Tuning
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *an untested detection is a hope; fire the real technique and find out.*
 
 ## Why this matters

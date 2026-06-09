@@ -1,5 +1,8 @@
 # Module 09 — Network Forensics
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *reconstruct what moved across the wire — sessions, files, and intent — from the packet record.*
 
 ## Why this matters

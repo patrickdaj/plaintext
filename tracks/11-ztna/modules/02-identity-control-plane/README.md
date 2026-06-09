@@ -1,5 +1,8 @@
 # Module 02 — Identity as the Control Plane
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *when the perimeter dissolves, identity is the only boundary left.*
 
 ## Why this matters

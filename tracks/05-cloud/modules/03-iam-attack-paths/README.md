@@ -1,5 +1,8 @@
 # Module 03 — IAM Attack Paths
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *privilege escalation in the cloud isn't a vulnerability — it's a policy composition that an attacker walks like a graph.*
 
 ## Why this matters

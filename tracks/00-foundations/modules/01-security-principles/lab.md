@@ -1,5 +1,8 @@
 # Lab 01 — Reason About a Breach with First Principles
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

@@ -1,5 +1,8 @@
 # Module 03 — Docker & Containers
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Foundations** — *every lab here is Docker-first; this is the literacy that assumes.*
 
 ## Why this matters

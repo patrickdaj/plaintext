@@ -1,5 +1,8 @@
 # Module 04 — Windows Artifacts
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *Windows leaves a detailed record of everything that ran — if you know where to look.*
 
 ## Why this matters

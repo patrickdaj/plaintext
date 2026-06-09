@@ -1,5 +1,8 @@
 # Module 15 — Cloud Logging & Detection
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *the attacker's footprint is in the API log; the defender's job is to find it before it becomes news.*
 
 ## Why this matters

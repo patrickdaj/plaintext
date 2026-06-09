@@ -1,5 +1,8 @@
 # Module 02 — Symmetric & AEAD
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *AES-GCM is the right choice — until you reuse the IV, at which point it is broken in a way that's worse than CBC.*
 
 ## Why this matters

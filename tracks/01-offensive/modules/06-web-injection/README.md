@@ -1,5 +1,8 @@
 # Module 06 — Web Attacks: Injection
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *the injection class that still pops databases decades later.*
 
 ## Why this matters

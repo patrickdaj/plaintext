@@ -1,5 +1,8 @@
 # Module 03 — Structured Data & Reporting
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *get the data into shape, then make it readable by a human and a machine.*
 
 ## Why this matters

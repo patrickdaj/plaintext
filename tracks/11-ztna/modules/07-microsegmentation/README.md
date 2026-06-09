@@ -1,5 +1,8 @@
 # Module 07 — Microsegmentation
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *shrink the blast radius to a single service boundary, not a VLAN.*
 
 ## Why this matters

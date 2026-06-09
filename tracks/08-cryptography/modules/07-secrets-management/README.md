@@ -1,5 +1,8 @@
 # Module 07 — Secrets Management
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *Secrets in environment variables, config files, and source code are not secrets — they are liabilities waiting to be found.*
 
 ## Why this matters

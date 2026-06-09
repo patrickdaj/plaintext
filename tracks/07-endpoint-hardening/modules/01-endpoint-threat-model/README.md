@@ -1,5 +1,8 @@
 # Module 01 — Threat Model of the Endpoint
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *Before you harden anything, decide what you're actually defending it from.*
 
 ## Why this matters

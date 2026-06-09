@@ -1,5 +1,8 @@
 # Module 02 — Windows & Endpoint Telemetry
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *the endpoint sees what the network can't; Sysmon is how you make it talk.*
 
 ## Why this matters

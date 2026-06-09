@@ -1,5 +1,8 @@
 # Module 10 — Reviewing AI-Generated Automation
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *the automation an AI writes is confident, plausible, and frequently wrong in ways that matter.*
 
 ## Why this matters

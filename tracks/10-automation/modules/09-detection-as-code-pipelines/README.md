@@ -1,5 +1,8 @@
 # Module 09 — Detection-as-Code Pipelines
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *a detection that isn't tested isn't a detection — it's a guess with a YAML file.*
 
 ## Why this matters

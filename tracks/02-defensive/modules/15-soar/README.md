@@ -1,5 +1,8 @@
 # Module 15 — Response Automation (SOAR)
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *automate the boring 80% of response — with a human on the trigger.*
 
 ## Why this matters

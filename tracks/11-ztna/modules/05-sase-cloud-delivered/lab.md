@@ -1,5 +1,8 @@
 # Lab 05 — SASE & Cloud-Delivered Zero Trust: Cloudflare Access
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This lab uses the **Cloudflare Zero Trust free tier** (50 users, no trial expiry) and a local

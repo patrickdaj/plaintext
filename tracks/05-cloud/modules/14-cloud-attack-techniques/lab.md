@@ -1,5 +1,8 @@
 # Lab 14 — Simulate Cloud Attack Techniques
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — the environment lives in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo:

@@ -1,5 +1,8 @@
 # Lab 07 — Persistence in Active Directory
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

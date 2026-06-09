@@ -1,5 +1,8 @@
 # Module 10 — Hardening AD as Code
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *every misconfiguration found in modules 02-09 has a fix; this module turns those fixes into code that can be deployed, reviewed, and re-run.*
 
 ## Why this matters

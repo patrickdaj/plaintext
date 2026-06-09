@@ -1,5 +1,8 @@
 # Module 08 — Detection-as-Code
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *write the detection once, version it, test it — like software, because it is.*
 
 ## Why this matters

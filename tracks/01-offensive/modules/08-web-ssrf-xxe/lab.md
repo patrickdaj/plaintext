@@ -1,5 +1,8 @@
 # Lab 08 — Exploit SSRF and XXE
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

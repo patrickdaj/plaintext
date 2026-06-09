@@ -1,5 +1,8 @@
 # Module 14 — Living-off-the-Land & Evasion
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *the quietest attacks bring no tools — they use what's already there.*
 
 ## Why this matters

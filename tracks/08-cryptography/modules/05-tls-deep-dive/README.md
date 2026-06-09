@@ -1,5 +1,8 @@
 # Module 05 — TLS Deep Dive
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *TLS is the applied cryptography you interact with hundreds of times per day — reading the handshake tells you everything about a connection's actual security.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 07 — Compliance Scoring & Auditing
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *A compliance score you run once is a photograph; a score you run on a schedule is a vital sign.*
 
 ## Why this matters

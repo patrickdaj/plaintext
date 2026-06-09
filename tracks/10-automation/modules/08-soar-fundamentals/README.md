@@ -1,5 +1,8 @@
 # Module 08 — SOAR Fundamentals
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *a playbook is repeatable; a human running the same steps for the fifth time this week is not.*
 
 ## Why this matters

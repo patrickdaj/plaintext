@@ -1,5 +1,8 @@
 # Lab 15 — Build a Response Playbook (Track Capstone)
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

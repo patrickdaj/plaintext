@@ -1,5 +1,8 @@
 # Module 08 — SOAR + AI
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *SOAR handles the routing and the record; AI handles the judgment call in the middle.*
 
 ## Why this matters

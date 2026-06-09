@@ -1,5 +1,8 @@
 # Lab 10 — Hardening AD as Code
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

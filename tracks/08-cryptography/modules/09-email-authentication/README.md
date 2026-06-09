@@ -1,5 +1,8 @@
 # Module 09 — Email Authentication
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *SPF, DKIM, and DMARC are the three DNS records that determine whether a domain can be spoofed for phishing — and most organisations have at least one wrong.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Module 07 — AI-Assisted Detection & Triage
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *the model doesn't replace the analyst; it handles the repetitive 80% so the analyst focuses on the 20% that matters.*
 
 ## Why this matters

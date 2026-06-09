@@ -1,5 +1,8 @@
 # Lab 01 — Cloud Account Enumeration & Shared Responsibility Mapping
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — it ships a one-command environment in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo.

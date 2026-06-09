@@ -1,5 +1,8 @@
 # Module 05 — Building MCP Servers
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *MCP is the USB port for AI tools: write the tool once, and any compliant client can call it.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Lab 01 — Map the Meridian Domain
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This lab uses no containers — it is a structured analysis exercise against a pre-built domain description.

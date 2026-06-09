@@ -1,5 +1,8 @@
 # Module 01 — The Automation Mindset
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *automate the repeatable so humans can own the judgment.*
 
 ## Why this matters

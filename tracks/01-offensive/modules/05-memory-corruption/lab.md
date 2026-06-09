@@ -1,5 +1,8 @@
 # Lab 05 — Overflow a Buffer and Take Control
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

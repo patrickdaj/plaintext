@@ -1,5 +1,8 @@
 # Module 06 — Containerising Tooling
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *a security tool in a Dockerfile is a tool that runs the same way, everywhere, forever.*
 
 ## Why this matters

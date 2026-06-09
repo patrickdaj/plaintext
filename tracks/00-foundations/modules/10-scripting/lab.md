@@ -1,5 +1,8 @@
 # Lab 10 — A Failed-Login Parser in Python
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

@@ -1,5 +1,8 @@
 # Lab 12 — Hunt for C2 Beaconing
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

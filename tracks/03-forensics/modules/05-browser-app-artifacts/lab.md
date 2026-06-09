@@ -1,5 +1,8 @@
 # Lab 05 — Browser & Application Artifacts
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — its environment lives in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo:

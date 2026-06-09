@@ -1,5 +1,8 @@
 # Lab 03 — Kerberoasting & AS-REP Roasting
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

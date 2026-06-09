@@ -1,5 +1,8 @@
 # Module 03 — Vulnerability Identification
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *from "this host runs X 1.2.3" to "here's the known way in, and how urgent it is."*
 
 ## Why this matters

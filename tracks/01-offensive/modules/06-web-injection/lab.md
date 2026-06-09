@@ -1,5 +1,8 @@
 # Lab 06 — Exploit SQL Injection
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — it ships its own deliberately vulnerable app in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo (no external target

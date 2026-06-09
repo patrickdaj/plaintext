@@ -1,5 +1,8 @@
 # Module 10 — Attacking AI Systems
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *red-teaming AI is the same discipline as red-teaming anything: systematic coverage, documented findings, and a repeatable test suite.*
 
 ## Why this matters

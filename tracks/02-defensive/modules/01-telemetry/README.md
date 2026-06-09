@@ -1,5 +1,8 @@
 # Module 01 — Telemetry & Log Centralisation
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *you can't detect what you don't collect; this is the data plane everything else runs on.*
 
 ## Why this matters

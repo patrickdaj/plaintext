@@ -1,5 +1,8 @@
 # Module 05 — Posture & Misconfiguration Auditing
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *your account is never as locked down as you think it is.*
 
 ## Why this matters

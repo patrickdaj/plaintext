@@ -1,5 +1,8 @@
 # Module 16 — Reporting & Remediation
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *the report is the product; a shell nobody can act on is worthless.*
 
 ## Why this matters

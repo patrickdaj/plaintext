@@ -1,5 +1,8 @@
 # Lab 09 — Detection in a Zero Trust Environment
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **reference lab** — it ships a one-command environment in the companion

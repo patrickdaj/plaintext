@@ -1,5 +1,8 @@
 # Lab 02 — Infrastructure as Code
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 ```bash
 git clone https://github.com/plaintext-security/plaintext-labs

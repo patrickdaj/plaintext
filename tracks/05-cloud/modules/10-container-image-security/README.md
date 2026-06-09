@@ -1,5 +1,8 @@
 # Module 10 — Container & Image Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *the image is your artifact: if you ship a vulnerable image, you ship a vulnerable workload.*
 
 ## Why this matters

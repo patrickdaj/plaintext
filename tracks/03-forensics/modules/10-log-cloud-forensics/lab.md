@@ -1,5 +1,8 @@
 # Lab 10 — Log & Cloud Forensics: Hayabusa, Chainsaw, and CloudTrail
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **reference lab** — it ships a one-command environment in the companion

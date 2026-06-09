@@ -1,5 +1,8 @@
 # Lab 05 — ACL & Delegation Abuse
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

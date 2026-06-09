@@ -13,22 +13,22 @@ the cloud the infrastructure *is* code. AWS/GCP/Azure plus containers and Kubern
 
 | # | Module | What you'll learn | OSS / free tools |
 |---|--------|-------------------|-----------------|
-| 01 | Cloud Fundamentals & Shared Responsibility | The model, accounts, and CLIs | cloud CLIs |
-| 02 | Cloud Identity & IAM | Policies, roles, trust, and federation | `cloudfox` |
-| 03 | IAM Attack Paths | Finding privilege-escalation chains | `pmapper`, `cloudfox` |
-| 04 | Cloud Network Security | VPCs, Security Groups, PrivateLink, WAF, and flow logs | `cloudmapper`, cloud CLIs |
-| 05 | Posture & Misconfiguration Auditing | Benchmarking accounts against known issues | `prowler`, `scoutsuite` |
-| 06 | Infrastructure-as-Code Security | Scanning Terraform before it deploys | `checkov`, `tfsec`, `trivy` |
-| 07 | Secrets Management & Detection | Storing and finding leaked credentials | `vault`, `trufflehog` |
-| 08 | CI/CD Pipeline Security | Securing the path from commit to deploy | `trivy`, `gitleaks` |
-| 09 | Serverless Security | Function execution roles, event-injection, and confused deputy | `cloudfox`, `pacu`, `aws-sam-cli` |
-| 10 | Container & Image Security | Image hygiene and supply-chain scanning | `trivy`, `grype` |
-| 11 | Container Escape & Runtime | Breakouts and runtime visibility | `falco` |
-| 12 | Kubernetes — RBAC & Network Policy | Least privilege and segmentation as code | `kube-bench` |
-| 13 | Kubernetes — Admission & Runtime | Policy enforcement and runtime detection | `kyverno`, `falco` |
-| 14 | Cloud Attack Techniques | Exploiting misconfig; simulating safely | `pacu`, `stratus-red-team` |
-| 15 | Cloud Logging & Detection | Native detectors vs. open tools; tuning signal | `falco`, `sigma`; GuardDuty / Defender for Cloud / GCP SCC |
-| 16 | Cloud Incident Response | Investigating and containing in the cloud | `cloudtrail`, `hayabusa` |
+| 01 | [Cloud Fundamentals & Shared Responsibility](modules/01-cloud-fundamentals/README.md) | The model, accounts, and CLIs | cloud CLIs |
+| 02 | [Cloud Identity & IAM](modules/02-cloud-identity-iam/README.md) | Policies, roles, trust, and federation | `cloudfox` |
+| 03 | [IAM Attack Paths](modules/03-iam-attack-paths/README.md) | Finding privilege-escalation chains | `pmapper`, `cloudfox` |
+| 04 | [Cloud Network Security](modules/04-cloud-network-security/README.md) | VPCs, Security Groups, PrivateLink, WAF, and flow logs | `cloudmapper`, cloud CLIs |
+| 05 | [Posture & Misconfiguration Auditing](modules/05-posture-auditing/README.md) | Benchmarking accounts against known issues | `prowler`, `scoutsuite` |
+| 06 | [Infrastructure-as-Code Security](modules/06-iac-security/README.md) | Scanning Terraform before it deploys | `checkov`, `tfsec`, `trivy` |
+| 07 | [Secrets Management & Detection](modules/07-secrets-management/README.md) | Storing and finding leaked credentials | `vault`, `trufflehog` |
+| 08 | [CI/CD Pipeline Security](modules/08-cicd-security/README.md) | Securing the path from commit to deploy | `trivy`, `gitleaks` |
+| 09 | [Serverless Security](modules/09-serverless-security/README.md) | Function execution roles, event-injection, and confused deputy | `cloudfox`, `pacu`, `aws-sam-cli` |
+| 10 | [Container & Image Security](modules/10-container-image-security/README.md) | Image hygiene and supply-chain scanning | `trivy`, `grype` |
+| 11 | [Container Escape & Runtime](modules/11-container-escape-runtime/README.md) | Breakouts and runtime visibility | `falco` |
+| 12 | [Kubernetes — RBAC & Network Policy](modules/12-kubernetes-rbac-network/README.md) | Least privilege and segmentation as code | `kube-bench` |
+| 13 | [Kubernetes — Admission & Runtime](modules/13-kubernetes-admission-runtime/README.md) | Policy enforcement and runtime detection | `kyverno`, `falco` |
+| 14 | [Cloud Attack Techniques](modules/14-cloud-attack-techniques/README.md) | Exploiting misconfig; simulating safely | `pacu`, `stratus-red-team` |
+| 15 | [Cloud Logging & Detection](modules/15-cloud-logging-detection/README.md) | Native detectors vs. open tools; tuning signal | `falco`, `sigma`; GuardDuty / Defender for Cloud / GCP SCC |
+| 16 | [Cloud Incident Response](modules/16-cloud-incident-response/README.md) | Investigating and containing in the cloud | `cloudtrail`, `hayabusa` |
 
 ## Prerequisites
 Complete Track 00 — Foundations first.

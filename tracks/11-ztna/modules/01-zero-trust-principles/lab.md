@@ -1,5 +1,8 @@
 # Lab 01 — Zero Trust Gap Analysis: Meridian Financial
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **document analysis lab** — no containers needed. The scenario and seed data live in the

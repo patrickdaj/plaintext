@@ -1,5 +1,8 @@
 # Lab 11 — Escalate to SYSTEM on Windows
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 **Windows VM required.** This lab needs a Windows host; Docker won't work here.

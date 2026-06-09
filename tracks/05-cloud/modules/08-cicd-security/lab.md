@@ -1,5 +1,8 @@
 # Lab 08 — CI/CD Pipeline Security
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

@@ -1,5 +1,8 @@
 # Module 01 — Cloud Fundamentals & Shared Responsibility
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *before you can attack or defend the cloud, you have to know who owns what.*
 
 ## Why this matters

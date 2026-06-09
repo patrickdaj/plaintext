@@ -1,5 +1,8 @@
 # Module 03 — Device Trust & Posture
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *identity tells you who is asking; device posture tells you whether to believe the device they're asking from.*
 
 ## Why this matters

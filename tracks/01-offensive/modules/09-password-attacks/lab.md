@@ -1,5 +1,8 @@
 # Lab 09 — Crack Real Password Hashes
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

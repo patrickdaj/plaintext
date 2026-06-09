@@ -13,17 +13,17 @@ and AD security model by attacking it and then closing the paths as code.
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | AD & Windows Security Model | Domains, trusts, tokens, and auth | — |
-| 02 | Enumeration | Mapping users, groups, and paths | `BloodHound`, `SharpHound` |
-| 03 | Kerberos Attacks | Kerberoasting and AS-REP roasting | `impacket`, `Rubeus` |
-| 04 | Credential Theft & Replay | Pass-the-hash / pass-the-ticket | `impacket`, `mimikatz` |
-| 05 | ACL & Delegation Abuse | Object permissions and delegation paths | `BloodHound`, `PowerView` |
-| 06 | Lateral Movement | Moving host to host inside the domain | `impacket`, `crackmapexec` |
-| 07 | Persistence in AD | Golden/silver tickets and other footholds | `impacket` |
-| 08 | Path to Domain Admin | Chaining findings to full control | `BloodHound` |
-| 09 | Detecting AD Attacks | Event logs, honeytokens, and signals | `sigma`, `wazuh` |
-| 10 | Hardening AD as Code | Tiering, baselines, and measuring posture | `PingCastle` |
-| 11 | Defending Identity | Protecting Kerberos, GPO, and delegation | — |
+| 01 | [AD & Windows Security Model](modules/01-ad-windows-model/README.md) | Domains, trusts, tokens, and auth | — |
+| 02 | [Enumeration](modules/02-enumeration/README.md) | Mapping users, groups, and paths | `BloodHound`, `SharpHound` |
+| 03 | [Kerberos Attacks](modules/03-kerberos-attacks/README.md) | Kerberoasting and AS-REP roasting | `impacket`, `Rubeus` |
+| 04 | [Credential Theft & Replay](modules/04-credential-theft/README.md) | Pass-the-hash / pass-the-ticket | `impacket`, `mimikatz` |
+| 05 | [ACL & Delegation Abuse](modules/05-acl-delegation-abuse/README.md) | Object permissions and delegation paths | `BloodHound`, `PowerView` |
+| 06 | [Lateral Movement](modules/06-lateral-movement/README.md) | Moving host to host inside the domain | `impacket`, `crackmapexec` |
+| 07 | [Persistence in AD](modules/07-persistence-ad/README.md) | Golden/silver tickets and other footholds | `impacket` |
+| 08 | [Path to Domain Admin](modules/08-path-to-da/README.md) | Chaining findings to full control | `BloodHound` |
+| 09 | [Detecting AD Attacks](modules/09-detecting-ad-attacks/README.md) | Event logs, honeytokens, and signals | `sigma`, `wazuh` |
+| 10 | [Hardening AD as Code](modules/10-hardening-ad/README.md) | Tiering, baselines, and measuring posture | `PingCastle` |
+| 11 | [Defending Identity](modules/11-defending-identity/README.md) | Protecting Kerberos, GPO, and delegation | — |
 
 ## Prerequisites
 Complete Track 00 — Foundations; Track 01 — Offensive helps.

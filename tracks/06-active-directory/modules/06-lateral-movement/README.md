@@ -1,5 +1,8 @@
 # Module 06 — Lateral Movement
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Active Directory & Windows Security** — *getting domain admin is not the goal; reaching the data is — and data rarely lives on the first machine you land on.*
 
 ## Why this matters

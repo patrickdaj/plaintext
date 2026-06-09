@@ -1,5 +1,8 @@
 # Module 03 — Asymmetric & Key Exchange
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *Public-key cryptography solves the key distribution problem; Diffie-Hellman turns it into something you can do over an untrusted channel.*
 
 ## Why this matters

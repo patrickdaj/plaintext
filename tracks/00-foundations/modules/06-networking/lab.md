@@ -1,5 +1,8 @@
 # Lab 06 — Capture and Dissect a Live Exchange
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

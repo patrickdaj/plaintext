@@ -1,5 +1,8 @@
 # Module 09 — Securing the AI You Run
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *the copilot you built in Module 06 is now the attack surface; understand it before an adversary does.*
 
 ## Why this matters

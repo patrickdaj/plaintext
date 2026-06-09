@@ -1,5 +1,8 @@
 # Module 03 — Linux Telemetry
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *servers and containers are Linux; this is how you watch them.*
 
 ## Why this matters

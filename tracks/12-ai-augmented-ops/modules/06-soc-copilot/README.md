@@ -1,5 +1,8 @@
 # Module 06 — A SoC Copilot (MCP + RAG)
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *the copilot combines everything: institutional memory from RAG, live data from MCP tools, and reasoning from the local model.*
 
 ## Why this matters

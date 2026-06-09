@@ -1,5 +1,8 @@
 # Module 10 — ATT&CK Mapping & Coverage
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *you can't defend what you can't measure; map your detections to know your gaps.*
 
 ## Why this matters

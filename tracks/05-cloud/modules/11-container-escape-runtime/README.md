@@ -1,5 +1,8 @@
 # Module 11 — Container Escape & Runtime Security
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Cloud & Container Security** — *containers are not a security boundary; understand where the walls are and how they break.*
 
 ## Why this matters

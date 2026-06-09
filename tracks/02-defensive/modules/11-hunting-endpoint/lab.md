@@ -1,5 +1,8 @@
 # Lab 11 — Hunt the Endpoint
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

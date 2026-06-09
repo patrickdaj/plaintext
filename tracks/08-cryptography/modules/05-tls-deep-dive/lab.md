@@ -1,5 +1,8 @@
 # Lab 05 — TLS Deep Dive
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 This is a **reference lab** — it ships a one-command environment in the companion
 [`plaintext-labs`](https://github.com/plaintext-security/plaintext-labs) repo:

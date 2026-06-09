@@ -1,5 +1,8 @@
 # Lab 13 — Kyverno Admission Policies and Falco Runtime Detection
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 **Prerequisites:** Docker (running), `kind` >= v0.23.0, `kubectl`, and `helm` installed.

@@ -1,5 +1,8 @@
 # Module 10 — Privilege Escalation: Linux
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *a shell is rarely root; this is how you get there.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Lab 06 — Lateral Movement
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

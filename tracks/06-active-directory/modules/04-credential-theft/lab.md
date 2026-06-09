@@ -1,5 +1,8 @@
 # Lab 04 — Credential Theft & Pass-the-Hash
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

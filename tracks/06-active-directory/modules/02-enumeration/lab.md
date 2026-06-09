@@ -1,5 +1,8 @@
 # Lab 02 — Enumerate the Meridian Domain
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **reference lab** — the environment lives in the companion repo:

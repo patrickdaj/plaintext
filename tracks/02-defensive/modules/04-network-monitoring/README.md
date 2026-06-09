@@ -1,5 +1,8 @@
 # Module 04 — Network Security Monitoring
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *the network doesn't lie; Zeek turns packets into evidence.*
 
 ## Why this matters

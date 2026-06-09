@@ -1,5 +1,8 @@
 # Lab 06 — Infrastructure-as-Code Security
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

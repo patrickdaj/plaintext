@@ -1,5 +1,8 @@
 # Lab 05 — Alert on Real Malicious Traffic
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

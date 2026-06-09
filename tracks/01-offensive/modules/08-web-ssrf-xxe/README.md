@@ -1,5 +1,8 @@
 # Module 08 — Web Attacks: SSRF, XXE & Deserialization
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *the server-side classes that turn one web bug into cloud compromise.*
 
 ## Why this matters

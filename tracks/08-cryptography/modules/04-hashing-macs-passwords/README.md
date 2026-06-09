@@ -1,5 +1,8 @@
 # Module 04 — Hashing, MACs & Passwords
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 08 — Cryptography, PKI & Secrets]** — *A hash is not a MAC, a MAC is not a password hash, and using the wrong one for the job is a common and serious mistake.*
 
 ## Why this matters

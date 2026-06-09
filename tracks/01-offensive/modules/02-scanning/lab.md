@@ -1,5 +1,8 @@
 # Lab 02 — Scan and Enumerate a Target
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

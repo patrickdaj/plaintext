@@ -1,5 +1,8 @@
 # Module 01 — Reconnaissance & OSINT
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *the engagement starts here; the wider the attack surface you find, the more there is to test.*
 
 ## Why this matters

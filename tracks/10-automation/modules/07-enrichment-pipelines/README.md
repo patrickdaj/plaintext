@@ -1,5 +1,8 @@
 # Module 07 — Enrichment & Data Pipelines
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Security Automation** — *collection without enrichment is noise; enrichment without collection is trivia.*
 
 ## Why this matters

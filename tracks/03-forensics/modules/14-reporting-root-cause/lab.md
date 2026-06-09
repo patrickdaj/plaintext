@@ -1,5 +1,8 @@
 # Lab 14 — Reporting & Root-Cause Analysis
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **concept and writing module** — no container required. The exercise materials are in

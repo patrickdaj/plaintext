@@ -1,5 +1,8 @@
 # Module 02 — Windows Hardening to CIS
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **[Track 07 — Endpoint & Host Hardening]** — *A CIS benchmark is only useful when it's applied, measured, and version-controlled.*
 
 ## Why this matters

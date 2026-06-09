@@ -1,5 +1,8 @@
 # Lab 01 — Stand Up a Log Pipeline
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

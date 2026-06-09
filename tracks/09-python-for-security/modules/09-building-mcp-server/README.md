@@ -1,5 +1,8 @@
 # Module 09 — Building an MCP Server
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *if you can describe a security operation as a function, you can hand it to an LLM.*
 
 ## Why this matters

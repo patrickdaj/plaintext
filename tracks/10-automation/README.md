@@ -15,16 +15,16 @@ skill.*
 
 | # | Module | What you'll learn | OSS tools |
 |---|--------|-------------------|-----------|
-| 01 | The Automation Mindset | Where automation pays off — and where it bites | — |
-| 02 | Infrastructure as Code | Reproducible infra from zero | `terraform`, `opentofu` |
-| 03 | IaC Security Scanning | Gating misconfigurations in CI | `checkov`, `tfsec` |
-| 04 | Configuration Management | Hardening and state at scale | `ansible` |
-| 05 | CI/CD Pipelines & Gates | Security checks from commit to deploy | `github actions`, `gitleaks` |
-| 06 | Containerising Tooling | Reproducible, shareable security tools | `docker` |
-| 07 | Enrichment & Data Pipelines | Scheduled collection and processing | `python`, `cron` |
-| 08 | SOAR Fundamentals | Playbooks: enrich → contain → ticket | `Shuffle`, `n8n` |
-| 09 | Detection-as-Code Pipelines | Versioned, tested detections in CI | `sigma`, `pytest` |
-| 10 | Reviewing AI-Generated Automation | Catching what the model got wrong | `checkov` |
+| 01 | [The Automation Mindset](modules/01-automation-mindset/README.md) | Where automation pays off — and where it bites | — |
+| 02 | [Infrastructure as Code](modules/02-infrastructure-as-code/README.md) | Reproducible infra from zero | `terraform`, `opentofu` |
+| 03 | [IaC Security Scanning](modules/03-iac-security-scanning/README.md) | Gating misconfigurations in CI | `checkov`, `tfsec` |
+| 04 | [Configuration Management](modules/04-configuration-management/README.md) | Hardening and state at scale | `ansible` |
+| 05 | [CI/CD Pipelines & Gates](modules/05-cicd-pipelines/README.md) | Security checks from commit to deploy | `github actions`, `gitleaks` |
+| 06 | [Containerising Tooling](modules/06-containerising-tooling/README.md) | Reproducible, shareable security tools | `docker` |
+| 07 | [Enrichment & Data Pipelines](modules/07-enrichment-pipelines/README.md) | Scheduled collection and processing | `python`, `cron` |
+| 08 | [SOAR Fundamentals](modules/08-soar-fundamentals/README.md) | Playbooks: enrich → contain → ticket | `Shuffle`, `n8n` |
+| 09 | [Detection-as-Code Pipelines](modules/09-detection-as-code-pipelines/README.md) | Versioned, tested detections in CI | `sigma`, `pytest` |
+| 10 | [Reviewing AI-Generated Automation](modules/10-reviewing-ai-automation/README.md) | Catching what the model got wrong | `checkov` |
 
 ## Prerequisites
 Complete Track 00 — Foundations; Track 09 — Python helps.

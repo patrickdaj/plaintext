@@ -1,5 +1,8 @@
 # Module 13 — Alert Triage & Incident Response
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *an alert is a question; triage and IR are how you answer it without panic.*
 
 ## Why this matters

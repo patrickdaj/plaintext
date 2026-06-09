@@ -1,5 +1,8 @@
 # Lab 11 — Defending Identity: Tiered Admin Model
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a design and analysis lab — no containers required.

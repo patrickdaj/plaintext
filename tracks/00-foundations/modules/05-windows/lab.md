@@ -1,5 +1,8 @@
 # Lab 05 — Inspect a Windows System (and Find a Real Attack in the Logs)
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

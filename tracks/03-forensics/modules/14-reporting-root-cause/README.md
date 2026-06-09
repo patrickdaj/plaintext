@@ -1,5 +1,8 @@
 # Module 14 — Reporting & Root-Cause Analysis
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *the investigation is only as valuable as the report — findings that can't survive scrutiny, or can't be read by a non-technical audience, don't drive decisions.*
 
 ## Why this matters

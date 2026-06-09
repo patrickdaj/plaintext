@@ -1,5 +1,8 @@
 # Module 14 — Threat Intelligence
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *context turns an indicator into a decision; CTI is how you get it.*
 
 ## Why this matters

@@ -1,5 +1,8 @@
 # Lab 09 — Purple-Team a Detection
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

@@ -1,5 +1,8 @@
 # Module 01 — Forensic Fundamentals & Evidence Handling
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *every conclusion you ever draw in this track stands or falls on what you do in the first five minutes.*
 
 ## Why this matters

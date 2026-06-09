@@ -1,5 +1,8 @@
 # Lab 12 — Pivot Into an Internal Network
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

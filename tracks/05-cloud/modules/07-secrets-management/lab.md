@@ -1,5 +1,8 @@
 # Lab 07 — Secrets Management & Detection
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

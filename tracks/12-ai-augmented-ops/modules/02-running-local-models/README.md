@@ -1,5 +1,8 @@
 # Module 02 — Running Local Models
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **AI-Augmented Security Operations** — *a model you can't explain is a dependency you can't audit; running it yourself is where that audit starts.*
 
 ## Why this matters

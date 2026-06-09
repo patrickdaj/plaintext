@@ -1,5 +1,8 @@
 # Lab 07 — Break Access Control (IDOR + Privilege Escalation)
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 ```bash

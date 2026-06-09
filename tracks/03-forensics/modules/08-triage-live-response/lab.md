@@ -1,5 +1,8 @@
 # Lab 08 — Triage & Live Response with Velociraptor
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **reference lab** — it ships a one-command environment in the companion

@@ -1,5 +1,8 @@
 # Module 05 — Memory Corruption Primer
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Offensive Security** — *why a program crashes is often why it gets exploited.*
 
 ## Why this matters

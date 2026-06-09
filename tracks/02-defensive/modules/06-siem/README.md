@@ -1,5 +1,8 @@
 # Module 06 — SIEM Fundamentals
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *where all your telemetry meets: search, correlate, alert.*
 
 ## Why this matters

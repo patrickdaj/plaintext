@@ -1,5 +1,8 @@
 # Module 05 — Intrusion Detection
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Defensive Operations** — *signatures and anomalies on the wire — catching the known-bad as it happens.*
 
 ## Why this matters

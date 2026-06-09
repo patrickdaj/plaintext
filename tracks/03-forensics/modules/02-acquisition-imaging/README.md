@@ -1,5 +1,8 @@
 # Module 02 — Acquisition & Imaging
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Digital Forensics & IR** — *the only shot you get at the original evidence is the first one — take it cleanly.*
 
 ## Why this matters

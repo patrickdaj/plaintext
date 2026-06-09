@@ -1,5 +1,8 @@
 # Module 06 — Network Programming
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Python for Security** — *understanding the wire is what separates a script from a tool and a tool from an audit.*
 
 ## Why this matters

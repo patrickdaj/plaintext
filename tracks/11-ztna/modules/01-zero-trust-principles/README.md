@@ -1,5 +1,8 @@
 # Module 01 — Zero Trust Principles
 
+*Module concept · [Go to the hands-on lab →](lab.md)*
+
+
 **Zero Trust Network Access** — *the perimeter didn't fail; it dissolved — and the model that replaced it starts by trusting nothing.*
 
 ## Why this matters

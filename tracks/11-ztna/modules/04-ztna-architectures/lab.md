@@ -1,5 +1,8 @@
 # Lab 04 — ZTNA Architecture Decision: Meridian Financial
 
+*Hands-on lab · [← Back to the module concept](README.md)*
+
+
 ## Setup
 
 This is a **design exercise** — no containers needed. The scenario materials live in the companion
