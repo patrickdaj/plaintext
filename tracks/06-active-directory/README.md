@@ -25,6 +25,22 @@ and AD security model by attacking it and then closing the paths as code.
 | 10 | [Hardening AD as Code](modules/10-hardening-ad/README.md) | Tiering, baselines, and measuring posture | `PingCastle` |
 | 11 | [Defending Identity](modules/11-defending-identity/README.md) | Protecting Kerberos, GPO, and delegation | — |
 
+## Phases & projects
+
+The eleven modules run in three phases; each ends in a **project** that integrates its modules (a
+phase is the substantial, standalone unit — a single module is a few hours). Build and attack your
+own lab domain (GOAD or a local eval VM) only.
+
+- **Phase 1 · Map & break in** (01–05) — **Project:** from a single low-privilege user, enumerate the
+  domain with BloodHound, then execute and document the core credential attacks — Kerberoast/AS-REP,
+  pass-the-hash/ticket, and one ACL or delegation abuse — each tied to its ATT&CK technique.
+- **Phase 2 · Own the domain** (06–08) — **Project:** chain those findings into a single, replayable
+  path from foothold to Domain Admin — lateral movement, a persistence foothold (golden/silver
+  ticket), and the BloodHound path that explains why it works.
+- **Phase 3 · Detect & defend** (09–11) — **Project:** the track capstone — close the path you walked:
+  write detections for each step, harden AD as code, and report the before/after PingCastle posture
+  score alongside the attack path and the detections.
+
 ## Prerequisites
 Complete Track 00 — Foundations; Track 01 — Offensive helps.
 

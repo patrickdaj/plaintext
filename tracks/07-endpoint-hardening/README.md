@@ -24,6 +24,22 @@ recognised benchmarks — as code, with compliance scoring and drift detection.
 | 09 | [Local Privilege-Escalation Defense](modules/09-privesc-defense/README.md) | Closing the paths Track 01 abuses | — |
 | 10 | [Detecting Host Compromise](modules/10-detecting-host-compromise/README.md) | Catching what the baseline didn't stop | `wazuh`, `sigma` |
 
+## Phases & projects
+
+The ten modules run in three phases; each ends in a **project** that integrates its modules (a phase
+is the substantial, standalone unit — a single module is a few hours). Work on VMs you own, and
+snapshot before destructive changes.
+
+- **Phase 1 · Model & baseline** (01–04) — **Project:** an endpoint threat model that drives a CIS
+  baseline applied to a Windows *and* a Linux host — including exploit mitigations and application
+  allowlisting — with each control justified against the model.
+- **Phase 2 · Scale, score & patch** (05–08) — **Project:** stand up endpoint telemetry, push the
+  baseline at scale with Ansible, score compliance with OpenSCAP, and run a patch/vuln-management
+  loop — proving drift detection catches a deliberate misconfiguration.
+- **Phase 3 · Detect & defend** (09–10) — **Project:** the track capstone — close the local
+  privilege-escalation paths Track 01 abuses, show telemetry firing on a simulated host compromise,
+  and deliver the config-as-code, the before/after score delta, and the detection.
+
 ## Prerequisites
 Complete Track 00 — Foundations first.
 

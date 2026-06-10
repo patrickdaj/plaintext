@@ -25,6 +25,22 @@ direct and review the ones AI writes.
 | 09 | [Building an MCP Server](modules/09-building-mcp-server/README.md) | Exposing a tool to an LLM | `fastmcp` |
 | 10 | [Packaging, Testing & Owning AI Code](modules/10-packaging-testing/README.md) | Reviewing, testing, and shipping | `pytest`, `ruff` |
 
+## Phases & projects
+
+The ten modules run in three phases; each ends in a **project** that integrates its modules (a phase
+is the substantial, standalone unit — a single module is a few hours). Each project carries the
+"AI authors → you review → you own it" habit into committed, tested code.
+
+- **Phase 1 · Parse & report** (01–03) — **Project:** a log-analysis script with a clean toolchain
+  that parses a real log with regex, reshapes it through structured data, and emits a readable
+  JSON/CSV plus a `rich` console report — with tests on the parsing.
+- **Phase 2 · Talk to the network & the world** (04–07) — **Project:** an IOC enrichment CLI (with
+  `typer`/`argparse`) that queries threat-intel APIs, plus a small network or scraping tool — error
+  handling, rate limits, and responsible use built in.
+- **Phase 3 · Tooling, MCP & shipping** (08–10) — **Project:** the track capstone — wrap a security
+  tool (VirusTotal/MISP) and expose it to an LLM as an MCP server, then package it with `pytest`/`ruff`
+  and a README — delivering the tool, its tests, and a write-up of what AI wrote vs. what you changed.
+
 ## Prerequisites
 Complete Track 00 — Foundations (module 10 — Scripting & Automation).
 

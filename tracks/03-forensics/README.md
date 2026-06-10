@@ -28,6 +28,24 @@ on a system — defensibly, so the timeline holds up. Acquisition through root-c
 | 13 | [Incident Response Process](modules/13-ir-process/README.md) | The NIST lifecycle in practice | — |
 | 14 | [Reporting & Root-Cause Analysis](modules/14-reporting-root-cause/README.md) | A report that survives scrutiny | — |
 
+## Phases & projects
+
+The fourteen modules run in four phases; each ends in a **project** that integrates its modules
+into a portfolio-worthy artifact (a phase is the substantial, standalone unit — a single module is
+a few hours).
+
+- **Phase 1 · Acquire & preserve** (01–03) — **Project:** a forensically sound acquisition kit —
+  image a training disk and capture memory, verify with hashes, and carve back deleted files, all
+  documented with a chain-of-custody log that would survive challenge.
+- **Phase 2 · Reconstruct the host** (04–08) — **Project:** from a single compromised-host image,
+  pull Windows artifacts, browser/app traces, and memory, then fuse them into one `plaso`/Timesketch
+  super-timeline and triage it at scale with Velociraptor.
+- **Phase 3 · Beyond the host** (09–12) — **Project:** extend the investigation off the box —
+  reconstruct sessions and files from PCAP, pivot through logs and cloud trails, spot anti-forensic
+  tampering, and hand malware artifacts off to deep analysis (→ T04).
+- **Phase 4 · Investigation & report** (13–14) — **Project:** the track capstone — run the full NIST
+  lifecycle and deliver a root-cause incident report where every claim traces back to an artifact.
+
 ## Prerequisites
 Complete Track 00 — Foundations first.
 

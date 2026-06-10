@@ -26,6 +26,22 @@ skill.*
 | 09 | [Detection-as-Code Pipelines](modules/09-detection-as-code-pipelines/README.md) | Versioned, tested detections in CI | `sigma`, `pytest` |
 | 10 | [Reviewing AI-Generated Automation](modules/10-reviewing-ai-automation/README.md) | Catching what the model got wrong | `checkov` |
 
+## Phases & projects
+
+The ten modules run in three phases; each ends in a **project** that integrates its modules (a phase
+is the substantial, standalone unit — a single module is a few hours). Every project is reviewed,
+version-controlled code with a note on what AI generated vs. what you corrected.
+
+- **Phase 1 · Infrastructure & config as code** (01–04) — **Project:** define a small environment in
+  Terraform/OpenTofu and configure it with Ansible, with `checkov`/`tfsec` gating misconfigurations —
+  proving a deliberately over-broad rule is *blocked* before apply.
+- **Phase 2 · Pipelines & portable tooling** (05–07) — **Project:** a CI/CD pipeline that runs
+  secret-scanning and security gates from commit to deploy, a containerised security tool that runs
+  the same everywhere, and a scheduled enrichment pipeline feeding processed data downstream.
+- **Phase 3 · Response & detection as code** (08–10) — **Project:** the track capstone — a SOAR
+  playbook that enriches → contains → tickets with a human approval step, plus detections-as-code
+  tested in CI — and a review pass that catches what an AI-generated version got wrong.
+
 ## Prerequisites
 Complete Track 00 — Foundations; Track 09 — Python helps.
 

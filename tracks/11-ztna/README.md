@@ -24,6 +24,23 @@ tools.
 | 08 | [Policy as Code](modules/08-policy-as-code/README.md) | Continuous, versioned authorization | `OPA` |
 | 09 | [Monitoring & Detection in Zero Trust](modules/09-monitoring-detection/README.md) | What "trust nothing" means for logging and detection | `sigma` |
 
+## Phases & projects
+
+The nine modules run in three phases; each ends in a **project** that integrates its modules (a
+phase is the substantial, standalone unit — a single module is a few hours). Identity-aware proxies
+touch real access — test only against resources you own.
+
+- **Phase 1 · Principles & identity** (01–03) — **Project:** stand up an identity control plane with
+  Keycloak (OIDC/SAML) and tie access to device posture — passkeys/FIDO2 and a Tailscale/Headscale
+  mesh — with a short written map of the Zero Trust tenets each control satisfies.
+- **Phase 2 · Architectures & access** (04–06) — **Project:** publish a lab service with **no inbound
+  ports** behind an identity-aware proxy — self-hosted (Pomerium/Tailscale) *and* cloud-delivered
+  (Cloudflare Zero Trust) — and explain the trade-off you'd choose for which use case.
+- **Phase 3 · Segment, govern & monitor** (07–09) — **Project:** the track capstone — segment the
+  workloads with Cilium, enforce authorization as code with OPA, and prove from the access logs that
+  every request was authenticated and authorised — delivering the setup, the policy-as-code, and the
+  audit trail.
+
 ## Prerequisites
 Complete Track 00 — Foundations; Track 05 — Cloud helps.
 
