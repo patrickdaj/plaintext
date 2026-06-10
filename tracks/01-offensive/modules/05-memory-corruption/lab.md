@@ -22,9 +22,9 @@ junior dev without hardening flags. You've got the binary. Demonstrate stack
 smashing: find the offset that controls the saved instruction pointer, then
 redirect execution to a function that was never supposed to be reachable.
 
-> **Authorization note:** Only exploit systems you own or have explicit written
-> permission to test. This binary is intentionally vulnerable; run it inside
-> the provided container only.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

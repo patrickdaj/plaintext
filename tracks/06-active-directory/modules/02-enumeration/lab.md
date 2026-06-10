@@ -21,7 +21,9 @@ The lab provides:
 - `attacker` — a Debian container with `ldapsearch`, `enum4linux-ng`, and `bloodhound-python` installed, pre-configured to reach the DC.
 - `data/bloodhound-meridian.json` — a pre-generated BloodHound dataset for the Meridian domain (import this into BloodHound CE if you want the graph without running the full ingestor).
 
-> Only attack environments you own or have explicit written permission to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 

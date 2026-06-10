@@ -19,10 +19,9 @@ scanner container (nmap + Python). The `scan.py` harness runs three
 progressive nmap phases and parses the XML output into a formatted
 report — the same artifact you'd hand to module 03.
 
-> **Authorization:** the scan target is the `victim` container on the
-> isolated lab network. Never scan systems you don't own or aren't
-> explicitly authorized to test. `scanme.nmap.org` is a legitimate
-> external practice target if you want live-network experience.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 Meridian's red team just received a scope authorization for

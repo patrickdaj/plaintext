@@ -20,8 +20,9 @@ The lab is two containers running PowerShell 7: `web` stages a **benign** payloa
 (encode / obfuscate / emit-4104) you'll extend. Everything runs PowerShell faithfully at the language
 level; AMSI is a Windows runtime feature, so the AMSI step below is documented against a Windows VM.
 
-> **Authorisation.** Only run this tradecraft against systems you own or are explicitly authorised to
-> test. Here, you attack the lab's own `web` container with a harmless marker payload — nothing else.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 A phish has landed you code execution as `MERIDIAN\jsmith` on a finance workstation. You'll reproduce

@@ -20,7 +20,9 @@ The environment provides:
 - `ws-it-01` (10.10.0.102) — IT workstation running a minimal SMB service
 - `attacker` (10.10.0.20) — Debian container with `netexec`, impacket
 
-> Only attack environments you own or have explicit written permission to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 

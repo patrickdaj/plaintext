@@ -20,7 +20,9 @@ The environment includes a Samba4 DC with the Meridian misconfigurations pre-see
 - `svc-backup` has unconstrained delegation.
 - `data/acl-findings.json` — a BloodHound-shaped JSON showing the ACL abuse paths.
 
-> Only attack environments you own or have explicit written permission to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 
