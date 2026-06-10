@@ -25,8 +25,9 @@ internal segment (`172.21.x.x`) is not reachable from your machine. You need to
 set up a tunnel so your traffic routes through the pivot host to reach internal
 systems.
 
-> **Authorization note:** Only pivot through hosts you own or have explicit written
-> authorisation to test. Never attempt this on production networks.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

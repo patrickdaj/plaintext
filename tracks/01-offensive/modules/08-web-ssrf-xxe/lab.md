@@ -23,8 +23,9 @@ and an XML invoice importer. Both features process server-supplied data without
 validating the input source. Neither can be exploited from the UI — but the API
 endpoints have no server-side trust boundary.
 
-> **Authorization note:** Only exploit PortSwigger labs, deliberately vulnerable
-> apps, or systems you own or have explicit written authorisation to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

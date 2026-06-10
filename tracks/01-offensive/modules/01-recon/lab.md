@@ -19,10 +19,9 @@ fingerprinted hosts). The `recon.py` harness implements the four passive
 recon steps — CT log parsing, DNS grouping, tech fingerprinting, priority
 scoring — without live network calls, so the demo is deterministic.
 
-> **Authorization:** this demo analyzes the fictional Meridian Financial
-> estate only. If you run live recon (`--live`), only target domains you
-> own or have explicit written permission to test. Passive recon still
-> appears in DNS server logs.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 Meridian Financial's security team has asked for an external attack-surface

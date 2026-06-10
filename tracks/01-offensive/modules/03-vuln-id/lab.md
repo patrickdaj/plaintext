@@ -18,9 +18,9 @@ Rapid Reset (CVE-2023-44487), and FortiGate RCE (CVE-2024-21762) plus
 the CISA KEV catalog entries. The `vuln_assess.py` harness walks the
 CVE→CWE→CVSS→KEV→PoC research chain and generates `vuln-assessment.md`.
 
-> **Authorization:** this lab performs research only — no active
-> exploitation. For the exploitation module (04), target only systems
-> you own or have explicit permission to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 Your module 02 scan found `nginx 1.24.0` on ports 80/443 and the module

@@ -16,7 +16,9 @@ make down    # stop when done
 
 The `data/hashes.txt` file contains pre-generated Kerberoast ticket hashes for offline cracking practice — use these if you want to skip straight to hashcat.
 
-> Only attack environments you own or have explicit written permission to test. Never run these techniques against a network you do not control.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 

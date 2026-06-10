@@ -22,9 +22,9 @@ Meridian's dev team shipped the internal portal quickly and tested it
 right. But the server-side checks are broken in two ways. Find them, exploit
 them, and state the fix.
 
-> **Authorization note:** Only attack Juice Shop, DVWA, PortSwigger labs,
-> or other intentionally vulnerable targets. Never test systems you don't own
-> or have explicit written authorisation to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

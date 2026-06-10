@@ -8,7 +8,7 @@
 **Windows VM required.** This lab needs a Windows host; Docker won't work here.
 
 **Option A — Windows eval VM (local):**
-1. Download the [Windows Server 2019/2022 eval ISO](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server)
+1. Download the [Windows Server 2019/2022 eval ISO](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022)
    (180-day free trial, no license key).
 2. Create a VM in VirtualBox or VMware. Snapshot the clean state before planting misconfigs.
 3. Run the lab seeder (as Administrator in PowerShell):
@@ -34,8 +34,9 @@ You've obtained a low-privilege shell as `labuser` on Meridian Financial's
 application server. Enumerate the host with winPEAS, triage the findings, and
 exploit the highest-confidence vector to reach SYSTEM.
 
-> **Authorization note:** Only escalate on VMs you own or have explicit written
-> authorisation to test. Never test against production systems.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

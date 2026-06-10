@@ -22,8 +22,9 @@ identity store. Crack it the way an attacker would: identify hash types,
 run a dictionary attack, apply rules-based mutations, then assess what
 defenses would have stopped you.
 
-> **Authorization note:** Only crack hashes you generated or are authorised to
-> test. Never attack credentials you don't own.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

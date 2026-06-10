@@ -14,7 +14,9 @@ make shell   # interactive shell
 make down
 ```
 
-> Only attack environments you own or have explicit written permission to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Scenario
 

@@ -22,9 +22,9 @@ blocks known-malicious binaries but allows native tools. Accomplish your
 objectives — download a payload, execute it, and persist — using only the
 system's own trusted binaries.
 
-> **Authorization note:** Only use LOLBins on systems you own or have explicit
-> written authorisation to test. This container is intentionally set up for
-> this lab.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

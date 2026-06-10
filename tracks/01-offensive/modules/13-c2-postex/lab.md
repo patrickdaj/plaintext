@@ -24,9 +24,9 @@ You've deployed an implant on a Meridian Financial application server. Use the C
 framework to maintain access, enumerate the host, and establish persistence. Then
 switch hats: analyze what you left on the wire and how a defender would detect it.
 
-> **Authorization note:** Only deploy C2 implants on systems you own or have
-> explicit written authorisation to test. This container is intentionally set up
-> for this lab; never deploy implants on production systems.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 

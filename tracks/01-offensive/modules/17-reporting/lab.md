@@ -21,7 +21,9 @@ offensive track (SSRF, IDOR, privilege escalation, LOLBins). Turn those raw
 notes into a professional deliverable the CISO can share with the board and
 the engineering team can act on within 30 days.
 
-> **Authorization note:** Report only on systems you were authorised to test.
+> Authorization: this app is yours — attack it freely. The habit still matters everywhere else:
+> only test systems you own or have explicit written permission to test (DVWA, PortSwigger Academy,
+> targets you own).
 
 ## Do
 
