@@ -33,7 +33,7 @@ and PowerShell, rescan, and produce a delta report that the security team can pr
 
 **On your Windows VM:**
 
-1. [ ] Download [CIS-CAT Lite](https://www.cisecurity.org/cybersecurity-tools/cis-cat-lite) and
+1. [ ] Download [CIS-CAT Lite](https://www.cisecurity.org/cis-cat/) from CIS Controls and
    run `CIS-CAT-Lite.bat` against your Windows 11 host. Export the JSON report as
    `cis-report-before.json`. Note your baseline score.
 

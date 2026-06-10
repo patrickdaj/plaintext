@@ -33,7 +33,7 @@ Every major browser stores its state in a collection of SQLite databases and JSO
 - [DB Browser for SQLite](https://sqlitebrowser.org/) — the GUI tool for exploring SQLite files interactively; useful for understanding schema before scripting queries.
 
 **Application artifacts (~0.5 hr)**
-- [Windows Application Forensics — DFIR.training resources](https://dfir.training/resources/windows-application-forensics/) — a curated index of where major applications (Slack, Teams, Office) store forensically relevant data; use as a reference, not a deep read.
+- [Windows Application Forensics — DFIR.training resources](https://www.dfir.training/resources/windows-application-forensics/) — a curated index of where major applications (Slack, Teams, Office) store forensically relevant data; use as a reference, not a deep read.
 
 ## Key concepts
 - Chrome stores history, downloads, and searches in SQLite databases in the user profile directory.
