@@ -41,6 +41,7 @@ field. Tasks are ordered P0 → P2; do the P0 concrete fixes first (they're fast
 | T15 | Living CISA-KEV lab | P2 | both | Sonnet 4.6 | M | T5 |
 | T16 | Accessibility: alt-text audit | P2 | plaintext | Sonnet 4.6 | S–M | — |
 | T17 | Community: showcase + office hours + instructor guide | P2 | plaintext | Sonnet 4.6 | M | — |
+| T18 | Triage & fix labs failing the full CI matrix; opt each into `.ci-demo` | P1 | plaintext-labs | Sonnet 4.6 (Opus for design calls) | L | T5 |
 
 ---
 
@@ -191,6 +192,30 @@ progress checkboxes all exist and are in the nav.
 > structure (tie to the Discord in `COMMUNITY.md`), and an instructor/cohort guide (running Plaintext as a
 > cohort: pacing, scaffolding, how to review phase projects and capstones). Keep it honest — no fake testimonials.
 
+### T18 — Triage & fix labs failing the full CI matrix; opt each into `.ci-demo` · Sonnet 4.6 (Opus for design calls) · plaintext-labs · depends T5
+**Why:** the first full Labs CI run (T5) exercised all 158 labs and surfaced two classes of red:
+genuine bugs and labs that fail *by design*. Already handled: the AD `samba-tool` build bug (fixed)
+and the matrix re-scope to **opt-in** via `.ci-demo` (so learner-exercise / VM-cloud labs aren't
+false failures). What remains is to walk the full failure census and resolve each lab.
+**Per-lab triage (three buckets):**
+- **Genuine bug** → fix it, confirm `make up && make demo && make down` is green, then add a `.ci-demo`.
+- **Learner-exercise** (demo intentionally fails until completed — e.g. a Dockerfile the learner
+  writes, `# YOU:` scaffolds) → leave unmarked; no `.ci-demo`.
+- **VM / cloud** (needs Windows / hypervisor / real cloud creds) → leave unmarked; note it in the lab.
+**Known specifics:** `automation/06-containerising-tooling` `data/seed-repo` is committed as an empty
+git submodule with no `.gitmodules` (real bug) — fix as part of that lab's completion; shipping a
+scannable git repo as seed data needs a small design choice (init at demo-time from committed plain
+files, or scan in filesystem mode). The active-directory attack labs may still not be CI-green even
+after the build fix (they provision a samba DC + run an attack) — verify before opting them in.
+**Done when:** every lab is either green **with** a `.ci-demo`, or intentionally unmarked **with a
+one-line reason**; the full matrix census has been triaged; no lab is red-by-accident.
+> **Kickoff:** Trigger the full Labs CI matrix (workflow_dispatch on `labs-ci.yml`, no `only` input)
+> and collect the per-lab pass/fail census. For each failing lab, classify it: genuine bug (fix it,
+> get `make demo` green on a Linux runner, add a `.ci-demo` marker), learner-exercise (leave
+> unmarked), or VM/cloud (leave unmarked, note in `lab.md`). Fix `automation/06`'s `seed-repo`
+> submodule as part of that lab. Report the final census: green+opted-in vs intentionally-unmarked.
+
 ---
 
 *Generated from a content+structure review on 2026-06-10. Re-run the assessment after P0/P1 land to re-prioritise P2.*
+*Update 2026-06-10: T1–T7, T11(core), T13, T14 merged to `main` (plaintext PR #16, plaintext-labs PR #1). T5 follow-up (AD build fix + opt-in re-scope) in plaintext-labs PR #2. Remaining: T8, T9, T10, T11(rest), T12, T15, T16(n/a — no images), T17, T18.*
