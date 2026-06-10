@@ -2,8 +2,13 @@
 
 *Module concept · [Go to the hands-on lab →](lab.md)*
 
+*Last reviewed: 2026-06*
 
 **Defensive Operations** — *defend against what's actually being exploited this week, not the CVE wall.*
+
+<!-- module-meta -->
+**Difficulty:** Intermediate &nbsp;·&nbsp; **Estimated time:** ~5–7 hrs (study + lab) &nbsp;·&nbsp; **Prerequisites:** [Foundations](../../../00-foundations/README.md)
+{ .module-meta }
 
 ## Why this matters
 A defender drowning in CVEs is a defender who patches the wrong thing. CISA's Known Exploited
