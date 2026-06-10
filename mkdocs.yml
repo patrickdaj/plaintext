@@ -214,6 +214,9 @@ nav:
       - "16 · Response Automation (SOAR)":
           - Concept: 02-defensive/modules/16-soar/README.md
           - Lab: 02-defensive/modules/16-soar/lab.md
+      - "17 · KEV-Driven Defense":
+          - Concept: 02-defensive/modules/17-kev-driven-defense/README.md
+          - Lab: 02-defensive/modules/17-kev-driven-defense/lab.md
   - Digital Forensics & IR:
       - Overview: 03-forensics/README.md
       - "01 · Forensic Fundamentals & Evidence Handling":
