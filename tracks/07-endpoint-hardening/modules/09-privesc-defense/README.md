@@ -30,7 +30,7 @@ The audit workflow for a hardened host follows a checklist pattern: enumerate SU
 - [MITRE ATT&CK — T1134 Access Token Manipulation & T1548 Abuse Elevation Control](https://attack.mitre.org/techniques/T1548/) — real-world privilege escalation techniques and how attackers leverage them; read the sub-techniques for SUID/sudo abuse.
 
 **Defensive controls**
-- [Sudo Manual — sudoers](https://www.sudo.ws/docs/man/1.8.15/sudoers/) — official sudo documentation on secure sudoers configuration; covers limiting NOPASSWD, restricting command scope, and using `Defaults` directives.
+- [Sudo Configuration and Security — Official Manual](https://www.sudo.ws/) — official sudo documentation; read the man pages for sudoers configuration syntax, NOPASSWD restrictions, and `Defaults` directives for secure setup.
 - [sysctl hardening for kernel privesc mitigations (KSPP)](https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project/Recommended_Settings) — kernel parameters that close namespace-based and memory-based escalation paths; read the "Recommended settings" table.
 
 **Auditing tools**
