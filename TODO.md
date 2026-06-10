@@ -48,8 +48,10 @@ Status: ✅ done · 🟡 partial · ⬜ not started · ➖ n/a
 | T20 | ✅ | pytest + CI for the grading/credential scripts (69 tests, grade/verify/certificate/consistency) | P1 | plaintext-labs | Sonnet 4.6 | M | T6 |
 | T21 | ✅ | `grade.yaml` schema-lint in CI | P2 | plaintext-labs | Sonnet 4.6 | S | T6 |
 | T22 | ✅ | Document grading/`.ci-demo`/credentials in CLAUDE.md + CONTRIBUTING.md + a learner page | P1 | plaintext | Sonnet 4.6 | M | — |
+| T23 | ⬜ | Harden GitHub Actions supply chain: pin actions to commit SHAs + Dependabot | P2 | both | Haiku 4.5 | S | — |
 
 *(T19–T22 added 2026-06-10 from a testing/CI + docs review — the grading system shipped but was untested in CI and undocumented in the charter, and PRs had no build gate.)*
+*(T23 added 2026-06-10 from the recognition-system PR review — workflows reference mutable `@v4`/`@v5` tags.)*
 
 ---
 
@@ -222,6 +224,23 @@ one-line reason**; the full matrix census has been triaged; no lab is red-by-acc
 > get `make demo` green on a Linux runner, add a `.ci-demo` marker), learner-exercise (leave
 > unmarked), or VM/cloud (leave unmarked, note in `lab.md`). Fix `automation/06`'s `seed-repo`
 > submodule as part of that lab. Report the final census: green+opted-in vs intentionally-unmarked.
+
+### T23 — Harden GitHub Actions supply chain · Haiku 4.5 · both repos
+**Why:** workflows reference third-party actions by **mutable** version tags (`actions/checkout@v4`,
+`actions/setup-python@v5`). A tag can be re-pointed at new (or malicious) code by the action owner, so
+the workflow runs whatever the tag points to at trigger time. The badge template
+(`plaintext-labs/templates/portfolio-progress/`) is the sharpest case — it runs in the *learner's* repo
+with `contents: write` — and it also `curl`s scripts from `plaintext-labs@main` (another moving ref).
+**Done when:** every `uses:` across both repos' workflows is pinned to a full commit SHA with the version
+in a trailing comment (`@<sha>  # v4.2.2`); the badge template's `PLAINTEXT_REF` is pinned to a release
+tag rather than `main`; a `.github/dependabot.yml` (`package-ecosystem: "github-actions"`) is added to each
+repo so pins are bumped via PR and don't go stale. Mechanic: `git ls-remote --tags <repo> <tag>` gives the
+SHA; swap tag→SHA, keep `# version` comment.
+> **Kickoff:** Pin every GitHub Actions `uses:` reference in both `plaintext` and `plaintext-labs`
+> workflows (and the `plaintext-labs/templates/portfolio-progress/` template) from mutable `@vN` tags to
+> full commit SHAs, with the version in a trailing comment. Pin the template's `PLAINTEXT_REF` to a release
+> tag. Add a `github-actions` Dependabot config to each repo so the pins are kept current via PR. Verify
+> each pinned SHA against the tag with `git ls-remote`; don't change action behaviour or inputs.
 
 ---
 
