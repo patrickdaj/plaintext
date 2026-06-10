@@ -1,0 +1,3 @@
+[submodule "plaintext-labs"]
+	path = plaintext-labs
+	url = https://github.com/plaintext-security/plaintext-labs.git
