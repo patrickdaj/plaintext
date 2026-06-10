@@ -25,6 +25,21 @@ attack the AI systems you just built.
 | 09 | [Securing the AI You Run](modules/09-securing-ai/README.md) | Prompt injection, data exfil, MCP/RAG hardening | — |
 | 10 | [Attacking AI Systems](modules/10-attacking-ai/README.md) | Red-teaming LLM/MCP/RAG applications | `garak`, `promptfoo` |
 
+## Phases & projects
+
+The ten modules run in three phases; each ends in a **project** that integrates its modules (a phase
+is the substantial, standalone unit — a single module is a few hours).
+
+- **Phase 1 · Run & ground models** (01–04) — **Project:** a local-model setup (Ollama/llama.cpp)
+  with a reviewable prompt library and a working RAG pipeline that grounds answers in your own
+  security notes — proving when local suffices and when a frontier model earns the call.
+- **Phase 2 · Build the copilot** (05–08) — **Project:** an MCP server exposing one real security
+  tool, wired to the RAG corpus into a SoC copilot that triages at volume, plus a SOAR + AI playbook
+  that drafts a response and waits for human approval.
+- **Phase 3 · Secure & attack the AI** (09–10) — **Project:** the track capstone — red-team the
+  copilot you built: demonstrate a prompt-injection or data-exfil weakness with `garak`/`promptfoo`,
+  then harden against it — delivering the copilot, the attack, and the fix.
+
 ## Prerequisites
 Complete Track 00 — Foundations; Track 09 — Python is strongly recommended.
 

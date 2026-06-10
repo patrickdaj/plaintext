@@ -30,6 +30,22 @@ the cloud the infrastructure *is* code. AWS/GCP/Azure plus containers and Kubern
 | 15 | [Cloud Logging & Detection](modules/15-cloud-logging-detection/README.md) | Native detectors vs. open tools; tuning signal | `falco`, `sigma`; GuardDuty / Defender for Cloud / GCP SCC |
 | 16 | [Cloud Incident Response](modules/16-cloud-incident-response/README.md) | Investigating and containing in the cloud | `cloudtrail`, `hayabusa` |
 
+## Phases & projects
+
+The sixteen modules run in three phases; each ends in a **project** that integrates its modules (a
+phase is the substantial, standalone unit — a single module is a few hours).
+
+- **Phase 1 · Identity, posture & the pipeline** (01–08) — **Project:** audit a deliberately
+  vulnerable account (CloudGoat/flaws.cloud) with `prowler`/`pmapper` to map an IAM privilege-escalation
+  path, then close it as Terraform gated by `checkov`/`trivy` in CI, with secrets pulled out of code and
+  into a broker.
+- **Phase 2 · Containers & Kubernetes** (09–13) — **Project:** harden a workload end to end — scan the
+  image, lock down a serverless execution role, demonstrate a container breakout caught by Falco, and
+  enforce RBAC, NetworkPolicy, and an admission policy as code on a kind cluster.
+- **Phase 3 · Attack, detect & respond** (14–16) — **Project:** the track capstone — simulate a cloud
+  attack with `stratus-red-team`/`pacu`, detect it from cloud logs (native detector *and* a Sigma rule),
+  and investigate-and-contain it — delivering the attack path, the fix-as-code, and the detection.
+
 ## Prerequisites
 Complete Track 00 — Foundations first.
 

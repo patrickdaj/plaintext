@@ -24,6 +24,22 @@ cryptography, PKI, secrets management, and email authentication — and how to a
 | 09 | [Email Authentication](modules/09-email-authentication/README.md) | SPF, DKIM, and DMARC in practice | `dig`, `openssl` |
 | 10 | [Auditing Applied-Crypto Failures](modules/10-auditing-crypto-failures/README.md) | Spotting the real-world mistakes | `testssl.sh` |
 
+## Phases & projects
+
+The ten modules run in three phases; each ends in a **project** that integrates its modules (a phase
+is the substantial, standalone unit — a single module is a few hours).
+
+- **Phase 1 · Primitives in your hands** (01–04) — **Project:** a small, tested crypto toolkit that
+  exercises each primitive correctly — AEAD encrypt/decrypt, a key exchange, an HMAC, and password
+  hashing with argon2 — plus a written note on the misuse each one invites (ECB, nonce reuse, fast
+  hashes for passwords).
+- **Phase 2 · TLS & PKI** (05–06) — **Project:** run a private CA with `step-ca`, issue and chain a
+  certificate, stand up a TLS service, then scan it with `testssl.sh` and explain every handshake
+  step and cipher decision the scan reports.
+- **Phase 3 · Secrets & applied audit** (07–10) — **Project:** the track capstone — audit a small
+  system's full crypto posture (TLS config, cert hygiene, secrets handling, SPF/DKIM/DMARC), hunt for
+  leaked credentials, fix each finding, and re-test — delivering the before/after audit report.
+
 ## Prerequisites
 Complete Track 00 — Foundations (module 09 — Cryptography Basics).
 
