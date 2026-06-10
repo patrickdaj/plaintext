@@ -7,7 +7,7 @@
 
 ```bash
 git clone https://github.com/plaintext-security/plaintext-labs
-cd plaintext-labs/defensive/13-triage-ir
+cd plaintext-labs/defensive/14-triage-ir
 make up      # builds the Python triage harness
 make demo    # walks through INC-2024-0315-001 across all 5 NIST phases
 make down

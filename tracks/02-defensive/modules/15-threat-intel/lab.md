@@ -7,7 +7,7 @@
 
 ```bash
 git clone https://github.com/plaintext-security/plaintext-labs
-cd plaintext-labs/defensive/14-threat-intel
+cd plaintext-labs/defensive/15-threat-intel
 make up
 ```
 

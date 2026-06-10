@@ -7,7 +7,7 @@
 
 ```bash
 git clone https://github.com/plaintext-security/plaintext-labs.git
-cd plaintext-labs/offensive/15-cloud-primer
+cd plaintext-labs/offensive/16-cloud-primer
 python3 check.py        # verify connectivity + print the walkthrough guide
 ```
 

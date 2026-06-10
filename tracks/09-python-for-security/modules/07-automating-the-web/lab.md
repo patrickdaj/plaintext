@@ -37,8 +37,10 @@ main navigation — the kind of thing a pentester's spider would find in the fir
    - Follow links that stay on the same host; record all visited URLs.
    - Use a `set` to avoid visiting the same URL twice.
 3. [ ] Extend the scraper to also search each page's raw HTML for path-like strings using regex:
-   `re.findall(r'(?<!["\w])/[\w/.-]+', response.text)`. Add any discovered paths to your
-   link map.
+   ```python
+   re.findall(r'(?<!["\w])/[\w/.-]+', response.text)
+   ```
+   Add any discovered paths to your link map.
 4. [ ] Print a complete link map: URL, HTTP status, page title, and whether it was found via
    `<a href>` or via the regex pass.
 5. [ ] Confirm that `/internal/status` is discovered by the regex pass (it's embedded in a

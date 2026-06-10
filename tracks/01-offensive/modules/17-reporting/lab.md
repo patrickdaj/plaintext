@@ -7,7 +7,7 @@
 
 ```bash
 git clone https://github.com/plaintext-security/plaintext-labs.git
-cd plaintext-labs/offensive/16-reporting
+cd plaintext-labs/offensive/17-reporting
 make demo   # prints writing guide, validates template, checks reference URLs
 ```
 

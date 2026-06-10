@@ -7,7 +7,7 @@
 
 ```bash
 git clone https://github.com/plaintext-security/plaintext-labs
-cd plaintext-labs/defensive/15-soar
+cd plaintext-labs/defensive/16-soar
 make up      # builds the Python SOAR harness
 make demo    # runs all 3 test alerts through the 4-stage pipeline
 make down
