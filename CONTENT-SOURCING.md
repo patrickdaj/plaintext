@@ -174,12 +174,32 @@ CloudSecList (Marco Lancini — still running, redesigned Apr 2026), Risky Busin
 
 ## 3. "The freeCodeCamp for security" — what to adopt structurally
 
-*(Sections 3.1–3.2 integrate a dedicated research pass — see citations once the engagement and fCC agents
-land. The mechanics below are the actionable core.)*
+### 3.0 The gap is real and unclaimed
 
-freeCodeCamp didn't win on content quality — plenty of sites had good content. It won on **structure and a
-flywheel.** The mechanics, mapped to what Plaintext can do with Markdown + docker-compose labs + the
-YAML auto-grader + completion receipts:
+A dedicated research pass found **no platform that credibly bills itself "the freeCodeCamp of
+cybersecurity."** freeCodeCamp's own Information Security cert is now *legacy* (folded into the old QA
+cert); TryHackMe and HTB are **freemium** (free tier shrinking — see §1.2); OpenSecurityTraining2 is free
+and deep but *advanced-only* with no linear on-ramp or portfolio cert; Cisco NetAcad and the Google
+Cybersecurity Certificate skew *theory/quiz* (and Google's is paid). The center — **free all the way
+through + open-source curriculum + a single linear beginner→job path + auto-graded hands-on projects +
+a portfolio credential** — is empty.
+
+Why it stays empty (and why Plaintext is positioned to take it):
+
+- **Security labs are expensive to host.** fCC's near-zero-marginal-cost in-browser test runner has no
+  security equivalent — vulnerable VMs/containers need isolation and attack infra, which is *why*
+  TryHackMe/HTB must charge. **Plaintext sidesteps this by pushing compute to the learner's own Docker
+  host** — that's how it can be free all the way through where they can't.
+- **Auto-grading exploitation is hard.** "Tests go green" works for `add(2,2)===4`; verifying "you got a
+  shell" deterministically and tamper-evidently is harder. Plaintext's multi-check-type grader
+  (`flag` / `structural` / `artifact_functional` / `target_state`) is the security-correct substitute.
+- **Legal/authorization.** Every offensive lab must ship its own sandboxed target — you can't drop a
+  beginner onto a hosted "attack box." Plaintext's lab-target ladder + authorization notes already do this.
+
+freeCodeCamp itself didn't win on content quality — plenty of sites had good content. It won on
+**structure and a flywheel** (News with 8,000+ tutorials + a ~11M-subscriber YouTube channel funneling
+millions of learners into an open-source, donor-funded, linear, project-graded curriculum). The mechanics,
+mapped to what Plaintext can do with Markdown + docker-compose labs + the YAML auto-grader + receipts:
 
 | freeCodeCamp / top-program mechanic | Why it works | Plaintext equivalent — status |
 |---|---|---|
@@ -193,6 +213,69 @@ YAML auto-grader + completion receipts:
 | **Randomized per-learner flags** (pwn.college) | Defeats answer-sharing; forces real solving | Hardest to retrofit; the grader's `flag` check type is the right primitive if we pursue it. |
 | **Content flywheel** (fCC News + YouTube funnel *into* the curriculum) | Acquisition + SEO + authority + community authorship | **Biggest missing piece.** A writeups/showcase stream + per-module "why this matters now" tied to a current CVE turns a curriculum into a *destination*. See T-CS4. |
 | **Zero-friction, no paywall cliff** (nonprofit) | Trust; nobody blocked mid-path | **Our structural wedge** — and it widens as competitors paywall. State it loudly. |
+
+### 3.1 The engagement mechanics that earn "hardcore" reputations (ranked, with evidence)
+
+The key finding from studying pwn.college, PortSwigger, KC7, picoCTF, OverTheWire, and HTB: **the
+mechanics that make programs respected are almost all authoring/structure decisions, not platform
+features** — which means our stack already supports the top ones. In priority order:
+
+1. **One narrow hands-on lab welded to every concept** — read → do, one vulnerability at a time.
+   PortSwigger's gold-standard pattern (explain in text, then an interactive lab scoped to *one* class);
+   pwn.college's SIGCSE'24 finding that generic CTF challenges are "too difficult" until each isolates one
+   mechanism; Julia Evans' cognitive version (you learn a topic far better *after* you have a real
+   problem). **Never separate prose from doing.** (`portswigger.net/web-security`; `jvns.ca/blog/learn-how-things-work/`; `dl.acm.org/doi/10.1145/3626252.3630912`)
+2. **A deliberate scaffolded difficulty ramp; first lab trivially winnable.** The single most
+   research-backed retention lever — picoCTF's "pico-Boo! How to avoid scaring students away," pwn.college's
+   "progressive learning curve through modularized challenges." Pure authoring discipline. Our CLAUDE.md
+   scaled-hand-holding-by-track rule *is* this. (`picoctf.org/pdfs/FINAL_CISSE_paper.pdf`; `arxiv.org/abs/2004.11556`)
+3. **One-command, validated environments** (`make up`/`make demo` actually run). OverTheWire endures on
+   `ssh`-in minimalism; pwn.college and the "PWN Lessons Made Easy with Docker" work Dockerize to lower the
+   on-ramp. We already mandate this in the definition of done — the research says it's a *top engagement
+   driver*, not just hygiene.
+4. **Instant, granular pass/fail feedback the learner runs at will** — the flag *is* the feedback.
+   Our `make grade` already is this; lean into immediacy and per-check granularity.
+5. **Visible belts/badges + portable proof.** pwn.college white→black belts; PortSwigger
+   apprentice→practitioner→expert; HTB tiers/XP. Our `receipt.json` + `track_certificate.py` + badge
+   rendering is the substrate — **make the progression bragworthy and visible**, and label labs by tier.
+   (Caution from pwn.college's own 5-year paper: tune gamification carefully — "don't let points become
+   the point.")
+6. **Cross-module narrative that reuses earlier artifacts.** KC7's data-driven detective story (55k+ free
+   players) proves a self-paced branching narrative needs only a dataset + ordered questions — maps onto
+   Markdown + a bundled `data/` set perfectly. Extend the Meridian thread; a later lab should consume the
+   artifact an earlier lab produced. (`kc7cyber.com/about`)
+7. **A no-hint "mystery/expert" tier and gated solutions.** PortSwigger's Mystery Lab hides the vuln class
+   "to introduce an element of recon"; HTB ships writeups *only after* a machine retires. Adopt as authoring
+   policy: advanced labs state only scenario + success criteria, and don't ship a walkthrough beside the
+   hardest ones. (`portswigger.net/web-security/mystery-lab-challenge`)
+8. **Mandatory "build-your-own-tool" finish.** MIT Missing Semester's toolsmithing ethos + Julia Evans'
+   "understand how things work." Our required **Automate & own it** step is exactly this — keep it mandatory;
+   the committed tool is both the engagement payoff and the marketable proof.
+
+### 3.2 The AI-era integrity move (most current finding)
+
+The live question — "how does a hands-on program stay hardcore when an LLM can just solve the flag?" — is
+being answered now, and the consensus maps directly onto our grader:
+
+- **Grade the artifact/trajectory, not just the flag.** AI-era CTF-design research (arXiv 2603.21551, 2026;
+  arXiv 2506.17644, CCS'25) converges on reviewing *intermediate steps* and excluding flag-only submissions
+  "lacking supporting steps." For us: the bare `flag` check is now the *weakest* signal; weight grading
+  toward `artifact_functional` (the learner's script runs), `structural` (the artifact exists / matches
+  patterns), and `target_state` (the live lab is provably solved) — these survive even when an LLM could
+  emit the flag.
+- **Randomized per-learner flags** defeat answer-sharing and make the grader tamper-evident. pwn.college
+  derives each flag from `challenge_id + user_id` and logs cross-user submissions as cheating (source:
+  `github.com/pwncollege/CTFd-pwn-college-plugin`). Adoptable in `grade.yaml` flag checks where a lab exposes
+  a unique per-learner secret — giving effort-proof + tamper-evidence (not proctoring, which an open repo
+  with visible keys can't provide — state this honestly, as our trust model already does).
+- **AI as sanctioned scaffolded tutor, not answer key.** pwn.college's SENSAI frames AI as one way to get
+  unstuck (with full challenge/terminal context), alongside thinking/searching/Discord. Our
+  "AI authors → you review → you own it" posture is exactly the published consensus.
+
+*(Engagement findings: all program-behavior/paper claims are from search-result extracts of primary pages
+— direct fetches of PortSwigger/MIT/ACM/arXiv were 403-blocked to the research agent; the per-user-flag
+detail is corroborated against pwn.college's actual GitHub source. fCC scale figures are search-snippet
+extractions, not full-page reads — treat exact numbers as directional.)*
 
 ---
 
