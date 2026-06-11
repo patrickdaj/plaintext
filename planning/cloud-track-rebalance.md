@@ -62,8 +62,10 @@ Executed on branch `feat/cloud-rebalance` (both repos), each lab `make up`/`make
   closes the PassRole escalation, prove it). 
 - ✅ **17 (new)** — Data Protection & KMS module created: envelope encryption + key-policy separation
   of duties (`check_keypolicy.py`). Concept + lab + nav + track map + landing counts.
-- ⬜ **Minor (optional):** 03 implement+verify the cut-set; 10 make the hardened multi-stage rebuild an
-  explicit graded step. Not yet done — low-priority opportunistic polish.
+- ✅ **Minor:** 03 implement+verify the cut-set (`graph-fixed.json` → analyze.py exit 0); 10
+  hardened-rebuild verify (`make harden-verify` gates on MEDIUM+; bad fails with 2 HIGH, hardened
+  passes). Both validated; also fixed pre-existing trivy/grype install break (multi-stage copy from
+  the official tool images).
 
 Not pushed yet (holding per request). Each lab change is in the `plaintext-labs` submodule; the
 `plaintext` feat branch advances the submodule pointer.
