@@ -45,7 +45,7 @@ telemetry the blue team is watching for.
 ## Learn (~3 hrs)
 
 **Fundamentals, hands-on**
-- [TryHackMe — Windows Fundamentals (free rooms)](https://tryhackme.com/) — click-through coverage of the filesystem, users, the registry, and built-in tooling.
+- [TryHackMe — Windows Fundamentals module](https://tryhackme.com/module/windows-fundamentals) — three rooms (1–3) on the filesystem, users, the registry, built-in tooling, and the built-in security features; historically free, but TryHackMe has been moving rooms behind premium, so check the room is still free before you start (~2 hrs).
 - [13Cubed — Introduction to Windows Forensics](https://www.youtube.com/watch?v=VYROU-ZwZX8) — a single intro episode (not the playlist); a defender's tour of the Windows artifacts (registry, event logs, execution) you'll be inspecting.
 
 **The native automation language**
